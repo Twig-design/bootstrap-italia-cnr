@@ -81,6 +81,20 @@ $color-border-secondary: hsl(210, 17%, 44%); // color-slate-44
 $color-border-subtle: hsl(210, 4%, 78%) !default; // color-slate-78
 $color-border-warning: hsl(36, 100%, 30%); // color-orange-30
 
+// Border radius & width (UI Kit Italia — design-tokens-italia)
+$radius-smooth: 8px !default;
+$radius-rounded: 48px !default;
+$radius-circle: 80px !default;
+$border-base: 1px !default;
+$border-double: 2px !default;
+$border-thick: 4px !default;
+$border-broad: 8px !default;
+
+// Brand corner radius — top-right square (labels, images, banners)
+$radius-brand-sm: 16px 0 16px 16px !default;
+$radius-brand-md: 32px 0 32px 32px !default;
+$radius-brand-lg: 48px 0 48px 48px !default;
+
 // Text
 $color-text-primary-active: hsl(210, 100%, 15%); // color-blue-15
 $color-text-primary-hover: hsl(210, 100%, 30%); // color-blue-30
