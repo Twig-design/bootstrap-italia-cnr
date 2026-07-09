@@ -11,6 +11,7 @@
 // typography, spacing, and more. By referencing these tokens in --bsi custom properties,
 // we can ensure that our custom properties are always in sync with the latest design tokens.
 @use 'design-tokens-italia/dist/scss/_variables.scss' as tokens;
+@use 'cnr-radius' as cnr;
 
 :root {
   // Note: Custom variable values only support SassScript inside `#{}`.
@@ -181,13 +182,16 @@
   --#{$prefix}border-width: 1px;
   --#{$prefix}border-style: solid;
   --#{$prefix}border-color: #{tokens.$it-color-border-subtle};
-  --#{$prefix}border-broad: #{tokens.$it-border-broad};
-  --#{$prefix}border-thick: #{tokens.$it-border-thick};
-  --#{$prefix}border-double: #{tokens.$it-border-double};
-  --#{$prefix}border-base: #{tokens.$it-border-base};
-  --#{$prefix}radius-rounded: #{tokens.$it-radius-rounded};
-  --#{$prefix}radius-circle: #{tokens.$it-radius-circle};
-  --#{$prefix}radius-smooth: #{tokens.$it-radius-smooth};
+  --#{$prefix}border-broad: #{cnr.$cnr-border-broad};
+  --#{$prefix}border-thick: #{cnr.$cnr-border-thick};
+  --#{$prefix}border-double: #{cnr.$cnr-border-double};
+  --#{$prefix}border-base: #{cnr.$cnr-border-base};
+  --#{$prefix}radius-rounded: #{cnr.$cnr-radius-rounded};
+  --#{$prefix}radius-circle: #{cnr.$cnr-radius-circle};
+  --#{$prefix}radius-smooth: #{cnr.$cnr-radius-smooth};
+  --#{$prefix}radius-brand-sm: #{cnr.$cnr-radius-brand-sm};
+  --#{$prefix}radius-brand-md: #{cnr.$cnr-radius-brand-md};
+  --#{$prefix}radius-brand-lg: #{cnr.$cnr-radius-brand-lg};
 
   // Sizing
   --#{$prefix}sizing-full: #{tokens.$it-sizing-full};

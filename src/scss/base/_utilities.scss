@@ -670,6 +670,9 @@ $utilities: map.merge(
           0: 0,
           circle: var(--#{$prefix}radius-circle),
           pill: var(--#{$prefix}radius-rounded),
+          'brand-sm': var(--#{$prefix}radius-brand-sm),
+          'brand-md': var(--#{$prefix}radius-brand-md),
+          'brand-lg': var(--#{$prefix}radius-brand-lg),
         ),
       ),
     'rounded-top': (

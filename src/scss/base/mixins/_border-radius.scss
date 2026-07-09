@@ -79,4 +79,16 @@
     border-bottom-left-radius: valid-radius($radius);
   }
 }
+
+@mixin border-radius-brand($size: sm) {
+  @if $enable-rounded {
+    @if $size == sm {
+      border-radius: var(--#{$prefix}radius-brand-sm);
+    } @else if $size == md {
+      border-radius: var(--#{$prefix}radius-brand-md);
+    } @else if $size == lg {
+      border-radius: var(--#{$prefix}radius-brand-lg);
+    }
+  }
+}
 // scss-docs-end border-radius-mixins
