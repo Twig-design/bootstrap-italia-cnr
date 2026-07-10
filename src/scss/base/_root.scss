@@ -308,6 +308,141 @@
   --#{$prefix}color-status-warning-hover: #{$color-background-warning-hover};
   --#{$prefix}color-status-warning-active: #{$color-background-warning-active};
 
+  // Department color scales
+  --#{$prefix}color-fisica-200: #{$color-fisica-200};
+  --#{$prefix}color-fisica-500: #{$color-fisica-500};
+  --#{$prefix}color-fisica-600: #{$color-fisica-600};
+  --#{$prefix}color-fisica-800: #{$color-fisica-800};
+  --#{$prefix}color-ambiente-200: #{$color-ambiente-200};
+  --#{$prefix}color-ambiente-500: #{$color-ambiente-500};
+  --#{$prefix}color-ambiente-600: #{$color-ambiente-600};
+  --#{$prefix}color-ambiente-800: #{$color-ambiente-800};
+  --#{$prefix}color-biomedica-200: #{$color-biomedica-200};
+  --#{$prefix}color-biomedica-500: #{$color-biomedica-500};
+  --#{$prefix}color-biomedica-600: #{$color-biomedica-600};
+  --#{$prefix}color-biomedica-800: #{$color-biomedica-800};
+  --#{$prefix}color-ingegneria-200: #{$color-ingegneria-200};
+  --#{$prefix}color-ingegneria-500: #{$color-ingegneria-500};
+  --#{$prefix}color-ingegneria-600: #{$color-ingegneria-600};
+  --#{$prefix}color-ingegneria-800: #{$color-ingegneria-800};
+  --#{$prefix}color-scienzeumane-200: #{$color-scienzeumane-200};
+  --#{$prefix}color-scienzeumane-500: #{$color-scienzeumane-500};
+  --#{$prefix}color-scienzeumane-600: #{$color-scienzeumane-600};
+  --#{$prefix}color-scienzeumane-800: #{$color-scienzeumane-800};
+  --#{$prefix}color-chimica-200: #{$color-chimica-200};
+  --#{$prefix}color-chimica-500: #{$color-chimica-500};
+  --#{$prefix}color-chimica-600: #{$color-chimica-600};
+  --#{$prefix}color-chimica-800: #{$color-chimica-800};
+  --#{$prefix}color-agroalimentari-200: #{$color-agroalimentari-200};
+  --#{$prefix}color-agroalimentari-500: #{$color-agroalimentari-500};
+  --#{$prefix}color-agroalimentari-600: #{$color-agroalimentari-600};
+  --#{$prefix}color-agroalimentari-800: #{$color-agroalimentari-800};
+
+  // Department semantic tokens — Fisica
+  --#{$prefix}color-background-fisica: #{$color-background-fisica};
+  --#{$prefix}color-background-fisica-light: #{$color-background-fisica-light};
+  --#{$prefix}color-background-fisica-hover: #{$color-background-fisica-hover};
+  --#{$prefix}color-background-fisica-active: #{$color-background-fisica-active};
+  --#{$prefix}color-text-fisica: #{$color-text-fisica};
+  --#{$prefix}color-text-fisica-hover: #{$color-text-fisica-hover};
+  --#{$prefix}color-text-fisica-active: #{$color-text-fisica-active};
+  --#{$prefix}color-border-fisica: #{$color-border-fisica};
+  --#{$prefix}color-border-fisica-hover: #{$color-border-fisica-hover};
+  --#{$prefix}color-border-fisica-active: #{$color-border-fisica-active};
+  --#{$prefix}icon-fisica: #{$icon-fisica};
+  --#{$prefix}icon-fisica-hover: #{$icon-fisica-hover};
+  --#{$prefix}icon-fisica-active: #{$icon-fisica-active};
+
+  // Department semantic tokens — Ambiente
+  --#{$prefix}color-background-ambiente: #{$color-background-ambiente};
+  --#{$prefix}color-background-ambiente-light: #{$color-background-ambiente-light};
+  --#{$prefix}color-background-ambiente-hover: #{$color-background-ambiente-hover};
+  --#{$prefix}color-background-ambiente-active: #{$color-background-ambiente-active};
+  --#{$prefix}color-text-ambiente: #{$color-text-ambiente};
+  --#{$prefix}color-text-ambiente-hover: #{$color-text-ambiente-hover};
+  --#{$prefix}color-text-ambiente-active: #{$color-text-ambiente-active};
+  --#{$prefix}color-border-ambiente: #{$color-border-ambiente};
+  --#{$prefix}color-border-ambiente-hover: #{$color-border-ambiente-hover};
+  --#{$prefix}color-border-ambiente-active: #{$color-border-ambiente-active};
+  --#{$prefix}icon-ambiente: #{$icon-ambiente};
+  --#{$prefix}icon-ambiente-hover: #{$icon-ambiente-hover};
+  --#{$prefix}icon-ambiente-active: #{$icon-ambiente-active};
+
+  // Department semantic tokens — Biomedica
+  --#{$prefix}color-background-biomedica: #{$color-background-biomedica};
+  --#{$prefix}color-background-biomedica-light: #{$color-background-biomedica-light};
+  --#{$prefix}color-background-biomedica-hover: #{$color-background-biomedica-hover};
+  --#{$prefix}color-background-biomedica-active: #{$color-background-biomedica-active};
+  --#{$prefix}color-text-biomedica: #{$color-text-biomedica};
+  --#{$prefix}color-text-biomedica-hover: #{$color-text-biomedica-hover};
+  --#{$prefix}color-text-biomedica-active: #{$color-text-biomedica-active};
+  --#{$prefix}color-border-biomedica: #{$color-border-biomedica};
+  --#{$prefix}color-border-biomedica-hover: #{$color-border-biomedica-hover};
+  --#{$prefix}color-border-biomedica-active: #{$color-border-biomedica-active};
+  --#{$prefix}icon-biomedica: #{$icon-biomedica};
+  --#{$prefix}icon-biomedica-hover: #{$icon-biomedica-hover};
+  --#{$prefix}icon-biomedica-active: #{$icon-biomedica-active};
+
+  // Department semantic tokens — Ingegneria
+  --#{$prefix}color-background-ingegneria: #{$color-background-ingegneria};
+  --#{$prefix}color-background-ingegneria-light: #{$color-background-ingegneria-light};
+  --#{$prefix}color-background-ingegneria-hover: #{$color-background-ingegneria-hover};
+  --#{$prefix}color-background-ingegneria-active: #{$color-background-ingegneria-active};
+  --#{$prefix}color-text-ingegneria: #{$color-text-ingegneria};
+  --#{$prefix}color-text-ingegneria-hover: #{$color-text-ingegneria-hover};
+  --#{$prefix}color-text-ingegneria-active: #{$color-text-ingegneria-active};
+  --#{$prefix}color-border-ingegneria: #{$color-border-ingegneria};
+  --#{$prefix}color-border-ingegneria-hover: #{$color-border-ingegneria-hover};
+  --#{$prefix}color-border-ingegneria-active: #{$color-border-ingegneria-active};
+  --#{$prefix}icon-ingegneria: #{$icon-ingegneria};
+  --#{$prefix}icon-ingegneria-hover: #{$icon-ingegneria-hover};
+  --#{$prefix}icon-ingegneria-active: #{$icon-ingegneria-active};
+
+  // Department semantic tokens — Scienze umane
+  --#{$prefix}color-background-scienzeumane: #{$color-background-scienzeumane};
+  --#{$prefix}color-background-scienzeumane-light: #{$color-background-scienzeumane-light};
+  --#{$prefix}color-background-scienzeumane-hover: #{$color-background-scienzeumane-hover};
+  --#{$prefix}color-background-scienzeumane-active: #{$color-background-scienzeumane-active};
+  --#{$prefix}color-text-scienzeumane: #{$color-text-scienzeumane};
+  --#{$prefix}color-text-scienzeumane-hover: #{$color-text-scienzeumane-hover};
+  --#{$prefix}color-text-scienzeumane-active: #{$color-text-scienzeumane-active};
+  --#{$prefix}color-border-scienzeumane: #{$color-border-scienzeumane};
+  --#{$prefix}color-border-scienzeumane-hover: #{$color-border-scienzeumane-hover};
+  --#{$prefix}color-border-scienzeumane-active: #{$color-border-scienzeumane-active};
+  --#{$prefix}icon-scienzeumane: #{$icon-scienzeumane};
+  --#{$prefix}icon-scienzeumane-hover: #{$icon-scienzeumane-hover};
+  --#{$prefix}icon-scienzeumane-active: #{$icon-scienzeumane-active};
+
+  // Department semantic tokens — Chimica
+  --#{$prefix}color-background-chimica: #{$color-background-chimica};
+  --#{$prefix}color-background-chimica-light: #{$color-background-chimica-light};
+  --#{$prefix}color-background-chimica-hover: #{$color-background-chimica-hover};
+  --#{$prefix}color-background-chimica-active: #{$color-background-chimica-active};
+  --#{$prefix}color-text-chimica: #{$color-text-chimica};
+  --#{$prefix}color-text-chimica-hover: #{$color-text-chimica-hover};
+  --#{$prefix}color-text-chimica-active: #{$color-text-chimica-active};
+  --#{$prefix}color-border-chimica: #{$color-border-chimica};
+  --#{$prefix}color-border-chimica-hover: #{$color-border-chimica-hover};
+  --#{$prefix}color-border-chimica-active: #{$color-border-chimica-active};
+  --#{$prefix}icon-chimica: #{$icon-chimica};
+  --#{$prefix}icon-chimica-hover: #{$icon-chimica-hover};
+  --#{$prefix}icon-chimica-active: #{$icon-chimica-active};
+
+  // Department semantic tokens — Agroalimentari
+  --#{$prefix}color-background-agroalimentari: #{$color-background-agroalimentari};
+  --#{$prefix}color-background-agroalimentari-light: #{$color-background-agroalimentari-light};
+  --#{$prefix}color-background-agroalimentari-hover: #{$color-background-agroalimentari-hover};
+  --#{$prefix}color-background-agroalimentari-active: #{$color-background-agroalimentari-active};
+  --#{$prefix}color-text-agroalimentari: #{$color-text-agroalimentari};
+  --#{$prefix}color-text-agroalimentari-hover: #{$color-text-agroalimentari-hover};
+  --#{$prefix}color-text-agroalimentari-active: #{$color-text-agroalimentari-active};
+  --#{$prefix}color-border-agroalimentari: #{$color-border-agroalimentari};
+  --#{$prefix}color-border-agroalimentari-hover: #{$color-border-agroalimentari-hover};
+  --#{$prefix}color-border-agroalimentari-active: #{$color-border-agroalimentari-active};
+  --#{$prefix}icon-agroalimentari: #{$icon-agroalimentari};
+  --#{$prefix}icon-agroalimentari-hover: #{$icon-agroalimentari-hover};
+  --#{$prefix}icon-agroalimentari-active: #{$icon-agroalimentari-active};
+
   // Icons colors
   --#{$prefix}icon-danger-active: #{$icon-danger-active};
   --#{$prefix}icon-danger-hover: #{$icon-danger-hover};
