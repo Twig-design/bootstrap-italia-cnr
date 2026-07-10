@@ -199,9 +199,27 @@
   --#{$prefix}sizing-quarter: #{tokens.$it-sizing-quarter};
 
   // Shadow
-  --#{$prefix}elevation-high: #{tokens.$it-elevation-high};
-  --#{$prefix}elevation-medium: #{tokens.$it-elevation-medium};
-  --#{$prefix}elevation-low: #{tokens.$it-elevation-low};
+  --#{$prefix}shadow-s-x: #{$shadow-s-x};
+  --#{$prefix}shadow-s-y: #{$shadow-s-y};
+  --#{$prefix}shadow-s-blur: #{$shadow-s-blur};
+  --#{$prefix}shadow-s-spread: #{$shadow-s-spread};
+  --#{$prefix}shadow-s-color: #{$shadow-s-color};
+  --#{$prefix}shadow-s: #{$shadow-s};
+  --#{$prefix}shadow-m-x: #{$shadow-m-x};
+  --#{$prefix}shadow-m-y: #{$shadow-m-y};
+  --#{$prefix}shadow-m-blur: #{$shadow-m-blur};
+  --#{$prefix}shadow-m-spread: #{$shadow-m-spread};
+  --#{$prefix}shadow-m-color: #{$shadow-m-color};
+  --#{$prefix}shadow-m: #{$shadow-m};
+  --#{$prefix}shadow-l-x: #{$shadow-l-x};
+  --#{$prefix}shadow-l-y: #{$shadow-l-y};
+  --#{$prefix}shadow-l-blur: #{$shadow-l-blur};
+  --#{$prefix}shadow-l-spread: #{$shadow-l-spread};
+  --#{$prefix}shadow-l-color: #{$shadow-l-color};
+  --#{$prefix}shadow-l: #{$shadow-l};
+  --#{$prefix}elevation-low: #{$shadow-s};
+  --#{$prefix}elevation-medium: #{$shadow-m};
+  --#{$prefix}elevation-high: #{$shadow-l};
 
   // Text colors
   --#{$prefix}color-text-accent: #{$color-text-accent};

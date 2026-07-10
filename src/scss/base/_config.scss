@@ -161,6 +161,29 @@ $radius-brand-sm: 16px 0 16px 16px !default;
 $radius-brand-md: 32px 0 32px 32px !default;
 $radius-brand-lg: 48px 0 48px 48px !default;
 
+// Shadows — shadow-s / shadow-m / shadow-l (UI Kit Italia)
+$shadow-s-x: 0 !default;
+$shadow-s-y: 0 !default;
+$shadow-s-blur: 4px !default;
+$shadow-s-spread: 0 !default;
+$shadow-s-color: rgba(0, 47, 95, 0.15) !default;
+
+$shadow-m-x: 0 !default;
+$shadow-m-y: 0 !default;
+$shadow-m-blur: 16px !default;
+$shadow-m-spread: 0 !default;
+$shadow-m-color: $shadow-s-color !default;
+
+$shadow-l-x: 0 !default;
+$shadow-l-y: 0 !default;
+$shadow-l-blur: 48px !default;
+$shadow-l-spread: 0 !default;
+$shadow-l-color: $shadow-s-color !default;
+
+$shadow-s: $shadow-s-x $shadow-s-y $shadow-s-blur $shadow-s-spread $shadow-s-color !default;
+$shadow-m: $shadow-m-x $shadow-m-y $shadow-m-blur $shadow-m-spread $shadow-m-color !default;
+$shadow-l: $shadow-l-x $shadow-l-y $shadow-l-blur $shadow-l-spread $shadow-l-color !default;
+
 // Text
 $color-text-primary: $color-primary-blue-600 !default;
 $color-text-primary-active: $color-primary-blue-700 !default;
