@@ -32,6 +32,7 @@ ol,
 dl {
   font-size: var(--#{$prefix}body-font-size);
   line-height: var(--#{$prefix}body-leading);
+  letter-spacing: var(--#{$prefix}body-tracking);
 }
 
 caption,
@@ -126,31 +127,38 @@ small,
 h1,
 .h1 {
   font-size: var(--#{$prefix}heading-1-font-size);
+  line-height: var(--#{$prefix}heading-1-leading);
+  letter-spacing: var(--#{$prefix}heading-1-tracking);
 }
 
 h2,
 .h2 {
   font-size: var(--#{$prefix}heading-2-font-size);
+  line-height: var(--#{$prefix}heading-2-leading);
 }
 
 h3,
 .h3 {
   font-size: var(--#{$prefix}heading-3-font-size);
+  line-height: var(--#{$prefix}heading-3-leading);
 }
 
 h4,
 .h4 {
   font-size: var(--#{$prefix}heading-4-font-size);
+  line-height: var(--#{$prefix}heading-4-leading);
 }
 
 h5,
 .h5 {
   font-size: var(--#{$prefix}heading-5-font-size);
+  line-height: var(--#{$prefix}heading-5-leading);
 }
 
 h6,
 .h6 {
   font-size: var(--#{$prefix}heading-6-font-size);
+  line-height: var(--#{$prefix}heading-6-leading);
 }
 
 h1,
@@ -165,15 +173,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-top: 0;
-  margin-bottom: var(--#{$prefix}heading-spacing);
-  line-height: var(--#{$prefix}heading-leading);
-
-  // Adds top spacing when two heading tags or classes are adiacent or follow a paragraph - WARNING: increases specificity score
-  :is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) + &,
-  p + & {
-    padding-top: var(--#{$prefix}spacing-s); // Use the paragraph spacing variable when available
-  }
+  margin-bottom: var(--#{$prefix}spacing-stack-bottom);
 }
 
 h1,
@@ -194,10 +194,16 @@ h6,
   font-weight: var(--#{$prefix}heading-font-weight-weak);
 }
 
-h1,
-.h1,
-.display-1 {
-  letter-spacing: -1px; // Reduce letter spacing on first or display headings
+// Vertical rhythm — spacing stack (margins collapse between consecutive blocks)
+* + :is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .lead, .display-1, blockquote, .blockquote) {
+  margin-top: var(--#{$prefix}spacing-stack-top);
+}
+
+p,
+.lead,
+blockquote,
+.blockquote {
+  margin-bottom: var(--#{$prefix}spacing-stack-bottom);
 }
 
 //
@@ -219,11 +225,13 @@ h1,
 //
 // Misc
 
-// Display heading
+// Display heading (hero — larger than h1 at md+)
 .display-1 {
   font-size: var(--#{$prefix}display-font-size);
   font-weight: var(--#{$prefix}heading-font-weight);
-  line-height: var(--#{$prefix}heading-leading);
+  line-height: var(--#{$prefix}display-leading);
+  letter-spacing: var(--#{$prefix}display-tracking);
+  margin-bottom: var(--#{$prefix}spacing-stack-bottom);
 }
 
 // Lead
@@ -299,7 +307,8 @@ blockquote,
   margin-top: 0;
   margin-bottom: var(--#{$prefix}spacing-s);
   color: var(--#{$prefix}color-text-secondary);
-  font-size: var(--#{$prefix}label-font-size);
+  font-size: var(--#{$prefix}label-font-size-s);
+  line-height: var(--#{$prefix}label-leading);
   &::before {
     content: '\2014\00A0'; // em dash, nbsp
   }

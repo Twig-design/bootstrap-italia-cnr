@@ -13,23 +13,27 @@ description: Guida completa al caricamento e alla configurazione dei font in Boo
 
 ## Introduzione
 
-Bootstrap Italia include tre famiglie di caratteri tipografici pensate per garantire leggibilità e coerenza visiva nei progetti della Pubblica Amministrazione:
+Bootstrap Italia include tre famiglie di caratteri tipografici pensate per garantire leggibilità e coerenza visiva:
 
-- **Titillium** (Web o Sans Pro): font principale senza grazie (sans-serif) per interfacce e testi 
+- **Source Sans 3**: font principale sans-serif per interfacce e testi (UI Kit CNR)
 - **Lora**: font con grazie (serif) per testi lunghi e contenuti editoriali
 - **Roboto Mono**: font monospace per codice, numeri e dati tabulari
 
-## Titillium: il font principale
+## Source Sans 3: il font principale
 
-Bootstrap Italia supporta dalla versione 3.0.0 due versioni alternative del carattere sans-serif Titillium con licenza aperta:
+Il font principale del kit CNR è **Source Sans 3** (in Figma indicato come Source Sans Pro), self-hosted in `src/fonts/Source_Sans_3/`. È disponibile nei pesi **400 Regular**, **600 SemiBold**, **700 Bold** con le rispettive varianti italic.
+
+Lo stack tipografico include **Titillium Web** e **Titillium Sans Pro** come fallback (non caricati di default).
+
+{% capture callout %}
+Usa il selettore "Font principale" nella barra di sinistra per confrontare Source Sans 3 con le varianti legacy Titillium sulla documentazione.
+{% endcapture %}{% include callout.html content=callout type="info" %}
+
+## Titillium (fallback legacy)
 
 - **Titillium Web** (`'web'`). Versione originale e default di Bootstrap Italia, è il carattere di riferimento del Design system .italia per il digitale della Pubblica Amministrazione italiana. Disponibile nei pesi 300, 400, 600, 700 con le rispettive varianti italic ([storia del font Titillium e crediti](https://nta.accademiadiurbino.it/titillium/)).
 
-- **Titillium Sans Pro** (`'sans-pro'`). Evoluzione del Titillium Web con supporto linguistico esteso e scrittura matematica. Particolare cura è riconoscibile nel miglioramento di spaziature, kerning, forme dei caratteri e metriche verticali. Disponibile in Bootstrap Italia nei formati WOFF2 e WOFF con gli stessi pesi e varianti del Titillium Web, sono disponibili anche i pesi Black e Thin e altri formati scaricabili dal repository ufficiale ([repository Titillium Sans Pro e crediti](https://github.com/chialab/titillium_pro/tree/main)).
-
-{% capture callout %}
-Usa il selettore "Font principale" nella barra di sinistra per esplorare la resa delle due differenti versioni di Titillium su questa documentazione. 
-{% endcapture %}{% include callout.html content=callout type="info" %}
+- **Titillium Sans Pro** (`'sans-pro'`). Evoluzione del Titillium Web con supporto linguistico esteso e scrittura matematica.
 
 Ti segnaliamo inoltre l'esistenza del font **Titillio**: versione alternativa del Titillium sviluppata partendo dal Titillium Sans Pro nell'ambito del progetto **App IO**. Questa versione è stata curata con particolare attenzione alle applicazioni per schermi piccoli, laddove ci sia necessità di distinguere numerose gerarchie visive. Questo font non è direttamente disponibile in Bootstrap Italia ma è possibile scaricarlo dal repository ufficiale ([repository Titillio e crediti](https://github.com/pagopa/titillio)).
 
@@ -37,7 +41,7 @@ Ulteriori informazioni nella scheda [Tipografia](/docs/organizzare-i-contenuti/t
 
 ## Font complementari: Lora e Roboto Mono
 
-Oltre al Titillium, Bootstrap Italia include due font complementari:
+Oltre a Source Sans 3, Bootstrap Italia include due font complementari:
 
 - **Lora**: font con grazie (serif), ideale per testi lunghi, articoli e contenuti editoriali. Disponibile nei pesi 400 e 700 con varianti italic.
 
@@ -59,8 +63,8 @@ loadFonts(percorso, opzioni)
 **Parametri:**
 - `percorso` (string): percorso della cartella contenente i font
 - `opzioni` (object, opzionale): 
-  - `titillium`: `'web'` (default) o `'sans-pro'`
-  - `fonts`: array di famiglie da caricare (default: `['titillium', 'lora', 'roboto-mono']`)
+  - `titillium`: `'web'` o `'sans-pro'` (solo se `'titillium'` è in `fonts`)
+  - `fonts`: array di famiglie da caricare (default: `['source-sans-3', 'lora', 'roboto-mono']`)
 
 ### Esempi con moduli ES
 
@@ -68,20 +72,14 @@ Se usi un bundler (come mostrato nella [pagina Introduzione]({{ site.baseurl }}/
 ```js
 import { loadFonts } from 'bootstrap-italia'
 
-// Caricamento standard (Titillium Web + Lora + Roboto Mono)
+// Caricamento standard (Source Sans 3 + Lora + Roboto Mono)
 loadFonts('/fonts');
 
-// Titillium Sans Pro al posto di Titillium Web
-loadFonts('/fonts', { titillium: 'sans-pro' });
+// Solo Source Sans 3
+loadFonts('/fonts', { fonts: ['source-sans-3'] });
 
-// Solo Titillium Web (nessun font serif o monospace)
-loadFonts('/fonts', { fonts: ['titillium'] });
-
-// Titillium Sans Pro + Lora (senza Roboto Mono)
-loadFonts('/fonts', { 
-  titillium: 'sans-pro', 
-  fonts: ['titillium', 'lora'] 
-});
+// Titillium Sans Pro (legacy) al posto di Source Sans 3
+loadFonts('/fonts', { titillium: 'sans-pro', fonts: ['titillium', 'lora', 'roboto-mono'] });
 ```
 
 ### Utilizzo con bundle

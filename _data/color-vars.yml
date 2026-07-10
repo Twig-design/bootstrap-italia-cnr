@@ -1,673 +1,673 @@
 text:
 - var: --bsi-color-text-accent
   swatch: bg
-  usage: Testo di accento su sfondi a contrasto
+  usage: "Testo di accento su sfondi a contrasto"
 - var: --bsi-color-text-inverse
   swatch: bg-border
-  usage: Testo su sfondi a contrasto (primary, emphasis)
+  usage: "Testo su sfondi a contrasto (primary, emphasis)"
 - var: --bsi-color-text-danger-active
   swatch: bg
-  usage: Testo di pericolo per lo stato active
+  usage: "Testo di pericolo per lo stato active"
 - var: --bsi-color-text-danger-hover
   swatch: bg
-  usage: Testo di pericolo per lo stato hover
+  usage: "Testo di pericolo per lo stato hover"
 - var: --bsi-color-text-danger
   swatch: bg
-  usage: Testo per errori o pericoli
+  usage: "Testo per errori o pericoli"
 - var: --bsi-color-text-warning-active
   swatch: bg
-  usage: Testo di allerta per lo stato active
+  usage: "Testo di allerta per lo stato active"
 - var: --bsi-color-text-warning-hover
   swatch: bg
-  usage: Testo di allerta per lo stato hover
+  usage: "Testo di allerta per lo stato hover"
 - var: --bsi-color-text-warning
   swatch: bg
-  usage: Testo per stati di allerta
+  usage: "Testo per stati di allerta"
 - var: --bsi-color-text-success-active
   swatch: bg
-  usage: Testo di successo per lo stato active
+  usage: "Testo di successo per lo stato active"
 - var: --bsi-color-text-success-hover
   swatch: bg
-  usage: Testo di successo per lo stato hover
+  usage: "Testo di successo per lo stato hover"
 - var: --bsi-color-text-success
   swatch: bg
-  usage: Testo per stati di successo
+  usage: "Testo per stati di successo"
 - var: --bsi-color-text-info-active
   swatch: bg
-  usage: Testo di informazione per lo stato active
+  usage: "Testo di informazione per lo stato active"
 - var: --bsi-color-text-info-hover
   swatch: bg
-  usage: Testo di informazione per lo stato hover
+  usage: "Testo di informazione per lo stato hover"
 - var: --bsi-color-text-info
   swatch: bg
-  usage: Testo per stati di informazione
+  usage: "Testo per stati di informazione"
 - var: --bsi-color-text-disabled
   swatch: bg
-  usage: Testo su elementi disabilitati
+  usage: "Testo su elementi disabilitati"
 - var: --bsi-color-text-muted
   swatch: bg
-  usage: Testo di supporto, didascalie brevi
+  usage: "Testo di supporto, didascalie brevi"
 - var: --bsi-color-text-secondary
   swatch: bg
-  usage: Testo alternativo, contenuti di dettaglio
+  usage: "Testo alternativo, contenuti di dettaglio"
 - var: --bsi-color-text-primary
   swatch: bg
-  usage: Testo con funzione di link o azione primaria
+  usage: "Testo con funzione di link o azione primaria"
 - var: --bsi-color-text-base
   swatch: bg
-  usage: Testo principale della pagina
+  usage: "Testo principale della pagina"
 
 link:
 - var: --bsi-color-link
   swatch: bg
-  usage: Colore base dei link
+  usage: "Colore base dei link"
 - var: --bsi-color-link-hover
   swatch: bg
-  usage: Link per lo stato hover
+  usage: "Link per lo stato hover"
 - var: --bsi-color-link-active
   swatch: bg
-  usage: Link per lo stato active
+  usage: "Link per lo stato active"
 - var: --bsi-color-link-secondary
   swatch: bg
-  usage: Link secondari (richiede sottolineatura)
+  usage: "Link secondari (richiede sottolineatura)"
 - var: --bsi-color-link-secondary-hover
   swatch: bg
-  usage: Link secondario per lo stato hover
+  usage: "Link secondario per lo stato hover"
 - var: --bsi-color-link-secondary-active
   swatch: bg
-  usage: Link secondario per lo stato active
+  usage: "Link secondario per lo stato active"
 - var: --bsi-color-link-inverse
   swatch: bg-border
-  usage: Link su sfondi a contrasto
+  usage: "Link su sfondi a contrasto"
 - var: --bsi-color-link-disabled
   swatch: bg
-  usage: Link disabilitato
+  usage: "Link disabilitato"
 - var: --bsi-color-link-accent
   swatch: bg
-  usage: Link con colore di accento
+  usage: "Link con colore di accento"
 - var: --bsi-color-link-accent-hover
   swatch: bg
-  usage: Link di accento per lo stato hover
+  usage: "Link di accento per lo stato hover"
 
 border:
 - var: --bsi-color-border-danger-active
   swatch: border
-  usage: Bordo di pericolo per lo stato active
+  usage: "Bordo di pericolo per lo stato active"
 - var: --bsi-color-border-danger-hover
   swatch: border
-  usage: Bordo di pericolo per lo stato hover
+  usage: "Bordo di pericolo per lo stato hover"
 - var: --bsi-color-border-danger
   swatch: border
-  usage: Bordo di pericolo/errore
+  usage: "Bordo di pericolo/errore"
 - var: --bsi-color-border-warning-active
   swatch: border
-  usage: Bordo di allerta per lo stato active
+  usage: "Bordo di allerta per lo stato active"
 - var: --bsi-color-border-warning-hover
   swatch: border
-  usage: Bordo di allerta per lo stato hover
+  usage: "Bordo di allerta per lo stato hover"
 - var: --bsi-color-border-warning
   swatch: border
-  usage: Bordo di allerta
+  usage: "Bordo di allerta"
 - var: --bsi-color-border-success-active
   swatch: border
-  usage: Bordo di successo per lo stato active
+  usage: "Bordo di successo per lo stato active"
 - var: --bsi-color-border-success-hover
   swatch: border
-  usage: Bordo di successo per lo stato hover
+  usage: "Bordo di successo per lo stato hover"
 - var: --bsi-color-border-success
   swatch: border
-  usage: Bordo di successo
+  usage: "Bordo di successo"
 - var: --bsi-color-border-info-active
   swatch: border
-  usage: Bordo di informazione per lo stato active
+  usage: "Bordo di informazione per lo stato active"
 - var: --bsi-color-border-info-hover
   swatch: border
-  usage: Bordo di informazione per lo stato hover
+  usage: "Bordo di informazione per lo stato hover"
 - var: --bsi-color-border-info
   swatch: border
-  usage: Bordo di informazione
+  usage: "Bordo di informazione"
 - var: --bsi-color-border-subtle
   swatch: border
-  usage: Bordo separatore (sezioni e componenti)
+  usage: "Bordo separatore (sezioni e componenti)"
 - var: --bsi-color-border-disabled
   swatch: border
-  usage: Bordo per elementi disabilitati
+  usage: "Bordo per elementi disabilitati"
 - var: --bsi-color-border-inverse
   swatch: inverse-border
-  usage: Bordo su sfondi a contrasto
+  usage: "Bordo su sfondi a contrasto"
 - var: --bsi-color-border-secondary-active
   swatch: border
-  usage: Bordo secondario per lo stato active
+  usage: "Bordo secondario per lo stato active"
 - var: --bsi-color-border-secondary-hover
   swatch: border
-  usage: Bordo secondario per lo stato hover
+  usage: "Bordo secondario per lo stato hover"
 - var: --bsi-color-border-secondary
   swatch: border
-  usage: Bordo secondario
+  usage: "Bordo secondario"
 - var: --bsi-color-border-primary-active
   swatch: border
-  usage: Bordo primario per lo stato active
+  usage: "Bordo primario per lo stato active"
 - var: --bsi-color-border-primary-hover
   swatch: border
-  usage: Bordo primario per lo stato hover
+  usage: "Bordo primario per lo stato hover"
 - var: --bsi-color-border-primary
   swatch: border
-  usage: Bordo primario (elementi interattivi cliccabili)
+  usage: "Bordo primario (elementi interattivi cliccabili)"
 
 background:
 - var: --bsi-color-background-primary
   swatch: bg
-  usage: Sfondo primario (pulsanti, link, elementi di identità)
+  usage: "Sfondo primario (pulsanti, link, elementi di identità)"
 - var: --bsi-color-background-primary-lighter
   swatch: bg
-  usage: Sfondo primario molto chiaro (definisce sezioni di pagina)
+  usage: "Sfondo primario molto chiaro (definisce sezioni di pagina)"
 - var: --bsi-color-background-primary-light
   swatch: bg
-  usage: Sfondo primario chiaro (alternativo per elementi interattivi)
+  usage: "Sfondo primario chiaro (alternativo per elementi interattivi)"
 - var: --bsi-color-background-primary-deep
   swatch: bg
-  usage: Sfondo primario scuro (sezioni di pagina)
+  usage: "Sfondo primario scuro (sezioni di pagina)"
 - var: --bsi-color-background-primary-muted
   swatch: bg
-  usage: Sfondo primario attenuato (sezioni di pagina)
+  usage: "Sfondo primario attenuato (sezioni di pagina)"
 - var: --bsi-color-background-primary-active
   swatch: bg
-  usage: Sfondo primario per lo stato active/premuto
+  usage: "Sfondo primario per lo stato active/premuto"
 - var: --bsi-color-background-primary-hover
   swatch: bg
-  usage: Sfondo primario per lo stato hover
+  usage: "Sfondo primario per lo stato hover"
 - var: --bsi-color-background-danger-active
   swatch: bg
-  usage: Sfondo di pericolo per lo stato active
+  usage: "Sfondo di pericolo per lo stato active"
 - var: --bsi-color-background-danger-hover
   swatch: bg
-  usage: Sfondo di pericolo per lo stato hover
+  usage: "Sfondo di pericolo per lo stato hover"
 - var: --bsi-color-background-danger-light
   swatch: bg
-  usage: Sfondo di pericolo chiaro (contenuti medio-lunghi)
+  usage: "Sfondo di pericolo chiaro (contenuti medio-lunghi)"
 - var: --bsi-color-background-danger
   swatch: bg
-  usage: Sfondo per errori o pericoli
+  usage: "Sfondo per errori o pericoli"
 - var: --bsi-color-background-warning-active
   swatch: bg
-  usage: Sfondo di allerta per lo stato active
+  usage: "Sfondo di allerta per lo stato active"
 - var: --bsi-color-background-warning-hover
   swatch: bg
-  usage: Sfondo di allerta per lo stato hover
+  usage: "Sfondo di allerta per lo stato hover"
 - var: --bsi-color-background-warning-light
   swatch: bg
-  usage: Sfondo di allerta chiaro (contenuti medio-lunghi)
+  usage: "Sfondo di allerta chiaro (contenuti medio-lunghi)"
 - var: --bsi-color-background-warning
   swatch: bg
-  usage: Sfondo per stati di allerta
+  usage: "Sfondo per stati di allerta"
 - var: --bsi-color-background-success-active
   swatch: bg
-  usage: Sfondo di successo per lo stato active
+  usage: "Sfondo di successo per lo stato active"
 - var: --bsi-color-background-success-hover
   swatch: bg
-  usage: Sfondo di successo per lo stato hover
+  usage: "Sfondo di successo per lo stato hover"
 - var: --bsi-color-background-success-light
   swatch: bg
-  usage: Sfondo di successo chiaro (contenuti medio-lunghi)
+  usage: "Sfondo di successo chiaro (contenuti medio-lunghi)"
 - var: --bsi-color-background-success
   swatch: bg
-  usage: Sfondo per stati di successo
+  usage: "Sfondo per stati di successo"
 - var: --bsi-color-background-info-active
   swatch: bg
-  usage: Sfondo di informazione per lo stato active
+  usage: "Sfondo di informazione per lo stato active"
 - var: --bsi-color-background-info-hover
   swatch: bg
-  usage: Sfondo di informazione per lo stato hover
+  usage: "Sfondo di informazione per lo stato hover"
 - var: --bsi-color-background-info-light
   swatch: bg
-  usage: Sfondo di informazione chiaro (contenuti medio-lunghi)
+  usage: "Sfondo di informazione chiaro (contenuti medio-lunghi)"
 - var: --bsi-color-background-info
   swatch: bg
-  usage: Sfondo per stati di informazione
+  usage: "Sfondo per stati di informazione"
 - var: --bsi-color-background-emphasis
   swatch: bg
-  usage: Sfondo di enfasi (sezioni in evidenza)
+  usage: "Sfondo di enfasi (sezioni in evidenza)"
 - var: --bsi-color-background-subtle
   swatch: bg
-  usage: Sfondo chiaro (separatori, sezioni)
+  usage: "Sfondo chiaro (separatori, sezioni)"
 - var: --bsi-color-background-disabled
   swatch: bg
-  usage: Sfondo per elementi disabilitati
+  usage: "Sfondo per elementi disabilitati"
 - var: --bsi-color-background-inverse
   swatch: bg-border
-  usage: Sfondo invertito (bianco su sfondi scuri)
+  usage: "Sfondo invertito (bianco su sfondi scuri)"
 - var: --bsi-color-background-inverse-hover
   swatch: bg
-  usage: Sfondo invertito per lo stato hover
+  usage: "Sfondo invertito per lo stato hover"
 - var: --bsi-color-background-muted
   swatch: bg
-  usage: Sfondo molto chiaro (sezioni, paragrafi)
+  usage: "Sfondo molto chiaro (sezioni, paragrafi)"
 - var: --bsi-color-background-accent-hover
   swatch: bg
-  usage: Sfondo di accento per lo stato hover
+  usage: "Sfondo di accento per lo stato hover"
 - var: --bsi-color-background-accent
   swatch: bg
-  usage: Sfondo con colore di accento
+  usage: "Sfondo con colore di accento"
 - var: --bsi-color-background-secondary-lighter
   swatch: bg
-  usage: Sfondo secondario molto chiaro
+  usage: "Sfondo secondario molto chiaro"
 - var: --bsi-color-background-secondary-light
   swatch: bg
-  usage: Sfondo secondario chiaro
+  usage: "Sfondo secondario chiaro"
 - var: --bsi-color-background-secondary-active
   swatch: bg
-  usage: Sfondo secondario per lo stato active
+  usage: "Sfondo secondario per lo stato active"
 - var: --bsi-color-background-secondary-hover
   swatch: bg
-  usage: Sfondo secondario per lo stato hover
+  usage: "Sfondo secondario per lo stato hover"
 - var: --bsi-color-background-secondary
   swatch: bg
-  usage: Sfondo secondario (elementi interattivi alternativi)
+  usage: "Sfondo secondario (elementi interattivi alternativi)"
 - var: --bsi-color-background-secondary-deep
   swatch: bg
-  usage: Sfondo secondario molto scuro
+  usage: "Sfondo secondario molto scuro"
 
 status:
 - var: --bsi-color-status-danger
   swatch: bg
-  usage: Colore indicatore di pericolo/errore
+  usage: "Colore indicatore di pericolo/errore"
 - var: --bsi-color-status-danger-hover
   swatch: bg
-  usage: Indicatore pericolo per lo stato hover
+  usage: "Indicatore pericolo per lo stato hover"
 - var: --bsi-color-status-danger-active
   swatch: bg
-  usage: Indicatore pericolo per lo stato active
+  usage: "Indicatore pericolo per lo stato active"
 - var: --bsi-color-status-success
   swatch: bg
-  usage: Colore indicatore di successo
+  usage: "Colore indicatore di successo"
 - var: --bsi-color-status-success-hover
   swatch: bg
-  usage: Indicatore successo per lo stato hover
+  usage: "Indicatore successo per lo stato hover"
 - var: --bsi-color-status-success-active
   swatch: bg
-  usage: Indicatore successo per lo stato active
+  usage: "Indicatore successo per lo stato active"
 - var: --bsi-color-status-warning
   swatch: bg
-  usage: Colore indicatore di allerta
+  usage: "Colore indicatore di allerta"
 - var: --bsi-color-status-warning-hover
   swatch: bg
-  usage: Indicatore allerta per lo stato hover
+  usage: "Indicatore allerta per lo stato hover"
 - var: --bsi-color-status-warning-active
   swatch: bg
-  usage: Indicatore allerta per lo stato active
+  usage: "Indicatore allerta per lo stato active"
 - var: --bsi-color-status-info
   swatch: bg
-  usage: Colore indicatore di informazione
+  usage: "Colore indicatore di informazione"
 - var: --bsi-color-status-info-hover
   swatch: bg
-  usage: Indicatore informazione per lo stato hover
+  usage: "Indicatore informazione per lo stato hover"
 - var: --bsi-color-status-info-active
   swatch: bg
-  usage: Indicatore informazione per lo stato active
+  usage: "Indicatore informazione per lo stato active"
 
 department-scale:
 - var: --bsi-color-fisica-200
   swatch: bg
-  usage: Scienze fisiche e tecnologie della materia: tonalità chiara (sfondi soft, badge)
+  usage: "Scienze fisiche e tecnologie della materia: tonalità chiara (sfondi soft, badge)"
 - var: --bsi-color-fisica-500
   swatch: bg
-  usage: Scienze fisiche e tecnologie della materia: colore principale del dipartimento
+  usage: "Scienze fisiche e tecnologie della materia: colore principale del dipartimento"
 - var: --bsi-color-fisica-600
   swatch: bg
-  usage: Scienze fisiche e tecnologie della materia: hover, stati attivi e testo su sfondi chiari
+  usage: "Scienze fisiche e tecnologie della materia: hover, stati attivi e testo su sfondi chiari"
 - var: --bsi-color-fisica-800
   swatch: bg
-  usage: Scienze fisiche e tecnologie della materia: testo, icone e stati pressed
+  usage: "Scienze fisiche e tecnologie della materia: testo, icone e stati pressed"
 - var: --bsi-color-ambiente-200
   swatch: bg
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: tonalità chiara (sfondi soft, badge)
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: tonalità chiara (sfondi soft, badge)"
 - var: --bsi-color-ambiente-500
   swatch: bg
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: colore principale del dipartimento
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: colore principale del dipartimento"
 - var: --bsi-color-ambiente-600
   swatch: bg
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: hover, stati attivi e testo su sfondi chiari
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: hover, stati attivi e testo su sfondi chiari"
 - var: --bsi-color-ambiente-800
   swatch: bg
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo, icone e stati pressed
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: testo, icone e stati pressed"
 - var: --bsi-color-biomedica-200
   swatch: bg
-  usage: Scienze biomediche: tonalità chiara (sfondi soft, badge)
+  usage: "Scienze biomediche: tonalità chiara (sfondi soft, badge)"
 - var: --bsi-color-biomedica-500
   swatch: bg
-  usage: Scienze biomediche: colore principale del dipartimento
+  usage: "Scienze biomediche: colore principale del dipartimento"
 - var: --bsi-color-biomedica-600
   swatch: bg
-  usage: Scienze biomediche: hover, stati attivi e testo su sfondi chiari
+  usage: "Scienze biomediche: hover, stati attivi e testo su sfondi chiari"
 - var: --bsi-color-biomedica-800
   swatch: bg
-  usage: Scienze biomediche: testo, icone e stati pressed
+  usage: "Scienze biomediche: testo, icone e stati pressed"
 - var: --bsi-color-ingegneria-200
   swatch: bg
-  usage: Ingegneria: tonalità chiara (sfondi soft, badge)
+  usage: "Ingegneria: tonalità chiara (sfondi soft, badge)"
 - var: --bsi-color-ingegneria-500
   swatch: bg
-  usage: Ingegneria: colore principale del dipartimento
+  usage: "Ingegneria: colore principale del dipartimento"
 - var: --bsi-color-ingegneria-600
   swatch: bg
-  usage: Ingegneria: hover, stati attivi e testo su sfondi chiari
+  usage: "Ingegneria: hover, stati attivi e testo su sfondi chiari"
 - var: --bsi-color-ingegneria-800
   swatch: bg
-  usage: Ingegneria: testo, icone e stati pressed
+  usage: "Ingegneria: testo, icone e stati pressed"
 - var: --bsi-color-scienzeumane-200
   swatch: bg
-  usage: Scienze umane: tonalità chiara (sfondi soft, badge)
+  usage: "Scienze umane: tonalità chiara (sfondi soft, badge)"
 - var: --bsi-color-scienzeumane-500
   swatch: bg
-  usage: Scienze umane: colore principale del dipartimento
+  usage: "Scienze umane: colore principale del dipartimento"
 - var: --bsi-color-scienzeumane-600
   swatch: bg
-  usage: Scienze umane: hover, stati attivi e testo su sfondi chiari
+  usage: "Scienze umane: hover, stati attivi e testo su sfondi chiari"
 - var: --bsi-color-scienzeumane-800
   swatch: bg
-  usage: Scienze umane: testo, icone e stati pressed
+  usage: "Scienze umane: testo, icone e stati pressed"
 - var: --bsi-color-chimica-200
   swatch: bg
-  usage: Scienze chimiche: tonalità chiara (sfondi soft, badge)
+  usage: "Scienze chimiche: tonalità chiara (sfondi soft, badge)"
 - var: --bsi-color-chimica-500
   swatch: bg
-  usage: Scienze chimiche: colore principale del dipartimento
+  usage: "Scienze chimiche: colore principale del dipartimento"
 - var: --bsi-color-chimica-600
   swatch: bg
-  usage: Scienze chimiche: hover, stati attivi e testo su sfondi chiari
+  usage: "Scienze chimiche: hover, stati attivi e testo su sfondi chiari"
 - var: --bsi-color-chimica-800
   swatch: bg
-  usage: Scienze chimiche: testo, icone e stati pressed
+  usage: "Scienze chimiche: testo, icone e stati pressed"
 - var: --bsi-color-agroalimentari-200
   swatch: bg
-  usage: Scienze bio-agroalimentari: tonalità chiara (sfondi soft, badge)
+  usage: "Scienze bio-agroalimentari: tonalità chiara (sfondi soft, badge)"
 - var: --bsi-color-agroalimentari-500
   swatch: bg
-  usage: Scienze bio-agroalimentari: colore principale del dipartimento
+  usage: "Scienze bio-agroalimentari: colore principale del dipartimento"
 - var: --bsi-color-agroalimentari-600
   swatch: bg
-  usage: Scienze bio-agroalimentari: hover, stati attivi e testo su sfondi chiari
+  usage: "Scienze bio-agroalimentari: hover, stati attivi e testo su sfondi chiari"
 - var: --bsi-color-agroalimentari-800
   swatch: bg
-  usage: Scienze bio-agroalimentari: testo, icone e stati pressed
+  usage: "Scienze bio-agroalimentari: testo, icone e stati pressed"
 
 department-background:
 - var: --bsi-color-background-fisica
   swatch: bg
-  usage: Scienze fisiche e tecnologie della materia: sfondo principale
+  usage: "Scienze fisiche e tecnologie della materia: sfondo principale"
 - var: --bsi-color-background-fisica-light
   swatch: bg
-  usage: Scienze fisiche e tecnologie della materia: sfondo chiaro
+  usage: "Scienze fisiche e tecnologie della materia: sfondo chiaro"
 - var: --bsi-color-background-fisica-hover
   swatch: bg
-  usage: Scienze fisiche e tecnologie della materia: sfondo per lo stato hover
+  usage: "Scienze fisiche e tecnologie della materia: sfondo per lo stato hover"
 - var: --bsi-color-background-fisica-active
   swatch: bg
-  usage: Scienze fisiche e tecnologie della materia: sfondo per lo stato active/premuto
+  usage: "Scienze fisiche e tecnologie della materia: sfondo per lo stato active/premuto"
 - var: --bsi-color-background-ambiente
   swatch: bg
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: sfondo principale
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: sfondo principale"
 - var: --bsi-color-background-ambiente-light
   swatch: bg
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: sfondo chiaro
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: sfondo chiaro"
 - var: --bsi-color-background-ambiente-hover
   swatch: bg
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: sfondo per lo stato hover
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: sfondo per lo stato hover"
 - var: --bsi-color-background-ambiente-active
   swatch: bg
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: sfondo per lo stato active/premuto
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: sfondo per lo stato active/premuto"
 - var: --bsi-color-background-biomedica
   swatch: bg
-  usage: Scienze biomediche: sfondo principale
+  usage: "Scienze biomediche: sfondo principale"
 - var: --bsi-color-background-biomedica-light
   swatch: bg
-  usage: Scienze biomediche: sfondo chiaro
+  usage: "Scienze biomediche: sfondo chiaro"
 - var: --bsi-color-background-biomedica-hover
   swatch: bg
-  usage: Scienze biomediche: sfondo per lo stato hover
+  usage: "Scienze biomediche: sfondo per lo stato hover"
 - var: --bsi-color-background-biomedica-active
   swatch: bg
-  usage: Scienze biomediche: sfondo per lo stato active/premuto
+  usage: "Scienze biomediche: sfondo per lo stato active/premuto"
 - var: --bsi-color-background-ingegneria
   swatch: bg
-  usage: Ingegneria: sfondo principale
+  usage: "Ingegneria: sfondo principale"
 - var: --bsi-color-background-ingegneria-light
   swatch: bg
-  usage: Ingegneria: sfondo chiaro
+  usage: "Ingegneria: sfondo chiaro"
 - var: --bsi-color-background-ingegneria-hover
   swatch: bg
-  usage: Ingegneria: sfondo per lo stato hover
+  usage: "Ingegneria: sfondo per lo stato hover"
 - var: --bsi-color-background-ingegneria-active
   swatch: bg
-  usage: Ingegneria: sfondo per lo stato active/premuto
+  usage: "Ingegneria: sfondo per lo stato active/premuto"
 - var: --bsi-color-background-scienzeumane
   swatch: bg
-  usage: Scienze umane: sfondo principale
+  usage: "Scienze umane: sfondo principale"
 - var: --bsi-color-background-scienzeumane-light
   swatch: bg
-  usage: Scienze umane: sfondo chiaro
+  usage: "Scienze umane: sfondo chiaro"
 - var: --bsi-color-background-scienzeumane-hover
   swatch: bg
-  usage: Scienze umane: sfondo per lo stato hover
+  usage: "Scienze umane: sfondo per lo stato hover"
 - var: --bsi-color-background-scienzeumane-active
   swatch: bg
-  usage: Scienze umane: sfondo per lo stato active/premuto
+  usage: "Scienze umane: sfondo per lo stato active/premuto"
 - var: --bsi-color-background-chimica
   swatch: bg
-  usage: Scienze chimiche: sfondo principale
+  usage: "Scienze chimiche: sfondo principale"
 - var: --bsi-color-background-chimica-light
   swatch: bg
-  usage: Scienze chimiche: sfondo chiaro
+  usage: "Scienze chimiche: sfondo chiaro"
 - var: --bsi-color-background-chimica-hover
   swatch: bg
-  usage: Scienze chimiche: sfondo per lo stato hover
+  usage: "Scienze chimiche: sfondo per lo stato hover"
 - var: --bsi-color-background-chimica-active
   swatch: bg
-  usage: Scienze chimiche: sfondo per lo stato active/premuto
+  usage: "Scienze chimiche: sfondo per lo stato active/premuto"
 - var: --bsi-color-background-agroalimentari
   swatch: bg
-  usage: Scienze bio-agroalimentari: sfondo principale
+  usage: "Scienze bio-agroalimentari: sfondo principale"
 - var: --bsi-color-background-agroalimentari-light
   swatch: bg
-  usage: Scienze bio-agroalimentari: sfondo chiaro
+  usage: "Scienze bio-agroalimentari: sfondo chiaro"
 - var: --bsi-color-background-agroalimentari-hover
   swatch: bg
-  usage: Scienze bio-agroalimentari: sfondo per lo stato hover
+  usage: "Scienze bio-agroalimentari: sfondo per lo stato hover"
 - var: --bsi-color-background-agroalimentari-active
   swatch: bg
-  usage: Scienze bio-agroalimentari: sfondo per lo stato active/premuto
+  usage: "Scienze bio-agroalimentari: sfondo per lo stato active/premuto"
 
 department-text:
 - var: --bsi-color-text-fisica
   swatch: bg
-  usage: Scienze fisiche e tecnologie della materia: testo su sfondo chiaro
+  usage: "Scienze fisiche e tecnologie della materia: testo su sfondo chiaro"
 - var: --bsi-color-text-fisica-hover
   swatch: bg
-  usage: Scienze fisiche e tecnologie della materia: testo per lo stato hover
+  usage: "Scienze fisiche e tecnologie della materia: testo per lo stato hover"
 - var: --bsi-color-text-fisica-active
   swatch: bg
-  usage: Scienze fisiche e tecnologie della materia: testo per lo stato active/premuto
+  usage: "Scienze fisiche e tecnologie della materia: testo per lo stato active/premuto"
 - var: --bsi-color-text-ambiente
   swatch: bg
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo su sfondo chiaro
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: testo su sfondo chiaro"
 - var: --bsi-color-text-ambiente-hover
   swatch: bg
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato hover
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato hover"
 - var: --bsi-color-text-ambiente-active
   swatch: bg
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato active/premuto
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato active/premuto"
 - var: --bsi-color-text-biomedica
   swatch: bg
-  usage: Scienze biomediche: testo su sfondo chiaro
+  usage: "Scienze biomediche: testo su sfondo chiaro"
 - var: --bsi-color-text-biomedica-hover
   swatch: bg
-  usage: Scienze biomediche: testo per lo stato hover
+  usage: "Scienze biomediche: testo per lo stato hover"
 - var: --bsi-color-text-biomedica-active
   swatch: bg
-  usage: Scienze biomediche: testo per lo stato active/premuto
+  usage: "Scienze biomediche: testo per lo stato active/premuto"
 - var: --bsi-color-text-ingegneria
   swatch: bg
-  usage: Ingegneria: testo su sfondo chiaro
+  usage: "Ingegneria: testo su sfondo chiaro"
 - var: --bsi-color-text-ingegneria-hover
   swatch: bg
-  usage: Ingegneria: testo per lo stato hover
+  usage: "Ingegneria: testo per lo stato hover"
 - var: --bsi-color-text-ingegneria-active
   swatch: bg
-  usage: Ingegneria: testo per lo stato active/premuto
+  usage: "Ingegneria: testo per lo stato active/premuto"
 - var: --bsi-color-text-scienzeumane
   swatch: bg
-  usage: Scienze umane: testo su sfondo chiaro
+  usage: "Scienze umane: testo su sfondo chiaro"
 - var: --bsi-color-text-scienzeumane-hover
   swatch: bg
-  usage: Scienze umane: testo per lo stato hover
+  usage: "Scienze umane: testo per lo stato hover"
 - var: --bsi-color-text-scienzeumane-active
   swatch: bg
-  usage: Scienze umane: testo per lo stato active/premuto
+  usage: "Scienze umane: testo per lo stato active/premuto"
 - var: --bsi-color-text-chimica
   swatch: bg
-  usage: Scienze chimiche: testo su sfondo chiaro
+  usage: "Scienze chimiche: testo su sfondo chiaro"
 - var: --bsi-color-text-chimica-hover
   swatch: bg
-  usage: Scienze chimiche: testo per lo stato hover
+  usage: "Scienze chimiche: testo per lo stato hover"
 - var: --bsi-color-text-chimica-active
   swatch: bg
-  usage: Scienze chimiche: testo per lo stato active/premuto
+  usage: "Scienze chimiche: testo per lo stato active/premuto"
 - var: --bsi-color-text-agroalimentari
   swatch: bg
-  usage: Scienze bio-agroalimentari: testo su sfondo chiaro
+  usage: "Scienze bio-agroalimentari: testo su sfondo chiaro"
 - var: --bsi-color-text-agroalimentari-hover
   swatch: bg
-  usage: Scienze bio-agroalimentari: testo per lo stato hover
+  usage: "Scienze bio-agroalimentari: testo per lo stato hover"
 - var: --bsi-color-text-agroalimentari-active
   swatch: bg
-  usage: Scienze bio-agroalimentari: testo per lo stato active/premuto
+  usage: "Scienze bio-agroalimentari: testo per lo stato active/premuto"
 
 department-border:
 - var: --bsi-color-border-fisica
   swatch: border
-  usage: Scienze fisiche e tecnologie della materia: testo su sfondo chiaro
+  usage: "Scienze fisiche e tecnologie della materia: testo su sfondo chiaro"
 - var: --bsi-color-border-fisica-hover
   swatch: border
-  usage: Scienze fisiche e tecnologie della materia: testo per lo stato hover
+  usage: "Scienze fisiche e tecnologie della materia: testo per lo stato hover"
 - var: --bsi-color-border-fisica-active
   swatch: border
-  usage: Scienze fisiche e tecnologie della materia: testo per lo stato active/premuto
+  usage: "Scienze fisiche e tecnologie della materia: testo per lo stato active/premuto"
 - var: --bsi-color-border-ambiente
   swatch: border
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo su sfondo chiaro
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: testo su sfondo chiaro"
 - var: --bsi-color-border-ambiente-hover
   swatch: border
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato hover
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato hover"
 - var: --bsi-color-border-ambiente-active
   swatch: border
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato active/premuto
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato active/premuto"
 - var: --bsi-color-border-biomedica
   swatch: border
-  usage: Scienze biomediche: testo su sfondo chiaro
+  usage: "Scienze biomediche: testo su sfondo chiaro"
 - var: --bsi-color-border-biomedica-hover
   swatch: border
-  usage: Scienze biomediche: testo per lo stato hover
+  usage: "Scienze biomediche: testo per lo stato hover"
 - var: --bsi-color-border-biomedica-active
   swatch: border
-  usage: Scienze biomediche: testo per lo stato active/premuto
+  usage: "Scienze biomediche: testo per lo stato active/premuto"
 - var: --bsi-color-border-ingegneria
   swatch: border
-  usage: Ingegneria: testo su sfondo chiaro
+  usage: "Ingegneria: testo su sfondo chiaro"
 - var: --bsi-color-border-ingegneria-hover
   swatch: border
-  usage: Ingegneria: testo per lo stato hover
+  usage: "Ingegneria: testo per lo stato hover"
 - var: --bsi-color-border-ingegneria-active
   swatch: border
-  usage: Ingegneria: testo per lo stato active/premuto
+  usage: "Ingegneria: testo per lo stato active/premuto"
 - var: --bsi-color-border-scienzeumane
   swatch: border
-  usage: Scienze umane: testo su sfondo chiaro
+  usage: "Scienze umane: testo su sfondo chiaro"
 - var: --bsi-color-border-scienzeumane-hover
   swatch: border
-  usage: Scienze umane: testo per lo stato hover
+  usage: "Scienze umane: testo per lo stato hover"
 - var: --bsi-color-border-scienzeumane-active
   swatch: border
-  usage: Scienze umane: testo per lo stato active/premuto
+  usage: "Scienze umane: testo per lo stato active/premuto"
 - var: --bsi-color-border-chimica
   swatch: border
-  usage: Scienze chimiche: testo su sfondo chiaro
+  usage: "Scienze chimiche: testo su sfondo chiaro"
 - var: --bsi-color-border-chimica-hover
   swatch: border
-  usage: Scienze chimiche: testo per lo stato hover
+  usage: "Scienze chimiche: testo per lo stato hover"
 - var: --bsi-color-border-chimica-active
   swatch: border
-  usage: Scienze chimiche: testo per lo stato active/premuto
+  usage: "Scienze chimiche: testo per lo stato active/premuto"
 - var: --bsi-color-border-agroalimentari
   swatch: border
-  usage: Scienze bio-agroalimentari: testo su sfondo chiaro
+  usage: "Scienze bio-agroalimentari: testo su sfondo chiaro"
 - var: --bsi-color-border-agroalimentari-hover
   swatch: border
-  usage: Scienze bio-agroalimentari: testo per lo stato hover
+  usage: "Scienze bio-agroalimentari: testo per lo stato hover"
 - var: --bsi-color-border-agroalimentari-active
   swatch: border
-  usage: Scienze bio-agroalimentari: testo per lo stato active/premuto
+  usage: "Scienze bio-agroalimentari: testo per lo stato active/premuto"
 
 department-icon:
 - var: --bsi-icon-fisica
   swatch: bg
-  usage: Scienze fisiche e tecnologie della materia: testo su sfondo chiaro
+  usage: "Scienze fisiche e tecnologie della materia: testo su sfondo chiaro"
 - var: --bsi-icon-fisica-hover
   swatch: bg
-  usage: Scienze fisiche e tecnologie della materia: testo per lo stato hover
+  usage: "Scienze fisiche e tecnologie della materia: testo per lo stato hover"
 - var: --bsi-icon-fisica-active
   swatch: bg
-  usage: Scienze fisiche e tecnologie della materia: testo per lo stato active/premuto
+  usage: "Scienze fisiche e tecnologie della materia: testo per lo stato active/premuto"
 - var: --bsi-icon-ambiente
   swatch: bg
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo su sfondo chiaro
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: testo su sfondo chiaro"
 - var: --bsi-icon-ambiente-hover
   swatch: bg
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato hover
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato hover"
 - var: --bsi-icon-ambiente-active
   swatch: bg
-  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato active/premuto
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato active/premuto"
 - var: --bsi-icon-biomedica
   swatch: bg
-  usage: Scienze biomediche: testo su sfondo chiaro
+  usage: "Scienze biomediche: testo su sfondo chiaro"
 - var: --bsi-icon-biomedica-hover
   swatch: bg
-  usage: Scienze biomediche: testo per lo stato hover
+  usage: "Scienze biomediche: testo per lo stato hover"
 - var: --bsi-icon-biomedica-active
   swatch: bg
-  usage: Scienze biomediche: testo per lo stato active/premuto
+  usage: "Scienze biomediche: testo per lo stato active/premuto"
 - var: --bsi-icon-ingegneria
   swatch: bg
-  usage: Ingegneria: testo su sfondo chiaro
+  usage: "Ingegneria: testo su sfondo chiaro"
 - var: --bsi-icon-ingegneria-hover
   swatch: bg
-  usage: Ingegneria: testo per lo stato hover
+  usage: "Ingegneria: testo per lo stato hover"
 - var: --bsi-icon-ingegneria-active
   swatch: bg
-  usage: Ingegneria: testo per lo stato active/premuto
+  usage: "Ingegneria: testo per lo stato active/premuto"
 - var: --bsi-icon-scienzeumane
   swatch: bg
-  usage: Scienze umane: testo su sfondo chiaro
+  usage: "Scienze umane: testo su sfondo chiaro"
 - var: --bsi-icon-scienzeumane-hover
   swatch: bg
-  usage: Scienze umane: testo per lo stato hover
+  usage: "Scienze umane: testo per lo stato hover"
 - var: --bsi-icon-scienzeumane-active
   swatch: bg
-  usage: Scienze umane: testo per lo stato active/premuto
+  usage: "Scienze umane: testo per lo stato active/premuto"
 - var: --bsi-icon-chimica
   swatch: bg
-  usage: Scienze chimiche: testo su sfondo chiaro
+  usage: "Scienze chimiche: testo su sfondo chiaro"
 - var: --bsi-icon-chimica-hover
   swatch: bg
-  usage: Scienze chimiche: testo per lo stato hover
+  usage: "Scienze chimiche: testo per lo stato hover"
 - var: --bsi-icon-chimica-active
   swatch: bg
-  usage: Scienze chimiche: testo per lo stato active/premuto
+  usage: "Scienze chimiche: testo per lo stato active/premuto"
 - var: --bsi-icon-agroalimentari
   swatch: bg
-  usage: Scienze bio-agroalimentari: testo su sfondo chiaro
+  usage: "Scienze bio-agroalimentari: testo su sfondo chiaro"
 - var: --bsi-icon-agroalimentari-hover
   swatch: bg
-  usage: Scienze bio-agroalimentari: testo per lo stato hover
+  usage: "Scienze bio-agroalimentari: testo per lo stato hover"
 - var: --bsi-icon-agroalimentari-active
   swatch: bg
-  usage: Scienze bio-agroalimentari: testo per lo stato active/premuto
+  usage: "Scienze bio-agroalimentari: testo per lo stato active/premuto"

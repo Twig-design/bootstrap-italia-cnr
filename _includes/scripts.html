@@ -3,10 +3,28 @@
 <script>
   class FontSwitcher {
     constructor() {
-      this.currentFont = localStorage.getItem('docs-font-variant') || 'web';
+      const stored = localStorage.getItem('docs-font-variant');
+      if (stored === 'sans-pro') {
+        this.currentFont = 'sans-pro';
+      } else if (stored === 'web') {
+        // 'web' era il default legacy — migra a Source Sans 3
+        this.currentFont = 'source-sans-3';
+        localStorage.setItem('docs-font-variant', 'source-sans-3');
+      } else {
+        this.currentFont = 'source-sans-3';
+        if (stored !== 'source-sans-3') {
+          localStorage.setItem('docs-font-variant', 'source-sans-3');
+        }
+      }
+      this.fontStacks = {
+        'source-sans-3': "'Source Sans 3', 'Titillium Web', 'Titillium Sans Pro', Geneva, Tahoma, sans-serif",
+        web: "'Titillium Web', Geneva, Tahoma, sans-serif",
+        'sans-pro': "'Titillium Sans Pro', Geneva, Tahoma, sans-serif",
+      };
       this.fontNames = {
-        'web': 'Titillium Web',
-        'sans-pro': 'Titillium Sans Pro'
+        'source-sans-3': 'Source Sans 3',
+        web: 'Titillium Web',
+        'sans-pro': 'Titillium Sans Pro',
       };
       this.init();
     }
@@ -19,10 +37,14 @@
 
     loadFont(variant) {
       document.querySelectorAll('style[data-font-switcher]').forEach(el => el.remove());
-      bootstrap.loadFonts('{{ site.baseurl }}/dist/fonts', {
-        titillium: variant,
-        fonts: ['titillium', 'lora', 'roboto-mono']
-      });
+      const fonts = variant === 'source-sans-3'
+        ? ['source-sans-3', 'lora', 'roboto-mono']
+        : ['titillium', 'lora', 'roboto-mono'];
+      const options = { fonts };
+      if (variant === 'web' || variant === 'sans-pro') {
+        options.titillium = variant;
+      }
+      bootstrap.loadFonts('{{ site.baseurl }}/dist/fonts', options);
       const lastStyle = document.querySelector('style:last-of-type');
       if (lastStyle) {
         lastStyle.setAttribute('data-font-switcher', variant);
@@ -31,17 +53,23 @@
     }
 
     updateFontStack(variant) {
+      document.querySelectorAll('style[data-font-switcher-override]').forEach(el => el.remove());
+
+      // Source Sans 3: usa lo stack da --bsi-font-sans nel CSS compilato (niente override)
+      if (variant === 'source-sans-3') {
+        return;
+      }
+
       const tempStyle = document.createElement('style');
       tempStyle.setAttribute('data-font-switcher-override', variant);
-      const fontFamily = this.fontNames[variant];
+      const fontFamily = this.fontStacks[variant];
       tempStyle.innerHTML = `
-        body, .font-sans-serif, 
+        body, .font-sans-serif,
         h1, h2, h3, h4, h5, h6,
         .h1, .h2, .h3, .h4, .h5, .h6 {
-          font-family: '${fontFamily}', Geneva, Tahoma, sans-serif !important;
+          font-family: ${fontFamily} !important;
         }
       `;
-      document.querySelectorAll('style[data-font-switcher-override]').forEach(el => el.remove());
       document.head.appendChild(tempStyle);
     }
 
@@ -87,14 +115,6 @@
   document.addEventListener('DOMContentLoaded', () => {
     window.fontSwitcher = new FontSwitcher();
   });
-
-  // Backward compatibility: carica Titillium Web di default se non c'è preferenza
-  if (!localStorage.getItem('docs-font-variant')) {
-    bootstrap.loadFonts('{{ site.baseurl }}/dist/fonts', {
-      titillium: 'web',
-      fonts: ['titillium', 'lora', 'roboto-mono']
-    });
-  }
 </script>
 {%- if page.layout == "default" or page.layout == "docs" -%}
 <script src="{{ site.baseurl }}/docs/assets/dist/js/docs.min.js?{{ buildTime }}"></script>

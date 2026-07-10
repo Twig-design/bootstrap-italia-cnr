@@ -131,6 +131,58 @@ const getTitilliumWebCSS = (basePath) => `
   }
 `
 
+const getSourceSans3CSS = (basePath) => `
+  /* Source Sans 3: 400, 600, 700 + italic */
+
+  @font-face {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('${basePath}/Source_Sans_3/source-sans-3-v19-latin_latin-ext-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Source Sans 3';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('${basePath}/Source_Sans_3/source-sans-3-v19-latin_latin-ext-italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('${basePath}/Source_Sans_3/source-sans-3-v19-latin_latin-ext-600.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Source Sans 3';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url('${basePath}/Source_Sans_3/source-sans-3-v19-latin_latin-ext-600italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('${basePath}/Source_Sans_3/source-sans-3-v19-latin_latin-ext-700.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Source Sans 3';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url('${basePath}/Source_Sans_3/source-sans-3-v19-latin_latin-ext-700italic.woff2') format('woff2');
+  }
+`
+
 const getTitilliumSansProCSS = (basePath) => `
   /* Titillium Sans Pro - Light 300 */
   @font-face {
@@ -432,6 +484,7 @@ const getRobotoMonoCSS = (basePath) => `
 `
 
 const fontGenerators = {
+  'source-sans-3': getSourceSans3CSS,
   'titillium-web': getTitilliumWebCSS,
   'titillium-sans-pro': getTitilliumSansProCSS,
   titillio: getTitillioCSS,
@@ -447,8 +500,7 @@ export default (path = '/node_modules/bootstrap-italia/dist/fonts', options = {}
   // Backward compatibility: if called without options, use legacy behavior
   if (Object.keys(options).length === 0) {
     options = {
-      titillium: 'web',
-      fonts: ['titillium', 'lora', 'roboto-mono'],
+      fonts: ['source-sans-3', 'lora', 'roboto-mono'],
     }
   }
 
@@ -474,10 +526,13 @@ export default (path = '/node_modules/bootstrap-italia/dist/fonts', options = {}
 /*
 USAGE EXAMPLES:
 
-// Backward compatible
+// Default: Source Sans 3 + Lora + Roboto Mono
 loadFonts('/fonts');
 
-// Load only Titillium Sans Pro
+// Load only Source Sans 3
+loadFonts('/fonts', { fonts: ['source-sans-3'] });
+
+// Load only Titillium Sans Pro (legacy)
 loadFonts('/fonts', { titillium: 'sans-pro', fonts: ['titillium'] });
 
 // Load Titillium Sans Pro + Lora (no Roboto Mono)
@@ -487,6 +542,6 @@ loadFonts('/fonts', { titillium: 'sans-pro', fonts: ['titillium', 'lora'] });
 loadFonts('/fonts', { titillium: 'sans-pro' });
 
 POSSIBLE VALUES:
-- titillium: 'web' | 'sans-pro'
-- fonts: ['titillium', 'lora', 'roboto-mono'] (any combination)
+- titillium: 'web' | 'sans-pro' (when 'titillium' is in fonts)
+- fonts: ['source-sans-3', 'titillium', 'lora', 'roboto-mono'] (any combination)
 */

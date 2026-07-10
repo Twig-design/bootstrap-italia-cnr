@@ -17,30 +17,28 @@ Le scelte tipografiche di Bootstrap Italia seguono le indicazioni del [Design sy
 ## Famiglie di caratteri
 
 Bootstrap Italia include tre famiglie di caratteri tipografici per garantire leggibilità e coerenza visiva:
-- **Titillium** (Web o Sans Pro): font principale sans-serif per interfacce e testi brevi
+- **Source Sans 3**: font principale sans-serif per interfacce e testi (UI Kit CNR)
 - **Lora**: font serif per contenuti editoriali e testi lunghi
 - **Roboto Mono**: font monospace per codice, dati tabulari e numeri
 
 {% capture callout %}
-Per informazioni su come caricare i font (via JavaScript, CSS o bundle) e scegliere tra le varianti Titillium Web e Titillium Sans Pro, consulta la [**pagina dedicata Font**]({{ site.baseurl }}/docs/come-iniziare/font/).
+Per informazioni su come caricare i font (via JavaScript, CSS o bundle) consulta la [**pagina dedicata Font**]({{ site.baseurl }}/docs/come-iniziare/font/).
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
-### Titillium (font principale)
+### Source Sans 3 (font principale)
 
-Bootstrap Italia supporta due varianti del carattere Titillium:
-- **Titillium Web** (default): versione originale e carattere di riferimento del Design system .italia
-- **Titillium Sans Pro**: evoluzione con supporto linguistico esteso e simboli matematici.
+Il font principale è **Source Sans 3**, con **Titillium** nello stack come fallback. Nella documentazione puoi confrontare Source Sans 3 con Titillium Web e Titillium Sans Pro usando il selettore "Font principale" nella barra laterale.
 
-Nella documentazione puoi esplorare la resa delle due versioni usando il selettore "Font principale" nella barra laterale.
+Il font sans-serif è applicato di default; in caso di necessità è possibile usare la classe `.font-sans-serif`.
 
-Il font Titillium è utilizzato di default, per cui di norma non è necessario applicarlo esplicitamente. In caso si renda necessario è possibile utilizzare la classe `.font-sans-serif`.
-
-{% comment %}Example name: Titillium Web{% endcomment %}
+{% comment %}Example name: Source Sans 3{% endcomment %}
 {% capture example %}
 <p class="font-sans-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
 <p class="font-sans-serif">abcdefghijklmnopqrstuvwxyz</p>
 <p class="font-sans-serif">0123456789</p>
 {% endcapture %}{% include example.html content=example %}
+
+### Titillium (fallback legacy)
 
 ### Lora (font serif)
 
@@ -78,7 +76,18 @@ spazio quando lo schermo lo permette.
 Tutte le intestazioni HTML, da `<h1>` fino a `<h6>`, sono disponibili, anche se
 è buona norma non utilizzare più di 4 livelli di intestazione.
 
-L'interlinea è impostata con il rapporto di  `1.2` per tutte le intestazioni.
+L'interlinea è impostata per livello di intestazione, con valori in pixel allineati al UI Kit CNR (es. h1: 48px su mobile, 56px da `≥576px`).
+
+### Ritmo verticale
+
+Gli elementi tipografici (titoli, paragrafi, lead, display) usano lo **spacing stack** del kit:
+
+| Breakpoint | margin-top | margin-bottom |
+|---|---|---|
+| `<576px` | 32px | 16px |
+| `≥576px` | 40px | 24px |
+
+I margini di elementi consecutivi si **sovrappongono** (margin collapsing), non si sommano.
 
 {% comment %}Example name: Intestazioni{% endcomment %}
 {% capture example %}

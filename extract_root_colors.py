@@ -159,6 +159,14 @@ def is_department_scale(var_suffix):
     return match.group(1) in DEPARTMENT_SLUGS
 
 
+def strip_yaml_scalar(value):
+    """Normalize a scalar read from a minimal YAML line."""
+    value = value.strip()
+    if len(value) >= 2 and value[0] == value[-1] and value[0] in ('"', "'"):
+        return bytes(value[1:-1], 'utf-8').decode('unicode_escape')
+    return value
+
+
 def system_semantic_usage(var_suffix, category):
     """Generate usage text for system status color variables."""
     status = next((name for name in SYSTEM_STATUS_LABELS if f'-{name}' in var_suffix), None)
@@ -343,7 +351,7 @@ def load_existing_yaml():
             if line.startswith('  swatch:'):
                 current_entry['swatch'] = line.split(':', 1)[1].strip()
             elif line.startswith('  usage:'):
-                current_entry['usage'] = line.split(':', 1)[1].strip()
+                current_entry['usage'] = strip_yaml_scalar(line.split(':', 1)[1])
 
     return {k: v for k, v in data.items() if v}
 
@@ -404,11 +412,8 @@ def write_yaml(data):
             lines.append(f'- var: {entry["var"]}')
             lines.append(f'  swatch: {entry["swatch"]}')
             if entry.get('usage'):
-                usage = entry['usage'].replace('"', '\\"')
-                if ':' in usage or "'" in usage:
-                    lines.append(f'  usage: {usage}')
-                else:
-                    lines.append(f'  usage: {usage}')
+                usage = entry['usage'].replace('\\', '\\\\').replace('"', '\\"')
+                lines.append(f'  usage: "{usage}"')
         lines.append('')
 
     with open(OUTPUT_YAML, 'w', encoding='utf-8') as f:
