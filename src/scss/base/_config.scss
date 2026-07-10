@@ -87,6 +87,17 @@ $color-info-500: #0066cc !default;
 $color-info-600: #005ab5 !default;
 $color-info-800: #0c4a6e !default;
 
+// Neutral
+$color-neutral-50: #f7f8fb !default;
+$color-neutral-100: #e7ecf1 !default;
+$color-neutral-200: #d8e0e8 !default;
+$color-neutral-300: #c3ced9 !default;
+$color-neutral-400: #a9b7c4 !default;
+$color-neutral-500: #8b9cac !default;
+$color-neutral-600: #60758a !default;
+$color-neutral-700: #4c6073 !default;
+$color-neutral-800: #334b5c !default;
+
 // ============================================================================
 // COLOR CONTRAST (per la funzione color-contrast)
 // ============================================================================
@@ -103,9 +114,9 @@ $red: $color-error-500 !default;
 $orange: $color-warning-500 !default;
 $green: $color-success-500 !default;
 $teal: hsl(178, 90%, 32%) !default;
-$dark: hsl(210, 54%, 20%) !default; // color-slate-20
-$gray-secondary: hsl(210, 17%, 44%) !default; // color-slate-44
-$gray-border: hsl(210, 4%, 78%) !default; // color-border-subtle
+$dark: $color-neutral-800 !default;
+$gray-secondary: $color-neutral-600 !default;
+$gray-border: $color-neutral-200 !default;
 $gray-disabled: hsl(210, 3%, 85%) !default; // color-background-disabled
 $gray-label-disabled: hsl(210, 12%, 44%) !default; // color-text-disabled
 
@@ -124,7 +135,6 @@ $lightgrey-c2: $color-primary-blue-50; // color-background-primary-lighter
 // ============================================================================
 
 // Backgrounds
-$color-background-emphasis: hsl(210, 54%, 20%); // color-slate-20
 $color-background-primary: $color-primary-blue-600 !default;
 $color-background-primary-lighter: $color-primary-blue-50 !default;
 $color-background-primary-light: $color-primary-blue-100 !default;
@@ -132,12 +142,8 @@ $color-background-primary-hover: $color-primary-blue-500 !default;
 $color-background-primary-active: $color-primary-blue-700 !default;
 $color-background-primary-muted: $color-primary-blue-700 !default;
 $color-background-primary-deep: $color-primary-blue-800 !default;
-$color-background-secondary-hover: hsl(210, 33%, 28%); // color-slate-28
-$color-background-secondary-lighter: hsl(210, 3%, 85%); // color-slate-85
 
 // Borders
-$color-border-secondary: hsl(210, 17%, 44%); // color-slate-44
-$color-border-subtle: hsl(210, 4%, 78%) !default; // color-slate-78
 $color-border-primary: $color-primary-blue-600 !default;
 $color-border-primary-hover: $color-primary-blue-500 !default;
 $color-border-primary-active: $color-primary-blue-700 !default;
@@ -159,8 +165,6 @@ $radius-brand-lg: 48px 0 48px 48px !default;
 $color-text-primary: $color-primary-blue-600 !default;
 $color-text-primary-active: $color-primary-blue-700 !default;
 $color-text-primary-hover: $color-primary-blue-500 !default;
-$color-text-muted: hsl(210, 17%, 44%); // color-slate-44
-$color-text-secondary: hsl(210, 33%, 28%); // color-slate-28
 
 // Links & icons (primary)
 $color-link: $color-primary-blue-600 !default;
@@ -241,6 +245,36 @@ $icon-warning-active: $color-warning-800 !default;
 
 // Info (theme color)
 $color-info: $color-info-500 !default;
+
+// ============================================================================
+// NEUTRAL — semantic tokens (UI Kit Italia)
+// ============================================================================
+
+$color-background-subtle: $color-neutral-50 !default;
+$color-background-muted: $color-neutral-100 !default;
+$color-background-secondary: $color-neutral-600 !default;
+$color-background-secondary-lighter: $color-neutral-50 !default;
+$color-background-secondary-light: $color-neutral-100 !default;
+$color-background-secondary-hover: $color-neutral-700 !default;
+$color-background-secondary-active: $color-neutral-800 !default;
+$color-background-secondary-deep: $color-neutral-800 !default;
+$color-background-emphasis: $color-neutral-800 !default;
+
+$color-text-muted: $color-neutral-600 !default;
+$color-text-secondary: $color-neutral-700 !default;
+
+$color-border-subtle: $color-neutral-200 !default;
+$color-border-secondary: $color-neutral-600 !default;
+$color-border-secondary-hover: $color-neutral-700 !default;
+$color-border-secondary-active: $color-neutral-800 !default;
+
+$color-link-secondary: $color-neutral-600 !default;
+$color-link-secondary-hover: $color-neutral-700 !default;
+$color-link-secondary-active: $color-neutral-800 !default;
+
+$icon-secondary: $color-neutral-600 !default;
+$icon-secondary-hover: $color-neutral-700 !default;
+$icon-secondary-active: $color-neutral-800 !default;
 
 // ============================================================================
 // COMPONENTI HSB ACCENT COLORS (numeri puri)
