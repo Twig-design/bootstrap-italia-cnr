@@ -87,6 +87,13 @@ SCALE_WEIGHT_USAGE = {
     '800': 'testo, icone e stati pressed',
 }
 
+SYSTEM_STATUS_LABELS = {
+    'danger': 'pericolo',
+    'warning': 'allerta',
+    'success': 'successo',
+    'info': 'informazione',
+}
+
 SEMANTIC_SUFFIX_USAGE = {
     '': 'sfondo principale',
     '-light': 'sfondo chiaro',
@@ -152,9 +159,54 @@ def is_department_scale(var_suffix):
     return match.group(1) in DEPARTMENT_SLUGS
 
 
+def system_semantic_usage(var_suffix, category):
+    """Generate usage text for system status color variables."""
+    status = next((name for name in SYSTEM_STATUS_LABELS if f'-{name}' in var_suffix), None)
+    if status is None:
+        return ''
+
+    label = SYSTEM_STATUS_LABELS[status]
+
+    if category == 'text':
+        if var_suffix.endswith('-active'):
+            return f'Testo di {label} per lo stato active'
+        if var_suffix.endswith('-hover'):
+            return f'Testo di {label} per lo stato hover'
+        return f'Testo per stati di {label}'
+
+    if category == 'border':
+        if var_suffix.endswith('-active'):
+            return f'Bordo di {label} per lo stato active'
+        if var_suffix.endswith('-hover'):
+            return f'Bordo di {label} per lo stato hover'
+        return f'Bordo di {label}'
+
+    if category == 'background':
+        if var_suffix.endswith('-active'):
+            return f'Sfondo di {label} per lo stato active'
+        if var_suffix.endswith('-hover'):
+            return f'Sfondo di {label} per lo stato hover'
+        if var_suffix.endswith('-light'):
+            return f'Sfondo di {label} chiaro (contenuti medio-lunghi)'
+        return f'Sfondo per stati di {label}'
+
+    if category == 'status':
+        if var_suffix.endswith('-active'):
+            return f'Indicatore {label} per lo stato active'
+        if var_suffix.endswith('-hover'):
+            return f'Indicatore {label} per lo stato hover'
+        return f'Colore indicatore di {label}'
+
+    return ''
+
+
 def default_usage(full_var, category):
     """Generate Italian usage text for new variables."""
     var_suffix = full_var.replace('--bsi-', '')
+
+    system_usage = system_semantic_usage(var_suffix, category)
+    if system_usage:
+        return system_usage
 
     if category == 'department-scale':
         match = SCALE_RE.match(var_suffix)

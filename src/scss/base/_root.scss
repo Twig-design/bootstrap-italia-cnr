@@ -215,6 +215,9 @@
   --#{$prefix}color-text-success-active: #{$color-text-success-active};
   --#{$prefix}color-text-success-hover: #{$color-text-success-hover};
   --#{$prefix}color-text-success: #{$color-text-success};
+  --#{$prefix}color-text-info-active: #{$color-text-info-active};
+  --#{$prefix}color-text-info-hover: #{$color-text-info-hover};
+  --#{$prefix}color-text-info: #{$color-text-info};
   --#{$prefix}color-text-disabled: #{tokens.$it-color-text-disabled};
   --#{$prefix}color-text-muted: #{$color-text-muted};
   --#{$prefix}color-text-secondary: #{$color-text-secondary};
@@ -242,6 +245,9 @@
   --#{$prefix}color-border-success-active: #{$color-border-success-active};
   --#{$prefix}color-border-success-hover: #{$color-border-success-hover};
   --#{$prefix}color-border-success: #{$color-border-success};
+  --#{$prefix}color-border-info-active: #{$color-border-info-active};
+  --#{$prefix}color-border-info-hover: #{$color-border-info-hover};
+  --#{$prefix}color-border-info: #{$color-border-info};
   --#{$prefix}color-border-subtle: #{$color-border-subtle};
   --#{$prefix}color-border-disabled: #{tokens.$it-color-border-disabled};
   --#{$prefix}color-border-inverse: #{tokens.$it-color-border-inverse};
@@ -274,6 +280,10 @@
   --#{$prefix}color-background-success-light: #{$color-background-success-light};
   // --#{$prefix}color-background-success-lighter: #{tokens.$it-color-background-success-lighter};
   --#{$prefix}color-background-success: #{$color-background-success};
+  --#{$prefix}color-background-info-active: #{$color-background-info-active};
+  --#{$prefix}color-background-info-hover: #{$color-background-info-hover};
+  --#{$prefix}color-background-info-light: #{$color-background-info-light};
+  --#{$prefix}color-background-info: #{$color-background-info};
   --#{$prefix}color-background-emphasis: #{$color-background-emphasis};
   --#{$prefix}color-background-subtle: #{$color-background-subtle};
   --#{$prefix}color-background-disabled: #{tokens.$it-color-background-disabled};
@@ -307,6 +317,9 @@
   --#{$prefix}color-status-warning: #{$color-background-warning};
   --#{$prefix}color-status-warning-hover: #{$color-background-warning-hover};
   --#{$prefix}color-status-warning-active: #{$color-background-warning-active};
+  --#{$prefix}color-status-info: #{$color-background-info};
+  --#{$prefix}color-status-info-hover: #{$color-background-info-hover};
+  --#{$prefix}color-status-info-active: #{$color-background-info-active};
 
   // Department color scales
   --#{$prefix}color-fisica-200: #{$color-fisica-200};
@@ -453,6 +466,9 @@
   --#{$prefix}icon-success-active: #{$icon-success-active};
   --#{$prefix}icon-success-hover: #{$icon-success-hover};
   --#{$prefix}icon-success: #{$icon-success};
+  --#{$prefix}icon-info-active: #{$icon-info-active};
+  --#{$prefix}icon-info-hover: #{$icon-info-hover};
+  --#{$prefix}icon-info: #{$icon-info};
   --#{$prefix}icon-secondary-active: #{$icon-secondary-active};
   --#{$prefix}icon-inverse: #{tokens.$it-icon-inverse};
   --#{$prefix}icon-secondary-hover: #{$icon-secondary-hover};

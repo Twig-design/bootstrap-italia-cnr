@@ -32,6 +32,15 @@ text:
 - var: --bsi-color-text-success
   swatch: bg
   usage: Testo per stati di successo
+- var: --bsi-color-text-info-active
+  swatch: bg
+  usage: Testo di informazione per lo stato active
+- var: --bsi-color-text-info-hover
+  swatch: bg
+  usage: Testo di informazione per lo stato hover
+- var: --bsi-color-text-info
+  swatch: bg
+  usage: Testo per stati di informazione
 - var: --bsi-color-text-disabled
   swatch: bg
   usage: Testo su elementi disabilitati
@@ -108,6 +117,15 @@ border:
 - var: --bsi-color-border-success
   swatch: border
   usage: Bordo di successo
+- var: --bsi-color-border-info-active
+  swatch: border
+  usage: Bordo di informazione per lo stato active
+- var: --bsi-color-border-info-hover
+  swatch: border
+  usage: Bordo di informazione per lo stato hover
+- var: --bsi-color-border-info
+  swatch: border
+  usage: Bordo di informazione
 - var: --bsi-color-border-subtle
   swatch: border
   usage: Bordo separatore (sezioni e componenti)
@@ -194,6 +212,18 @@ background:
 - var: --bsi-color-background-success
   swatch: bg
   usage: Sfondo per stati di successo
+- var: --bsi-color-background-info-active
+  swatch: bg
+  usage: Sfondo di informazione per lo stato active
+- var: --bsi-color-background-info-hover
+  swatch: bg
+  usage: Sfondo di informazione per lo stato hover
+- var: --bsi-color-background-info-light
+  swatch: bg
+  usage: Sfondo di informazione chiaro (contenuti medio-lunghi)
+- var: --bsi-color-background-info
+  swatch: bg
+  usage: Sfondo per stati di informazione
 - var: --bsi-color-background-emphasis
   swatch: bg
   usage: Sfondo di enfasi (sezioni in evidenza)
@@ -265,6 +295,15 @@ status:
 - var: --bsi-color-status-warning-active
   swatch: bg
   usage: Indicatore allerta per lo stato active
+- var: --bsi-color-status-info
+  swatch: bg
+  usage: Colore indicatore di informazione
+- var: --bsi-color-status-info-hover
+  swatch: bg
+  usage: Indicatore informazione per lo stato hover
+- var: --bsi-color-status-info-active
+  swatch: bg
+  usage: Indicatore informazione per lo stato active
 
 department-scale:
 - var: --bsi-color-fisica-200

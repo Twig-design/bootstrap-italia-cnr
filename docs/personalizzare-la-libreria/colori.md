@@ -95,6 +95,11 @@ I colori seguono la semantica definita dal [Design System Italia](https://design
         <td>Colore di sistema, identifica lo stato di pericolo</td>
       </tr>
       <tr class="align-middle">
+        <td>{% include color-swatch.html var='--bsi-color-background-info' %}</td>
+        <td><code>info</code></td>
+        <td>Colore di sistema, identifica lo stato informativo</td>
+      </tr>
+      <tr class="align-middle">
         <td>{% include color-swatch.html var='--bsi-color-background-inverse' type='bg-border' %}</td>
         <td><code>inverse</code></td>
         <td>Indica il colore invertito rispetto ad un colore di sfondo, generalmente bianco</td>
