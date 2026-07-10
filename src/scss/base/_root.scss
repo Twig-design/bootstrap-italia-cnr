@@ -204,7 +204,7 @@
   --#{$prefix}elevation-low: #{tokens.$it-elevation-low};
 
   // Text colors
-  --#{$prefix}color-text-accent: #{tokens.$it-color-text-accent};
+  --#{$prefix}color-text-accent: #{$color-text-accent};
   --#{$prefix}color-text-inverse: #{tokens.$it-color-text-inverse};
   --#{$prefix}color-text-danger-active: #{tokens.$it-color-text-danger-active};
   --#{$prefix}color-text-danger-hover: #{tokens.$it-color-text-danger-hover};
@@ -229,8 +229,8 @@
   --#{$prefix}color-link-secondary-active: #{tokens.$it-color-link-secondary-active};
   --#{$prefix}color-link-inverse: #{tokens.$it-color-link-inverse};
   --#{$prefix}color-link-disabled: #{tokens.$it-color-link-disabled};
-  --#{$prefix}color-link-accent: #{tokens.$it-color-link-accent};
-  --#{$prefix}color-link-accent-hover: #{tokens.$it-color-link-accent-hover};
+  --#{$prefix}color-link-accent: #{$color-link-accent};
+  --#{$prefix}color-link-accent-hover: #{$color-link-accent-hover};
 
   // Border colors
   --#{$prefix}color-border-danger-active: #{tokens.$it-color-border-danger-active};
@@ -280,8 +280,8 @@
   --#{$prefix}color-background-inverse: #{tokens.$it-color-background-inverse};
   --#{$prefix}color-background-inverse-hover: #{tokens.$it-color-slate-93}; // TODO: replace with semantic token
   --#{$prefix}color-background-muted: #{tokens.$it-color-background-muted};
-  --#{$prefix}color-background-accent-hover: #{tokens.$it-color-background-accent-hover};
-  --#{$prefix}color-background-accent: #{tokens.$it-color-background-accent};
+  --#{$prefix}color-background-accent-hover: #{$color-background-accent-hover};
+  --#{$prefix}color-background-accent: #{$color-background-accent};
   --#{$prefix}color-background-secondary-lighter: #{tokens.$it-color-background-secondary-lighter};
   --#{$prefix}color-background-secondary-light: #{tokens.$it-color-background-secondary-light};
   --#{$prefix}color-background-secondary-active: #{tokens.$it-color-background-secondary-active};

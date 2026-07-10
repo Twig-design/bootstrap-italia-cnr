@@ -142,6 +142,28 @@ $icon-primary-active: $color-primary-blue-700 !default;
 
 // Header legacy token
 $color-blue-30: $color-primary-blue-500 !default;
+
+// ============================================================================
+// ACCENT — color.orange.* (UI Kit Italia)
+// ============================================================================
+
+$color-orange-50: #fef5f1 !default;
+$color-orange-100: #fee8dd !default;
+$color-orange-200: #feccb3 !default;
+$color-orange-300: #ffa38f !default;
+$color-orange-400: #ff916a !default;
+$color-orange-500: #f97a48 !default;
+$color-orange-600: #f1722f !default;
+$color-orange-700: #e65319 !default;
+$color-orange-800: #a03f17 !default;
+$color-orange-900: #702b0f !default;
+
+$color-background-accent: $color-orange-700 !default;
+$color-background-accent-hover: $color-orange-800 !default;
+$color-text-accent: $color-orange-800 !default;
+$color-link-accent: $color-orange-800 !default;
+$color-link-accent-hover: $color-orange-900 !default;
+
 // ============================================================================
 // COMPONENTI HSB ACCENT COLORS (numeri puri)
 // ============================================================================
