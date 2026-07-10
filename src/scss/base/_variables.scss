@@ -7,7 +7,7 @@
 // PRIMARY COLOR (usa hsb)
 // ============================================================================
 
-$primary: hsb($primary-h, $primary-s, $primary-b) !default; // color-blue-40
+$primary: $color-primary-blue-600 !default; // color.primary.blue.600
 
 // ============================================================================
 // ALTRI COLORI CHE USANO HSB

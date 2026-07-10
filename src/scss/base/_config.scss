@@ -30,8 +30,30 @@ $gray-900: hsl(0, 0%, 10%) !default; // color-gray-10
 
 $primary-h: 210 !default;
 $primary-s: 100 !default;
-$primary-b: 80 !default;
-$primary-l: 40 !default; // Kit UI
+$primary-b: 19 !default;
+$primary-l: 19 !default; // Kit UI — allineato a color.primary.blue.600
+
+// ============================================================================
+// PRIMARY — color.primary.blue.* (UI Kit Italia)
+// ============================================================================
+
+$color-primary-blue-50: #f2f7fe !default;
+$color-primary-blue-100: #d5e6fa !default;
+$color-primary-blue-200: #aad1f8 !default;
+$color-primary-blue-300: #8dbdf2 !default;
+$color-primary-blue-400: #1d85ed !default;
+$color-primary-blue-500: #005bb3 !default;
+$color-primary-blue-600: #002f5f !default;
+$color-primary-blue-700: #002447 !default;
+$color-primary-blue-800: #001a33 !default;
+$color-primary-blue-900: #00101f !default;
+
+$theme-primary: $color-primary-blue-600 !default;
+$theme-primary-lighter: $color-primary-blue-50 !default;
+$theme-primary-light: $color-primary-blue-100 !default;
+$theme-primary-subtle: $color-primary-blue-500 !default;
+$theme-primary-muted: $color-primary-blue-700 !default;
+$theme-primary-deep: $color-primary-blue-800 !default;
 
 // ============================================================================
 // COLOR CONTRAST (per la funzione color-contrast)
@@ -57,13 +79,13 @@ $gray-label-disabled: hsl(210, 12%, 44%) !default; // color-text-disabled
 
 // Light Greys A
 $lightgrey-a1: hsl(210, 3%, 85%); // progress-background-default
-$lightgrey-a3: hsl(210, 62%, 97%); // color-background-primary-lighter
+$lightgrey-a3: $color-primary-blue-50; // color-background-primary-lighter
 
 // Light Greys B
-$lightgrey-b1: hsl(210, 62%, 97%); // color-background-primary-lighter
+$lightgrey-b1: $color-primary-blue-50; // color-background-primary-lighter
 
 // Light Greys C
-$lightgrey-c2: hsl(210, 62%, 97%); // color-background-primary-lighter
+$lightgrey-c2: $color-primary-blue-50; // color-background-primary-lighter
 
 // ============================================================================
 // DESIGN TOKENS VARIABLES (valori diretti)
@@ -71,8 +93,13 @@ $lightgrey-c2: hsl(210, 62%, 97%); // color-background-primary-lighter
 
 // Backgrounds
 $color-background-emphasis: hsl(210, 54%, 20%); // color-slate-20
-$color-background-primary-lighter: hsl(210, 62%, 97%); // color-blue-97
-$color-background-primary-hover: hsl(210, 100%, 30%); // color-blue-30
+$color-background-primary: $color-primary-blue-600 !default;
+$color-background-primary-lighter: $color-primary-blue-50 !default;
+$color-background-primary-light: $color-primary-blue-100 !default;
+$color-background-primary-hover: $color-primary-blue-500 !default;
+$color-background-primary-active: $color-primary-blue-700 !default;
+$color-background-primary-muted: $color-primary-blue-700 !default;
+$color-background-primary-deep: $color-primary-blue-800 !default;
 $color-background-secondary-hover: hsl(210, 33%, 28%); // color-slate-28
 $color-background-secondary-lighter: hsl(210, 3%, 85%); // color-slate-85
 
@@ -80,7 +107,9 @@ $color-background-secondary-lighter: hsl(210, 3%, 85%); // color-slate-85
 $color-border-secondary: hsl(210, 17%, 44%); // color-slate-44
 $color-border-subtle: hsl(210, 4%, 78%) !default; // color-slate-78
 $color-border-warning: hsl(36, 100%, 30%); // color-orange-30
-
+$color-border-primary: $color-primary-blue-600 !default;
+$color-border-primary-hover: $color-primary-blue-500 !default;
+$color-border-primary-active: $color-primary-blue-700 !default;
 // Border radius & width (UI Kit Italia — design-tokens-italia)
 $radius-smooth: 8px !default;
 $radius-rounded: 48px !default;
@@ -96,12 +125,23 @@ $radius-brand-md: 32px 0 32px 32px !default;
 $radius-brand-lg: 48px 0 48px 48px !default;
 
 // Text
-$color-text-primary-active: hsl(210, 100%, 15%); // color-blue-15
-$color-text-primary-hover: hsl(210, 100%, 30%); // color-blue-30
+$color-text-primary: $color-primary-blue-600 !default;
+$color-text-primary-active: $color-primary-blue-700 !default;
+$color-text-primary-hover: $color-primary-blue-500 !default;
 $color-text-muted: hsl(210, 17%, 44%); // color-slate-44
 $color-text-secondary: hsl(210, 33%, 28%); // color-slate-28
 $color-text-warning: hsl(36, 100%, 30%); // color-orange-30
 
+// Links & icons (primary)
+$color-link: $color-primary-blue-600 !default;
+$color-link-hover: $color-primary-blue-500 !default;
+$color-link-active: $color-primary-blue-700 !default;
+$icon-primary: $color-primary-blue-600 !default;
+$icon-primary-hover: $color-primary-blue-500 !default;
+$icon-primary-active: $color-primary-blue-700 !default;
+
+// Header legacy token
+$color-blue-30: $color-primary-blue-500 !default;
 // ============================================================================
 // COMPONENTI HSB ACCENT COLORS (numeri puri)
 // ============================================================================
