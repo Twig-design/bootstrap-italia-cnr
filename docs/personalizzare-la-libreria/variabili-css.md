@@ -103,14 +103,17 @@ Le variabili globali sono definite nel file `_root.scss` e possono essere usate 
   // Border
   --#{$prefix}border-width: 1px;
   --#{$prefix}border-style: solid;
-  --#{$prefix}border-color: #{tokens.$it-color-border-subtle};
-  --#{$prefix}border-broad: #{tokens.$it-border-broad};
-  --#{$prefix}border-thick: #{tokens.$it-border-thick};
-  --#{$prefix}border-double: #{tokens.$it-border-double};
-  --#{$prefix}border-base: #{tokens.$it-border-base};
-  --#{$prefix}radius-rounded: #{tokens.$it-radius-rounded};
-  --#{$prefix}radius-circle: #{tokens.$it-radius-circle};
-  --#{$prefix}radius-smooth: #{tokens.$it-radius-smooth};
+  --#{$prefix}border-color: #{$color-border-subtle};
+  --#{$prefix}border-broad: #{$border-broad};
+  --#{$prefix}border-thick: #{$border-thick};
+  --#{$prefix}border-double: #{$border-double};
+  --#{$prefix}border-base: #{$border-base};
+  --#{$prefix}radius-rounded: #{$radius-rounded};
+  --#{$prefix}radius-circle: #{$radius-circle};
+  --#{$prefix}radius-smooth: #{$radius-smooth};
+  --#{$prefix}radius-brand-sm: #{$radius-brand-sm};
+  --#{$prefix}radius-brand-md: #{$radius-brand-md};
+  --#{$prefix}radius-brand-lg: #{$radius-brand-lg};
 
   // Sizing
   --#{$prefix}sizing-full: #{tokens.$it-sizing-full};

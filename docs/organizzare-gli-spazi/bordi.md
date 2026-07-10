@@ -63,3 +63,26 @@ Classi per arrotondare facilmente gli angoli di un elemento.
   <img src="https://placehold.co/75x75/ebebeb/808080/?text=Immagine" class="rounded-0" alt="Esempio di immagine non arrotondata (sovrascrive l'eventuale arrotondamento applicato precedentemente)">
   <img src="https://placehold.co/150x75/ebebeb/808080/?text=Immagine" class="rounded-pill" alt="Esempio di immagine arrotondata a pillola">
 {% endcapture %}{% include example.html content=example %}
+
+## Arrotondamento brand
+
+Per etichette, immagini e banner con l'angolo superiore destro retto (stile CNR) sono disponibili le classi utility `.rounded-brand-sm`, `.rounded-brand-md` e `.rounded-brand-lg`.
+
+{% capture example %}
+<div class="d-flex flex-wrap gap-3 align-items-end">
+  <div class="p-4 bg-primary text-white rounded-brand-sm">`.rounded-brand-sm`</div>
+  <div class="p-4 bg-primary text-white rounded-brand-md">`.rounded-brand-md`</div>
+  <div class="p-4 bg-primary text-white rounded-brand-lg">`.rounded-brand-lg`</div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
+I valori sono esposti anche come variabili CSS globali:
+
+| Classe utility | Variabile CSS | Valore |
+| -------------- | ------------- | ------ |
+| `.rounded-brand-sm` | `--bsi-radius-brand-sm` | `16px 0 16px 16px` |
+| `.rounded-brand-md` | `--bsi-radius-brand-md` | `32px 0 32px 32px` |
+| `.rounded-brand-lg` | `--bsi-radius-brand-lg` | `48px 0 48px 48px` |
+{: .table .table-cols-equal .mb-4}
+
+Per gli altri token di arrotondamento e spessore bordo (`--bsi-radius-smooth`, `--bsi-border-thick`, ecc.) consulta la pagina [Variabili CSS]({{ site.baseurl }}/docs/personalizzare-la-libreria/variabili-css/).

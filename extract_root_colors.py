@@ -2,19 +2,36 @@
 Extract color CSS custom properties from _root.scss and write them to
 _data/color-vars.yml for use in Jekyll documentation tables.
 
-Grouped by semantic category (text, link, border, background, status).
-The `usage` field is never generated – it is preserved from an existing
-color-vars.yml or left empty for manual editing.
+Grouped by semantic category (text, link, border, background, status,
+department-scale, department-background, department-text, department-border,
+department-icon).
 
-Run: python extract_root_colors.py
+The `usage` field is preserved from an existing color-vars.yml when present.
+New entries receive a generated default description.
+
+Run: python3 extract_root_colors.py
+
+No external dependencies required.
 """
 
 import os
 import re
-import yaml
 
 ROOT_SCSS = os.path.join('src', 'scss', 'base', '_root.scss')
 OUTPUT_YAML = os.path.join('_data', 'color-vars.yml')
+
+CATEGORIES = (
+    'text',
+    'link',
+    'border',
+    'background',
+    'status',
+    'department-scale',
+    'department-background',
+    'department-text',
+    'department-border',
+    'department-icon',
+)
 
 # Maps comment markers in _root.scss to category keys
 SECTION_MARKERS = {
@@ -22,7 +39,69 @@ SECTION_MARKERS = {
     '// Border colors': 'border',
     '// Background colors': 'background',
     '// Status colors': 'status',
+    '// Department color scales': 'department-scale',
+    '// Icons colors': '_end',
 }
+
+# Prefixes allowed per category (guards against stray matches)
+CATEGORY_PREFIXES = {
+    'text': ('color-text-',),
+    'link': ('color-link',),
+    'border': ('color-border-',),
+    'background': ('color-background-',),
+    'status': ('color-status-',),
+    'department-scale': ('color-',),
+}
+
+DEPARTMENT_SLUGS = (
+    'scienzeumane',
+    'agroalimentari',
+    'biomedica',
+    'ingegneria',
+    'ambiente',
+    'chimica',
+    'fisica',
+)
+
+DEPARTMENT_LABELS = {
+    'fisica': 'Scienze fisiche e tecnologie della materia',
+    'ambiente': 'Scienze del sistema terra e tecnologie per l\'ambiente',
+    'biomedica': 'Scienze biomediche',
+    'ingegneria': 'Ingegneria',
+    'scienzeumane': 'Scienze umane',
+    'chimica': 'Scienze chimiche',
+    'agroalimentari': 'Scienze bio-agroalimentari',
+}
+
+DEPARTMENT_SEMANTIC_PREFIXES = (
+    ('color-background-', 'department-background'),
+    ('color-text-', 'department-text'),
+    ('color-border-', 'department-border'),
+    ('icon-', 'department-icon'),
+)
+
+SCALE_WEIGHT_USAGE = {
+    '200': 'tonalità chiara (sfondi soft, badge)',
+    '500': 'colore principale del dipartimento',
+    '600': 'hover, stati attivi e testo su sfondi chiari',
+    '800': 'testo, icone e stati pressed',
+}
+
+SEMANTIC_SUFFIX_USAGE = {
+    '': 'sfondo principale',
+    '-light': 'sfondo chiaro',
+    '-hover': 'sfondo per lo stato hover',
+    '-active': 'sfondo per lo stato active/premuto',
+}
+
+TEXT_SUFFIX_USAGE = {
+    '': 'testo su sfondo chiaro',
+    '-hover': 'testo per lo stato hover',
+    '-active': 'testo per lo stato active/premuto',
+}
+
+BORDER_SUFFIX_USAGE = TEXT_SUFFIX_USAGE
+ICON_SUFFIX_USAGE = TEXT_SUFFIX_USAGE
 
 # Variables to exclude even if they match the pattern
 EXCLUDED_VARS = {
@@ -30,16 +109,8 @@ EXCLUDED_VARS = {
     'color-outline-focus',
 }
 
-# Prefixes allowed per category (guards against stray matches)
-CATEGORY_PREFIXES = {
-    'text': ('color-text-',),
-    'link': ('color-link',),   # matches both color-link and color-link-*
-    'border': ('color-border-',),
-    'background': ('color-background-',),
-    'status': ('color-status-',),
-}
-
 VAR_RE = re.compile(r'\s--#\{\$prefix\}([a-z][a-z0-9-]*):\s')
+SCALE_RE = re.compile(r'^color-([a-z]+)-(200|500|600|800)$')
 
 
 def infer_swatch(var_name):
@@ -55,48 +126,133 @@ def infer_swatch(var_name):
     return 'bg'
 
 
+def department_slug_from_suffix(suffix):
+    """Extract department slug from the part after a semantic prefix."""
+    for slug in DEPARTMENT_SLUGS:
+        if suffix == slug or suffix.startswith(slug + '-'):
+            return slug
+    return None
+
+
+def infer_department_semantic_category(var_suffix):
+    """Route department semantic variables to documentation categories."""
+    for prefix, category in DEPARTMENT_SEMANTIC_PREFIXES:
+        if not var_suffix.startswith(prefix):
+            continue
+        rest = var_suffix[len(prefix):]
+        if department_slug_from_suffix(rest):
+            return category
+    return None
+
+
+def is_department_scale(var_suffix):
+    match = SCALE_RE.match(var_suffix)
+    if not match:
+        return False
+    return match.group(1) in DEPARTMENT_SLUGS
+
+
+def default_usage(full_var, category):
+    """Generate Italian usage text for new variables."""
+    var_suffix = full_var.replace('--bsi-', '')
+
+    if category == 'department-scale':
+        match = SCALE_RE.match(var_suffix)
+        if not match:
+            return ''
+        slug, weight = match.group(1), match.group(2)
+        label = DEPARTMENT_LABELS.get(slug, slug)
+        weight_text = SCALE_WEIGHT_USAGE.get(weight, f'tonalità {weight}')
+        return f'{label}: {weight_text}'
+
+    slug = None
+    semantic_suffix = ''
+    for prefix, cat in DEPARTMENT_SEMANTIC_PREFIXES:
+        if category != cat or not var_suffix.startswith(prefix):
+            continue
+        rest = var_suffix[len(prefix):]
+        slug = department_slug_from_suffix(rest)
+        if slug:
+            semantic_suffix = rest[len(slug):]
+            break
+
+    if not slug:
+        return ''
+
+    label = DEPARTMENT_LABELS.get(slug, slug)
+
+    if category == 'department-background':
+        detail = SEMANTIC_SUFFIX_USAGE.get(semantic_suffix, 'sfondo')
+    elif category == 'department-text':
+        detail = TEXT_SUFFIX_USAGE.get(semantic_suffix, 'testo')
+    elif category == 'department-border':
+        detail = BORDER_SUFFIX_USAGE.get(semantic_suffix, 'bordo')
+    elif category == 'department-icon':
+        detail = ICON_SUFFIX_USAGE.get(semantic_suffix, 'icona')
+    else:
+        detail = ''
+
+    return f'{label}: {detail}'
+
+
 def parse_root_scss():
     """Parse _root.scss and return a dict {category: [{'var': ..., 'swatch': ...}]}."""
-    result = {cat: [] for cat in ('text', 'link', 'border', 'background', 'status')}
+    result = {cat: [] for cat in CATEGORIES}
     current_category = None
+    department_semantic_mode = False
 
     with open(ROOT_SCSS, encoding='utf-8') as f:
         for line in f:
             stripped = line.strip()
 
-            # Detect section changes
-            for marker, cat in SECTION_MARKERS.items():
-                if stripped == marker or stripped.startswith(marker + ' '):
-                    current_category = cat
-                    break
-
-            # Skip commented-out variables
-            if stripped.startswith('//'):
+            if stripped.startswith('// Department semantic tokens'):
+                department_semantic_mode = True
+                current_category = None
                 continue
 
-            if current_category is None:
+            for marker, cat in SECTION_MARKERS.items():
+                if stripped == marker or stripped.startswith(marker + ' '):
+                    if cat == '_end':
+                        department_semantic_mode = False
+                        current_category = None
+                    else:
+                        current_category = cat
+                        department_semantic_mode = False
+                    break
+
+            if stripped.startswith('//') and not stripped.startswith('// Department semantic tokens'):
+                if not stripped.startswith('// Department semantic tokens'):
+                    pass
+
+            if stripped.startswith('//'):
                 continue
 
             m = VAR_RE.search(line)
             if not m:
                 continue
 
-            var_suffix = m.group(1)  # e.g. "color-text-base"
+            var_suffix = m.group(1)
 
             if var_suffix in EXCLUDED_VARS:
                 continue
 
-            # Determine the actual category: color-link and color-link-* go to
-            # 'link' even when encountered in the 'text' section of _root.scss
-            if current_category == 'text' and var_suffix.startswith('color-link'):
+            if department_semantic_mode:
+                target_cat = infer_department_semantic_category(var_suffix)
+                if target_cat is None:
+                    continue
+            elif current_category == 'department-scale':
+                if not is_department_scale(var_suffix):
+                    continue
+                target_cat = current_category
+            elif current_category is None:
+                continue
+            elif current_category == 'text' and var_suffix.startswith('color-link'):
                 target_cat = 'link'
             else:
                 target_cat = current_category
-
-            # Validate against expected prefixes for this category
-            allowed = CATEGORY_PREFIXES.get(target_cat, ())
-            if not any(var_suffix.startswith(p) for p in allowed):
-                continue
+                allowed = CATEGORY_PREFIXES.get(target_cat, ())
+                if not any(var_suffix.startswith(p) for p in allowed):
+                    continue
 
             full_var = f'--bsi-{var_suffix}'
             result[target_cat].append({
@@ -111,9 +267,33 @@ def load_existing_yaml():
     """Load current color-vars.yml if it exists; return empty dict otherwise."""
     if not os.path.exists(OUTPUT_YAML):
         return {}
+
+    data = {cat: [] for cat in CATEGORIES}
+    current_cat = None
+    current_entry = None
+
     with open(OUTPUT_YAML, encoding='utf-8') as f:
-        data = yaml.safe_load(f) or {}
-    return data
+        for line in f:
+            if re.match(r'^[a-z-]+:\s*$', line):
+                current_cat = line.strip().rstrip(':')
+                current_entry = None
+                continue
+
+            if line.startswith('- var:'):
+                current_entry = {'var': line.split(':', 1)[1].strip()}
+                if current_cat in data:
+                    data[current_cat].append(current_entry)
+                continue
+
+            if current_entry is None:
+                continue
+
+            if line.startswith('  swatch:'):
+                current_entry['swatch'] = line.split(':', 1)[1].strip()
+            elif line.startswith('  usage:'):
+                current_entry['usage'] = line.split(':', 1)[1].strip()
+
+    return {k: v for k, v in data.items() if v}
 
 
 def build_usage_index(existing):
@@ -132,13 +312,12 @@ def merge(parsed, existing_index):
     """
     Merge newly parsed vars with existing data:
     - Preserve 'usage' and manual 'swatch' from existing entries.
-    - Add new entries (no 'usage').
+    - Add default usage for new entries.
     - Warn about removed entries.
     """
     merged = {}
     all_new_vars = {e['var'] for entries in parsed.values() for e in entries}
 
-    # Warn about removed vars
     for old_var in existing_index:
         if old_var not in all_new_vars:
             print(f'[WARNING] Variable removed from _root.scss: {old_var}')
@@ -150,18 +329,38 @@ def merge(parsed, existing_index):
             if var in existing_index:
                 old = existing_index[var]
                 merged_entry = {'var': var, 'swatch': old.get('swatch', entry['swatch'])}
-                if 'usage' in old:
-                    merged_entry['usage'] = old['usage']
+                usage = old.get('usage')
             else:
                 merged_entry = {'var': var, 'swatch': entry['swatch']}
+                usage = default_usage(var, cat)
+
+            if usage:
+                merged_entry['usage'] = usage
             merged[cat].append(merged_entry)
 
     return merged
 
 
 def write_yaml(data):
+    lines = []
+    for cat in CATEGORIES:
+        entries = data.get(cat, [])
+        if not entries:
+            continue
+        lines.append(f'{cat}:')
+        for entry in entries:
+            lines.append(f'- var: {entry["var"]}')
+            lines.append(f'  swatch: {entry["swatch"]}')
+            if entry.get('usage'):
+                usage = entry['usage'].replace('"', '\\"')
+                if ':' in usage or "'" in usage:
+                    lines.append(f'  usage: {usage}')
+                else:
+                    lines.append(f'  usage: {usage}')
+        lines.append('')
+
     with open(OUTPUT_YAML, 'w', encoding='utf-8') as f:
-        yaml.dump(data, f, allow_unicode=True, default_flow_style=False, sort_keys=False)
+        f.write('\n'.join(lines).rstrip() + '\n')
 
 
 if __name__ == '__main__':

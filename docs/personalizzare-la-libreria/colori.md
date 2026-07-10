@@ -161,6 +161,105 @@ Le variabili `--bsi-color-status-*` sono alias semantici dei colori di sfondo di
 
 {% include color-vars-table.html category="status" %}
 
+## Colori dei dipartimenti CNR
+
+Oltre alla palette semantica del tema, la libreria espone i **colori identificativi dei dipartimenti CNR**, con scale monocromatiche e token semantici per sfondo, testo, bordo e icone.
+
+### Panoramica
+
+<div class="table-responsive mb-4">
+  <table class="table table-cols-preview">
+    <thead>
+      <tr>
+        <th>Esempio del colore</th>
+        <th>Dipartimento</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="align-middle">
+        <td>{% include color-swatch.html var='--bsi-color-fisica-500' %}</td>
+        <td><code>fisica</code></td>
+        <td>Scienze fisiche e tecnologie della materia</td>
+      </tr>
+      <tr class="align-middle">
+        <td>{% include color-swatch.html var='--bsi-color-ambiente-500' %}</td>
+        <td><code>ambiente</code></td>
+        <td>Scienze del sistema terra e tecnologie per l'ambiente</td>
+      </tr>
+      <tr class="align-middle">
+        <td>{% include color-swatch.html var='--bsi-color-biomedica-500' %}</td>
+        <td><code>biomedica</code></td>
+        <td>Scienze biomediche</td>
+      </tr>
+      <tr class="align-middle">
+        <td>{% include color-swatch.html var='--bsi-color-ingegneria-500' %}</td>
+        <td><code>ingegneria</code></td>
+        <td>Ingegneria</td>
+      </tr>
+      <tr class="align-middle">
+        <td>{% include color-swatch.html var='--bsi-color-scienzeumane-500' %}</td>
+        <td><code>scienzeumane</code></td>
+        <td>Scienze umane</td>
+      </tr>
+      <tr class="align-middle">
+        <td>{% include color-swatch.html var='--bsi-color-chimica-500' %}</td>
+        <td><code>chimica</code></td>
+        <td>Scienze chimiche</td>
+      </tr>
+      <tr class="align-middle">
+        <td>{% include color-swatch.html var='--bsi-color-agroalimentari-500' %}</td>
+        <td><code>agroalimentari</code></td>
+        <td>Scienze bio-agroalimentari</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Scale monocromatiche
+
+Ogni dipartimento espone quattro tonalità:
+
+| Suffisso | Uso tipico |
+| -------- | ---------- |
+| `-200` | Sfondi soft, badge chiari |
+| `-500` | Colore principale del dipartimento |
+| `-600` | Hover, stati attivi, testo su sfondi chiari |
+| `-800` | Testo, icone, stati pressed |
+{: .table .table-cols-equal .mb-4}
+
+{% include color-vars-table.html category="department-scale" %}
+
+### Token semantici per dipartimento
+
+Per ogni dipartimento sono disponibili variabili semantiche analoghe a quelle del tema (`background`, `text`, `border`, `icon`).
+
+#### Sfondo
+
+{% include color-vars-table.html category="department-background" %}
+
+#### Testo
+
+{% include color-vars-table.html category="department-text" %}
+
+#### Bordo
+
+{% include color-vars-table.html category="department-border" %}
+
+#### Icone
+
+{% include color-vars-table.html category="department-icon" %}
+
+### Aggiornare la documentazione dei colori
+
+Le tabelle di questa pagina sono generate a partire da `_root.scss` tramite lo script `extract_root_colors.py`. Dopo aver aggiunto o modificato token colore, esegui:
+
+```bash
+npm run extract-root-colors
+```
+
+Le descrizioni (`usage`) delle variabili già presenti vengono preservate; quelle nuove ricevono un testo predefinito che puoi rifinire in `_data/color-vars.yml`.
+
 ## Come personalizzare i colori
 
 Puoi personalizzare i colori creando un foglio di stile dedicato e caricarlo **dopo** `bootstrap-italia.min.css`, seguendo la logica a cascata dei file CSS. In questo modo è possibile sovrascrivere le variabili sull'elemento `:root`.

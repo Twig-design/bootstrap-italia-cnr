@@ -47,6 +47,7 @@ text:
 - var: --bsi-color-text-base
   swatch: bg
   usage: Testo principale della pagina
+
 link:
 - var: --bsi-color-link
   swatch: bg
@@ -78,6 +79,7 @@ link:
 - var: --bsi-color-link-accent-hover
   swatch: bg
   usage: Link di accento per lo stato hover
+
 border:
 - var: --bsi-color-border-danger-active
   swatch: border
@@ -133,6 +135,7 @@ border:
 - var: --bsi-color-border-primary
   swatch: border
   usage: Bordo primario (elementi interattivi cliccabili)
+
 background:
 - var: --bsi-color-background-primary
   swatch: bg
@@ -233,6 +236,7 @@ background:
 - var: --bsi-color-background-secondary-deep
   swatch: bg
   usage: Sfondo secondario molto scuro
+
 status:
 - var: --bsi-color-status-danger
   swatch: bg
@@ -261,3 +265,370 @@ status:
 - var: --bsi-color-status-warning-active
   swatch: bg
   usage: Indicatore allerta per lo stato active
+
+department-scale:
+- var: --bsi-color-fisica-200
+  swatch: bg
+  usage: Scienze fisiche e tecnologie della materia: tonalità chiara (sfondi soft, badge)
+- var: --bsi-color-fisica-500
+  swatch: bg
+  usage: Scienze fisiche e tecnologie della materia: colore principale del dipartimento
+- var: --bsi-color-fisica-600
+  swatch: bg
+  usage: Scienze fisiche e tecnologie della materia: hover, stati attivi e testo su sfondi chiari
+- var: --bsi-color-fisica-800
+  swatch: bg
+  usage: Scienze fisiche e tecnologie della materia: testo, icone e stati pressed
+- var: --bsi-color-ambiente-200
+  swatch: bg
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: tonalità chiara (sfondi soft, badge)
+- var: --bsi-color-ambiente-500
+  swatch: bg
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: colore principale del dipartimento
+- var: --bsi-color-ambiente-600
+  swatch: bg
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: hover, stati attivi e testo su sfondi chiari
+- var: --bsi-color-ambiente-800
+  swatch: bg
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo, icone e stati pressed
+- var: --bsi-color-biomedica-200
+  swatch: bg
+  usage: Scienze biomediche: tonalità chiara (sfondi soft, badge)
+- var: --bsi-color-biomedica-500
+  swatch: bg
+  usage: Scienze biomediche: colore principale del dipartimento
+- var: --bsi-color-biomedica-600
+  swatch: bg
+  usage: Scienze biomediche: hover, stati attivi e testo su sfondi chiari
+- var: --bsi-color-biomedica-800
+  swatch: bg
+  usage: Scienze biomediche: testo, icone e stati pressed
+- var: --bsi-color-ingegneria-200
+  swatch: bg
+  usage: Ingegneria: tonalità chiara (sfondi soft, badge)
+- var: --bsi-color-ingegneria-500
+  swatch: bg
+  usage: Ingegneria: colore principale del dipartimento
+- var: --bsi-color-ingegneria-600
+  swatch: bg
+  usage: Ingegneria: hover, stati attivi e testo su sfondi chiari
+- var: --bsi-color-ingegneria-800
+  swatch: bg
+  usage: Ingegneria: testo, icone e stati pressed
+- var: --bsi-color-scienzeumane-200
+  swatch: bg
+  usage: Scienze umane: tonalità chiara (sfondi soft, badge)
+- var: --bsi-color-scienzeumane-500
+  swatch: bg
+  usage: Scienze umane: colore principale del dipartimento
+- var: --bsi-color-scienzeumane-600
+  swatch: bg
+  usage: Scienze umane: hover, stati attivi e testo su sfondi chiari
+- var: --bsi-color-scienzeumane-800
+  swatch: bg
+  usage: Scienze umane: testo, icone e stati pressed
+- var: --bsi-color-chimica-200
+  swatch: bg
+  usage: Scienze chimiche: tonalità chiara (sfondi soft, badge)
+- var: --bsi-color-chimica-500
+  swatch: bg
+  usage: Scienze chimiche: colore principale del dipartimento
+- var: --bsi-color-chimica-600
+  swatch: bg
+  usage: Scienze chimiche: hover, stati attivi e testo su sfondi chiari
+- var: --bsi-color-chimica-800
+  swatch: bg
+  usage: Scienze chimiche: testo, icone e stati pressed
+- var: --bsi-color-agroalimentari-200
+  swatch: bg
+  usage: Scienze bio-agroalimentari: tonalità chiara (sfondi soft, badge)
+- var: --bsi-color-agroalimentari-500
+  swatch: bg
+  usage: Scienze bio-agroalimentari: colore principale del dipartimento
+- var: --bsi-color-agroalimentari-600
+  swatch: bg
+  usage: Scienze bio-agroalimentari: hover, stati attivi e testo su sfondi chiari
+- var: --bsi-color-agroalimentari-800
+  swatch: bg
+  usage: Scienze bio-agroalimentari: testo, icone e stati pressed
+
+department-background:
+- var: --bsi-color-background-fisica
+  swatch: bg
+  usage: Scienze fisiche e tecnologie della materia: sfondo principale
+- var: --bsi-color-background-fisica-light
+  swatch: bg
+  usage: Scienze fisiche e tecnologie della materia: sfondo chiaro
+- var: --bsi-color-background-fisica-hover
+  swatch: bg
+  usage: Scienze fisiche e tecnologie della materia: sfondo per lo stato hover
+- var: --bsi-color-background-fisica-active
+  swatch: bg
+  usage: Scienze fisiche e tecnologie della materia: sfondo per lo stato active/premuto
+- var: --bsi-color-background-ambiente
+  swatch: bg
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: sfondo principale
+- var: --bsi-color-background-ambiente-light
+  swatch: bg
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: sfondo chiaro
+- var: --bsi-color-background-ambiente-hover
+  swatch: bg
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: sfondo per lo stato hover
+- var: --bsi-color-background-ambiente-active
+  swatch: bg
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: sfondo per lo stato active/premuto
+- var: --bsi-color-background-biomedica
+  swatch: bg
+  usage: Scienze biomediche: sfondo principale
+- var: --bsi-color-background-biomedica-light
+  swatch: bg
+  usage: Scienze biomediche: sfondo chiaro
+- var: --bsi-color-background-biomedica-hover
+  swatch: bg
+  usage: Scienze biomediche: sfondo per lo stato hover
+- var: --bsi-color-background-biomedica-active
+  swatch: bg
+  usage: Scienze biomediche: sfondo per lo stato active/premuto
+- var: --bsi-color-background-ingegneria
+  swatch: bg
+  usage: Ingegneria: sfondo principale
+- var: --bsi-color-background-ingegneria-light
+  swatch: bg
+  usage: Ingegneria: sfondo chiaro
+- var: --bsi-color-background-ingegneria-hover
+  swatch: bg
+  usage: Ingegneria: sfondo per lo stato hover
+- var: --bsi-color-background-ingegneria-active
+  swatch: bg
+  usage: Ingegneria: sfondo per lo stato active/premuto
+- var: --bsi-color-background-scienzeumane
+  swatch: bg
+  usage: Scienze umane: sfondo principale
+- var: --bsi-color-background-scienzeumane-light
+  swatch: bg
+  usage: Scienze umane: sfondo chiaro
+- var: --bsi-color-background-scienzeumane-hover
+  swatch: bg
+  usage: Scienze umane: sfondo per lo stato hover
+- var: --bsi-color-background-scienzeumane-active
+  swatch: bg
+  usage: Scienze umane: sfondo per lo stato active/premuto
+- var: --bsi-color-background-chimica
+  swatch: bg
+  usage: Scienze chimiche: sfondo principale
+- var: --bsi-color-background-chimica-light
+  swatch: bg
+  usage: Scienze chimiche: sfondo chiaro
+- var: --bsi-color-background-chimica-hover
+  swatch: bg
+  usage: Scienze chimiche: sfondo per lo stato hover
+- var: --bsi-color-background-chimica-active
+  swatch: bg
+  usage: Scienze chimiche: sfondo per lo stato active/premuto
+- var: --bsi-color-background-agroalimentari
+  swatch: bg
+  usage: Scienze bio-agroalimentari: sfondo principale
+- var: --bsi-color-background-agroalimentari-light
+  swatch: bg
+  usage: Scienze bio-agroalimentari: sfondo chiaro
+- var: --bsi-color-background-agroalimentari-hover
+  swatch: bg
+  usage: Scienze bio-agroalimentari: sfondo per lo stato hover
+- var: --bsi-color-background-agroalimentari-active
+  swatch: bg
+  usage: Scienze bio-agroalimentari: sfondo per lo stato active/premuto
+
+department-text:
+- var: --bsi-color-text-fisica
+  swatch: bg
+  usage: Scienze fisiche e tecnologie della materia: testo su sfondo chiaro
+- var: --bsi-color-text-fisica-hover
+  swatch: bg
+  usage: Scienze fisiche e tecnologie della materia: testo per lo stato hover
+- var: --bsi-color-text-fisica-active
+  swatch: bg
+  usage: Scienze fisiche e tecnologie della materia: testo per lo stato active/premuto
+- var: --bsi-color-text-ambiente
+  swatch: bg
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo su sfondo chiaro
+- var: --bsi-color-text-ambiente-hover
+  swatch: bg
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato hover
+- var: --bsi-color-text-ambiente-active
+  swatch: bg
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato active/premuto
+- var: --bsi-color-text-biomedica
+  swatch: bg
+  usage: Scienze biomediche: testo su sfondo chiaro
+- var: --bsi-color-text-biomedica-hover
+  swatch: bg
+  usage: Scienze biomediche: testo per lo stato hover
+- var: --bsi-color-text-biomedica-active
+  swatch: bg
+  usage: Scienze biomediche: testo per lo stato active/premuto
+- var: --bsi-color-text-ingegneria
+  swatch: bg
+  usage: Ingegneria: testo su sfondo chiaro
+- var: --bsi-color-text-ingegneria-hover
+  swatch: bg
+  usage: Ingegneria: testo per lo stato hover
+- var: --bsi-color-text-ingegneria-active
+  swatch: bg
+  usage: Ingegneria: testo per lo stato active/premuto
+- var: --bsi-color-text-scienzeumane
+  swatch: bg
+  usage: Scienze umane: testo su sfondo chiaro
+- var: --bsi-color-text-scienzeumane-hover
+  swatch: bg
+  usage: Scienze umane: testo per lo stato hover
+- var: --bsi-color-text-scienzeumane-active
+  swatch: bg
+  usage: Scienze umane: testo per lo stato active/premuto
+- var: --bsi-color-text-chimica
+  swatch: bg
+  usage: Scienze chimiche: testo su sfondo chiaro
+- var: --bsi-color-text-chimica-hover
+  swatch: bg
+  usage: Scienze chimiche: testo per lo stato hover
+- var: --bsi-color-text-chimica-active
+  swatch: bg
+  usage: Scienze chimiche: testo per lo stato active/premuto
+- var: --bsi-color-text-agroalimentari
+  swatch: bg
+  usage: Scienze bio-agroalimentari: testo su sfondo chiaro
+- var: --bsi-color-text-agroalimentari-hover
+  swatch: bg
+  usage: Scienze bio-agroalimentari: testo per lo stato hover
+- var: --bsi-color-text-agroalimentari-active
+  swatch: bg
+  usage: Scienze bio-agroalimentari: testo per lo stato active/premuto
+
+department-border:
+- var: --bsi-color-border-fisica
+  swatch: border
+  usage: Scienze fisiche e tecnologie della materia: testo su sfondo chiaro
+- var: --bsi-color-border-fisica-hover
+  swatch: border
+  usage: Scienze fisiche e tecnologie della materia: testo per lo stato hover
+- var: --bsi-color-border-fisica-active
+  swatch: border
+  usage: Scienze fisiche e tecnologie della materia: testo per lo stato active/premuto
+- var: --bsi-color-border-ambiente
+  swatch: border
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo su sfondo chiaro
+- var: --bsi-color-border-ambiente-hover
+  swatch: border
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato hover
+- var: --bsi-color-border-ambiente-active
+  swatch: border
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato active/premuto
+- var: --bsi-color-border-biomedica
+  swatch: border
+  usage: Scienze biomediche: testo su sfondo chiaro
+- var: --bsi-color-border-biomedica-hover
+  swatch: border
+  usage: Scienze biomediche: testo per lo stato hover
+- var: --bsi-color-border-biomedica-active
+  swatch: border
+  usage: Scienze biomediche: testo per lo stato active/premuto
+- var: --bsi-color-border-ingegneria
+  swatch: border
+  usage: Ingegneria: testo su sfondo chiaro
+- var: --bsi-color-border-ingegneria-hover
+  swatch: border
+  usage: Ingegneria: testo per lo stato hover
+- var: --bsi-color-border-ingegneria-active
+  swatch: border
+  usage: Ingegneria: testo per lo stato active/premuto
+- var: --bsi-color-border-scienzeumane
+  swatch: border
+  usage: Scienze umane: testo su sfondo chiaro
+- var: --bsi-color-border-scienzeumane-hover
+  swatch: border
+  usage: Scienze umane: testo per lo stato hover
+- var: --bsi-color-border-scienzeumane-active
+  swatch: border
+  usage: Scienze umane: testo per lo stato active/premuto
+- var: --bsi-color-border-chimica
+  swatch: border
+  usage: Scienze chimiche: testo su sfondo chiaro
+- var: --bsi-color-border-chimica-hover
+  swatch: border
+  usage: Scienze chimiche: testo per lo stato hover
+- var: --bsi-color-border-chimica-active
+  swatch: border
+  usage: Scienze chimiche: testo per lo stato active/premuto
+- var: --bsi-color-border-agroalimentari
+  swatch: border
+  usage: Scienze bio-agroalimentari: testo su sfondo chiaro
+- var: --bsi-color-border-agroalimentari-hover
+  swatch: border
+  usage: Scienze bio-agroalimentari: testo per lo stato hover
+- var: --bsi-color-border-agroalimentari-active
+  swatch: border
+  usage: Scienze bio-agroalimentari: testo per lo stato active/premuto
+
+department-icon:
+- var: --bsi-icon-fisica
+  swatch: bg
+  usage: Scienze fisiche e tecnologie della materia: testo su sfondo chiaro
+- var: --bsi-icon-fisica-hover
+  swatch: bg
+  usage: Scienze fisiche e tecnologie della materia: testo per lo stato hover
+- var: --bsi-icon-fisica-active
+  swatch: bg
+  usage: Scienze fisiche e tecnologie della materia: testo per lo stato active/premuto
+- var: --bsi-icon-ambiente
+  swatch: bg
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo su sfondo chiaro
+- var: --bsi-icon-ambiente-hover
+  swatch: bg
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato hover
+- var: --bsi-icon-ambiente-active
+  swatch: bg
+  usage: Scienze del sistema terra e tecnologie per l'ambiente: testo per lo stato active/premuto
+- var: --bsi-icon-biomedica
+  swatch: bg
+  usage: Scienze biomediche: testo su sfondo chiaro
+- var: --bsi-icon-biomedica-hover
+  swatch: bg
+  usage: Scienze biomediche: testo per lo stato hover
+- var: --bsi-icon-biomedica-active
+  swatch: bg
+  usage: Scienze biomediche: testo per lo stato active/premuto
+- var: --bsi-icon-ingegneria
+  swatch: bg
+  usage: Ingegneria: testo su sfondo chiaro
+- var: --bsi-icon-ingegneria-hover
+  swatch: bg
+  usage: Ingegneria: testo per lo stato hover
+- var: --bsi-icon-ingegneria-active
+  swatch: bg
+  usage: Ingegneria: testo per lo stato active/premuto
+- var: --bsi-icon-scienzeumane
+  swatch: bg
+  usage: Scienze umane: testo su sfondo chiaro
+- var: --bsi-icon-scienzeumane-hover
+  swatch: bg
+  usage: Scienze umane: testo per lo stato hover
+- var: --bsi-icon-scienzeumane-active
+  swatch: bg
+  usage: Scienze umane: testo per lo stato active/premuto
+- var: --bsi-icon-chimica
+  swatch: bg
+  usage: Scienze chimiche: testo su sfondo chiaro
+- var: --bsi-icon-chimica-hover
+  swatch: bg
+  usage: Scienze chimiche: testo per lo stato hover
+- var: --bsi-icon-chimica-active
+  swatch: bg
+  usage: Scienze chimiche: testo per lo stato active/premuto
+- var: --bsi-icon-agroalimentari
+  swatch: bg
+  usage: Scienze bio-agroalimentari: testo su sfondo chiaro
+- var: --bsi-icon-agroalimentari-hover
+  swatch: bg
+  usage: Scienze bio-agroalimentari: testo per lo stato hover
+- var: --bsi-icon-agroalimentari-active
+  swatch: bg
+  usage: Scienze bio-agroalimentari: testo per lo stato active/premuto
