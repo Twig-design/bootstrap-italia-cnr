@@ -95,7 +95,7 @@ $color-neutral-300: #c3ced9 !default;
 $color-neutral-400: #a9b7c4 !default;
 $color-neutral-500: #8b9cac !default;
 $color-neutral-600: #60758a !default;
-$color-neutral-700: #4c6073 !default;
+$color-neutral-700: #4c5d73 !default;
 $color-neutral-800: #334b5c !default;
 
 // ============================================================================
@@ -275,6 +275,158 @@ $color-link-secondary-active: $color-neutral-800 !default;
 $icon-secondary: $color-neutral-600 !default;
 $icon-secondary-hover: $color-neutral-700 !default;
 $icon-secondary-active: $color-neutral-800 !default;
+
+// ============================================================================
+// DEPARTMENT — color.* (UI Kit Italia / CNR)
+// Scale: 200 (sfondi soft), 500 (brand), 600 (hover/active), 800 (testo/icone)
+// ============================================================================
+
+// Fisica — Scienze fisiche e tecnologie della materia
+$color-fisica-200: #e1e3e7 !default;
+$color-fisica-500: #adb0b8 !default;
+$color-fisica-600: #91959d !default;
+$color-fisica-800: #686c74 !default;
+
+// Ambiente — Scienze del sistema terra e tecnologie per l'ambiente
+$color-ambiente-200: #d2e8f7 !default;
+$color-ambiente-500: #78b3e0 !default;
+$color-ambiente-600: #4579ac !default;
+$color-ambiente-800: #2c5f88 !default;
+
+// Biomedica — Scienze biomediche
+$color-biomedica-200: #d7d2f0 !default;
+$color-biomedica-500: #8f7dcf !default;
+$color-biomedica-600: #6653ad !default;
+$color-biomedica-800: #3d2e76 !default;
+
+// Ingegneria
+$color-ingegneria-200: #f5bccb !default;
+$color-ingegneria-500: #e51a4b !default;
+$color-ingegneria-600: #ba0d3a !default;
+$color-ingegneria-800: #7a0725 !default;
+
+// Scienze umane
+$color-scienzeumane-200: #fde1b5 !default;
+$color-scienzeumane-500: #f79d27 !default;
+$color-scienzeumane-600: #d67311 !default;
+$color-scienzeumane-800: #984a08 !default;
+
+// Chimica — Scienze chimiche
+$color-chimica-200: #dce6aa !default;
+$color-chimica-500: #96ae21 !default;
+$color-chimica-600: #708416 !default;
+$color-chimica-800: #48560d !default;
+
+// Agroalimentari — Scienze bio-agroalimentari
+$color-agroalimentari-200: #b9d6bc !default;
+$color-agroalimentari-500: #417f45 !default;
+$color-agroalimentari-600: #2a5b2f !default;
+$color-agroalimentari-800: #18361c !default;
+
+// Semantic tokens — Fisica
+$color-background-fisica: $color-fisica-500 !default;
+$color-background-fisica-light: $color-fisica-200 !default;
+$color-background-fisica-hover: $color-fisica-600 !default;
+$color-background-fisica-active: $color-fisica-800 !default;
+$color-text-fisica: $color-fisica-800 !default;
+$color-text-fisica-hover: $color-fisica-600 !default;
+$color-text-fisica-active: $color-fisica-800 !default;
+$color-border-fisica: $color-fisica-500 !default;
+$color-border-fisica-hover: $color-fisica-600 !default;
+$color-border-fisica-active: $color-fisica-800 !default;
+$icon-fisica: $color-fisica-800 !default;
+$icon-fisica-hover: $color-fisica-600 !default;
+$icon-fisica-active: $color-fisica-800 !default;
+
+// Semantic tokens — Ambiente
+$color-background-ambiente: $color-ambiente-500 !default;
+$color-background-ambiente-light: $color-ambiente-200 !default;
+$color-background-ambiente-hover: $color-ambiente-600 !default;
+$color-background-ambiente-active: $color-ambiente-800 !default;
+$color-text-ambiente: $color-ambiente-800 !default;
+$color-text-ambiente-hover: $color-ambiente-600 !default;
+$color-text-ambiente-active: $color-ambiente-800 !default;
+$color-border-ambiente: $color-ambiente-500 !default;
+$color-border-ambiente-hover: $color-ambiente-600 !default;
+$color-border-ambiente-active: $color-ambiente-800 !default;
+$icon-ambiente: $color-ambiente-800 !default;
+$icon-ambiente-hover: $color-ambiente-600 !default;
+$icon-ambiente-active: $color-ambiente-800 !default;
+
+// Semantic tokens — Biomedica
+$color-background-biomedica: $color-biomedica-500 !default;
+$color-background-biomedica-light: $color-biomedica-200 !default;
+$color-background-biomedica-hover: $color-biomedica-600 !default;
+$color-background-biomedica-active: $color-biomedica-800 !default;
+$color-text-biomedica: $color-biomedica-800 !default;
+$color-text-biomedica-hover: $color-biomedica-600 !default;
+$color-text-biomedica-active: $color-biomedica-800 !default;
+$color-border-biomedica: $color-biomedica-500 !default;
+$color-border-biomedica-hover: $color-biomedica-600 !default;
+$color-border-biomedica-active: $color-biomedica-800 !default;
+$icon-biomedica: $color-biomedica-800 !default;
+$icon-biomedica-hover: $color-biomedica-600 !default;
+$icon-biomedica-active: $color-biomedica-800 !default;
+
+// Semantic tokens — Ingegneria
+$color-background-ingegneria: $color-ingegneria-500 !default;
+$color-background-ingegneria-light: $color-ingegneria-200 !default;
+$color-background-ingegneria-hover: $color-ingegneria-600 !default;
+$color-background-ingegneria-active: $color-ingegneria-800 !default;
+$color-text-ingegneria: $color-ingegneria-800 !default;
+$color-text-ingegneria-hover: $color-ingegneria-600 !default;
+$color-text-ingegneria-active: $color-ingegneria-800 !default;
+$color-border-ingegneria: $color-ingegneria-500 !default;
+$color-border-ingegneria-hover: $color-ingegneria-600 !default;
+$color-border-ingegneria-active: $color-ingegneria-800 !default;
+$icon-ingegneria: $color-ingegneria-800 !default;
+$icon-ingegneria-hover: $color-ingegneria-600 !default;
+$icon-ingegneria-active: $color-ingegneria-800 !default;
+
+// Semantic tokens — Scienze umane
+$color-background-scienzeumane: $color-scienzeumane-500 !default;
+$color-background-scienzeumane-light: $color-scienzeumane-200 !default;
+$color-background-scienzeumane-hover: $color-scienzeumane-600 !default;
+$color-background-scienzeumane-active: $color-scienzeumane-800 !default;
+$color-text-scienzeumane: $color-scienzeumane-800 !default;
+$color-text-scienzeumane-hover: $color-scienzeumane-600 !default;
+$color-text-scienzeumane-active: $color-scienzeumane-800 !default;
+$color-border-scienzeumane: $color-scienzeumane-500 !default;
+$color-border-scienzeumane-hover: $color-scienzeumane-600 !default;
+$color-border-scienzeumane-active: $color-scienzeumane-800 !default;
+$icon-scienzeumane: $color-scienzeumane-800 !default;
+$icon-scienzeumane-hover: $color-scienzeumane-600 !default;
+$icon-scienzeumane-active: $color-scienzeumane-800 !default;
+
+// Semantic tokens — Chimica
+$color-background-chimica: $color-chimica-500 !default;
+$color-background-chimica-light: $color-chimica-200 !default;
+$color-background-chimica-hover: $color-chimica-600 !default;
+$color-background-chimica-active: $color-chimica-800 !default;
+$color-text-chimica: $color-chimica-800 !default;
+$color-text-chimica-hover: $color-chimica-600 !default;
+$color-text-chimica-active: $color-chimica-800 !default;
+$color-border-chimica: $color-chimica-500 !default;
+$color-border-chimica-hover: $color-chimica-600 !default;
+$color-border-chimica-active: $color-chimica-800 !default;
+$icon-chimica: $color-chimica-800 !default;
+$icon-chimica-hover: $color-chimica-600 !default;
+$icon-chimica-active: $color-chimica-800 !default;
+
+// Semantic tokens — Agroalimentari
+$color-background-agroalimentari: $color-agroalimentari-500 !default;
+$color-background-agroalimentari-light: $color-agroalimentari-200 !default;
+$color-background-agroalimentari-hover: $color-agroalimentari-600 !default;
+$color-background-agroalimentari-active: $color-agroalimentari-800 !default;
+$color-text-agroalimentari: $color-agroalimentari-800 !default;
+$color-text-agroalimentari-hover: $color-agroalimentari-600 !default;
+$color-text-agroalimentari-active: $color-agroalimentari-800 !default;
+$color-border-agroalimentari: $color-agroalimentari-500 !default;
+$color-border-agroalimentari-hover: $color-agroalimentari-600 !default;
+$color-border-agroalimentari-active: $color-agroalimentari-800 !default;
+$icon-agroalimentari: $color-agroalimentari-800 !default;
+$icon-agroalimentari-hover: $color-agroalimentari-600 !default;
+$icon-agroalimentari-active: $color-agroalimentari-800 !default;
 
 // ============================================================================
 // COMPONENTI HSB ACCENT COLORS (numeri puri)
