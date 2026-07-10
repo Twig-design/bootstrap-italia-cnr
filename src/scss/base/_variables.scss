@@ -91,10 +91,10 @@ $colors: map.merge(
 $border-color: $gray-border !default;
 
 // Info Colors
-$success: $green-accessible !default;
-$info: $secondary !default;
-$warning: $orange-accessible !default;
-$danger: $red-accessible !default;
+$success: $color-success-500 !default;
+$info: $color-info-500 !default;
+$warning: $color-warning-500 !default;
+$danger: $color-error-500 !default;
 
 // ============================================================================
 // THEME COLORS MAP - MOVE TO MAPS?

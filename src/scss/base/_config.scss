@@ -56,6 +56,38 @@ $theme-primary-muted: $color-primary-blue-700 !default;
 $theme-primary-deep: $color-primary-blue-800 !default;
 
 // ============================================================================
+// SYSTEM — color.error.* / success.* / warning.* / info.* (UI Kit Italia)
+// ============================================================================
+
+// Error
+$color-error-100: #fdecec !default;
+$color-error-300: #f89c9c !default;
+$color-error-500: #dc2626 !default;
+$color-error-600: #c21f1f !default;
+$color-error-800: #7f1d1d !default;
+
+// Success
+$color-success-100: #dcfce7 !default;
+$color-success-300: #45d369 !default;
+$color-success-500: #008a22 !default;
+$color-success-600: #00771d !default;
+$color-success-800: #005c17 !default;
+
+// Warning
+$color-warning-100: #fef3c7 !default;
+$color-warning-300: #fcd34d !default;
+$color-warning-500: #cc7a00 !default;
+$color-warning-600: #b86e00 !default;
+$color-warning-800: #92400e !default;
+
+// Info
+$color-info-100: #e0f2fe !default;
+$color-info-300: #73b8fe !default;
+$color-info-500: #0066cc !default;
+$color-info-600: #005ab5 !default;
+$color-info-800: #0c4a6e !default;
+
+// ============================================================================
 // COLOR CONTRAST (per la funzione color-contrast)
 // ============================================================================
 
@@ -67,9 +99,9 @@ $color-contrast-light: $white !default;
 // COLORI DIRETTI (che non usano funzioni HSB)
 // ============================================================================
 
-$red: hsl(350, 60%, 50%) !default; // color-red-50
-$orange: hsl(36, 100%, 30%) !default; // color-orange-30
-$green: hsl(160, 100%, 25%) !default; // color-emerald-25
+$red: $color-error-500 !default;
+$orange: $color-warning-500 !default;
+$green: $color-success-500 !default;
 $teal: hsl(178, 90%, 32%) !default;
 $dark: hsl(210, 54%, 20%) !default; // color-slate-20
 $gray-secondary: hsl(210, 17%, 44%) !default; // color-slate-44
@@ -106,7 +138,6 @@ $color-background-secondary-lighter: hsl(210, 3%, 85%); // color-slate-85
 // Borders
 $color-border-secondary: hsl(210, 17%, 44%); // color-slate-44
 $color-border-subtle: hsl(210, 4%, 78%) !default; // color-slate-78
-$color-border-warning: hsl(36, 100%, 30%); // color-orange-30
 $color-border-primary: $color-primary-blue-600 !default;
 $color-border-primary-hover: $color-primary-blue-500 !default;
 $color-border-primary-active: $color-primary-blue-700 !default;
@@ -130,7 +161,6 @@ $color-text-primary-active: $color-primary-blue-700 !default;
 $color-text-primary-hover: $color-primary-blue-500 !default;
 $color-text-muted: hsl(210, 17%, 44%); // color-slate-44
 $color-text-secondary: hsl(210, 33%, 28%); // color-slate-28
-$color-text-warning: hsl(36, 100%, 30%); // color-orange-30
 
 // Links & icons (primary)
 $color-link: $color-primary-blue-600 !default;
@@ -163,6 +193,54 @@ $color-background-accent-hover: $color-orange-800 !default;
 $color-text-accent: $color-orange-800 !default;
 $color-link-accent: $color-orange-800 !default;
 $color-link-accent-hover: $color-orange-900 !default;
+
+// Danger (error)
+$color-background-danger: $color-error-500 !default;
+$color-background-danger-light: $color-error-100 !default;
+$color-background-danger-hover: $color-error-600 !default;
+$color-background-danger-active: $color-error-800 !default;
+$color-text-danger: $color-error-500 !default;
+$color-text-danger-hover: $color-error-600 !default;
+$color-text-danger-active: $color-error-800 !default;
+$color-border-danger: $color-error-500 !default;
+$color-border-danger-hover: $color-error-600 !default;
+$color-border-danger-active: $color-error-800 !default;
+$icon-danger: $color-error-500 !default;
+$icon-danger-hover: $color-error-600 !default;
+$icon-danger-active: $color-error-800 !default;
+
+// Success
+$color-background-success: $color-success-500 !default;
+$color-background-success-light: $color-success-100 !default;
+$color-background-success-hover: $color-success-600 !default;
+$color-background-success-active: $color-success-800 !default;
+$color-text-success: $color-success-500 !default;
+$color-text-success-hover: $color-success-600 !default;
+$color-text-success-active: $color-success-800 !default;
+$color-border-success: $color-success-500 !default;
+$color-border-success-hover: $color-success-600 !default;
+$color-border-success-active: $color-success-800 !default;
+$icon-success: $color-success-500 !default;
+$icon-success-hover: $color-success-600 !default;
+$icon-success-active: $color-success-800 !default;
+
+// Warning
+$color-background-warning: $color-warning-500 !default;
+$color-background-warning-light: $color-warning-100 !default;
+$color-background-warning-hover: $color-warning-600 !default;
+$color-background-warning-active: $color-warning-800 !default;
+$color-text-warning: $color-warning-600 !default;
+$color-text-warning-hover: $color-warning-600 !default;
+$color-text-warning-active: $color-warning-800 !default;
+$color-border-warning: $color-warning-500 !default;
+$color-border-warning-hover: $color-warning-600 !default;
+$color-border-warning-active: $color-warning-800 !default;
+$icon-warning: $color-warning-500 !default;
+$icon-warning-hover: $color-warning-600 !default;
+$icon-warning-active: $color-warning-800 !default;
+
+// Info (theme color)
+$color-info: $color-info-500 !default;
 
 // ============================================================================
 // COMPONENTI HSB ACCENT COLORS (numeri puri)
