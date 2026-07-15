@@ -131,55 +131,97 @@ const getTitilliumWebCSS = (basePath) => `
   }
 `
 
-const getSourceSans3CSS = (basePath) => `
-  /* Source Sans 3: 400, 600, 700 + italic */
+const getSourceSansProCSS = (basePath) => `
+  /* Source Sans Pro: 200, 300, 400, 600, 700 + italic */
 
   @font-face {
-    font-family: 'Source Sans 3';
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url('${basePath}/Source_Sans_Pro/SourceSansPro-ExtraLight.woff2') format('woff2'),
+         url('${basePath}/Source_Sans_Pro/SourceSansPro-ExtraLight.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 200;
+    font-display: swap;
+    src: url('${basePath}/Source_Sans_Pro/SourceSansPro-ExtraLightItalic.woff2') format('woff2'),
+         url('${basePath}/Source_Sans_Pro/SourceSansPro-ExtraLightItalic.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('${basePath}/Source_Sans_Pro/SourceSansPro-Light.woff2') format('woff2'),
+         url('${basePath}/Source_Sans_Pro/SourceSansPro-Light.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url('${basePath}/Source_Sans_Pro/SourceSansPro-LightItalic.woff2') format('woff2'),
+         url('${basePath}/Source_Sans_Pro/SourceSansPro-LightItalic.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('${basePath}/Source_Sans_3/source-sans-3-v19-latin_latin-ext-regular.woff2') format('woff2');
+    src: url('${basePath}/Source_Sans_Pro/SourceSansPro-Regular.woff2') format('woff2'),
+         url('${basePath}/Source_Sans_Pro/SourceSansPro-Regular.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: 'Source Sans 3';
+    font-family: 'Source Sans Pro';
     font-style: italic;
     font-weight: 400;
     font-display: swap;
-    src: url('${basePath}/Source_Sans_3/source-sans-3-v19-latin_latin-ext-italic.woff2') format('woff2');
+    src: url('${basePath}/Source_Sans_Pro/SourceSansPro-Italic.woff2') format('woff2'),
+         url('${basePath}/Source_Sans_Pro/SourceSansPro-Italic.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: 'Source Sans 3';
+    font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url('${basePath}/Source_Sans_3/source-sans-3-v19-latin_latin-ext-600.woff2') format('woff2');
+    src: url('${basePath}/Source_Sans_Pro/SourceSansPro-SemiBold.woff2') format('woff2'),
+         url('${basePath}/Source_Sans_Pro/SourceSansPro-SemiBold.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: 'Source Sans 3';
+    font-family: 'Source Sans Pro';
     font-style: italic;
     font-weight: 600;
     font-display: swap;
-    src: url('${basePath}/Source_Sans_3/source-sans-3-v19-latin_latin-ext-600italic.woff2') format('woff2');
+    src: url('${basePath}/Source_Sans_Pro/SourceSansPro-SemiBoldItalic.woff2') format('woff2'),
+         url('${basePath}/Source_Sans_Pro/SourceSansPro-SemiBoldItalic.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: 'Source Sans 3';
+    font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('${basePath}/Source_Sans_3/source-sans-3-v19-latin_latin-ext-700.woff2') format('woff2');
+    src: url('${basePath}/Source_Sans_Pro/SourceSansPro-Bold.woff2') format('woff2'),
+         url('${basePath}/Source_Sans_Pro/SourceSansPro-Bold.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: 'Source Sans 3';
+    font-family: 'Source Sans Pro';
     font-style: italic;
     font-weight: 700;
     font-display: swap;
-    src: url('${basePath}/Source_Sans_3/source-sans-3-v19-latin_latin-ext-700italic.woff2') format('woff2');
+    src: url('${basePath}/Source_Sans_Pro/SourceSansPro-BoldItalic.woff2') format('woff2'),
+         url('${basePath}/Source_Sans_Pro/SourceSansPro-BoldItalic.ttf') format('truetype');
   }
 `
 
@@ -484,7 +526,7 @@ const getRobotoMonoCSS = (basePath) => `
 `
 
 const fontGenerators = {
-  'source-sans-3': getSourceSans3CSS,
+  'source-sans-pro': getSourceSansProCSS,
   'titillium-web': getTitilliumWebCSS,
   'titillium-sans-pro': getTitilliumSansProCSS,
   titillio: getTitillioCSS,
@@ -500,13 +542,13 @@ export default (path = '/node_modules/bootstrap-italia/dist/fonts', options = {}
   // Backward compatibility: if called without options, use legacy behavior
   if (Object.keys(options).length === 0) {
     options = {
-      fonts: ['source-sans-3', 'lora', 'roboto-mono'],
+      fonts: ['source-sans-pro', 'lora', 'roboto-mono'],
     }
   }
 
   const {
     titillium = 'web', // 'web' | 'sans-pro'
-    fonts = ['titillium', 'lora', 'roboto-mono'], // which font families to include
+    fonts = ['source-sans-pro', 'lora', 'roboto-mono'], // which font families to include
   } = options
 
   const titilliumFontId = titillium === 'sans-pro' ? 'titillium-sans-pro' : 'titillium-web'
@@ -526,11 +568,11 @@ export default (path = '/node_modules/bootstrap-italia/dist/fonts', options = {}
 /*
 USAGE EXAMPLES:
 
-// Default: Source Sans 3 + Lora + Roboto Mono
+// Default: Source Sans Pro + Lora + Roboto Mono
 loadFonts('/fonts');
 
-// Load only Source Sans 3
-loadFonts('/fonts', { fonts: ['source-sans-3'] });
+// Load only Source Sans Pro
+loadFonts('/fonts', { fonts: ['source-sans-pro'] });
 
 // Load only Titillium Sans Pro (legacy)
 loadFonts('/fonts', { titillium: 'sans-pro', fonts: ['titillium'] });
@@ -543,5 +585,5 @@ loadFonts('/fonts', { titillium: 'sans-pro' });
 
 POSSIBLE VALUES:
 - titillium: 'web' | 'sans-pro' (when 'titillium' is in fonts)
-- fonts: ['source-sans-3', 'titillium', 'lora', 'roboto-mono'] (any combination)
+- fonts: ['source-sans-pro', 'titillium', 'lora', 'roboto-mono'] (any combination)
 */

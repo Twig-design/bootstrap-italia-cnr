@@ -59,7 +59,7 @@
       height: var(--#{$prefix}carousel-pagination-dot-size);
       padding: 0;
       border: none;
-      border-radius: 50px;
+      border-radius: $radius-rounded;
       background: var(--#{$prefix}carousel-pagination-dot-color);
       box-shadow: none;
       transition: all 0.3s;

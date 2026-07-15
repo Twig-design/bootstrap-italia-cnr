@@ -15,18 +15,18 @@ description: Guida completa al caricamento e alla configurazione dei font in Boo
 
 Bootstrap Italia include tre famiglie di caratteri tipografici pensate per garantire leggibilità e coerenza visiva:
 
-- **Source Sans 3**: font principale sans-serif per interfacce e testi (UI Kit CNR)
+- **Source Sans Pro**: font principale sans-serif per interfacce e testi (UI Kit CNR)
 - **Lora**: font con grazie (serif) per testi lunghi e contenuti editoriali
 - **Roboto Mono**: font monospace per codice, numeri e dati tabulari
 
-## Source Sans 3: il font principale
+## Source Sans Pro: il font principale
 
-Il font principale del kit CNR è **Source Sans 3** (in Figma indicato come Source Sans Pro), self-hosted in `src/fonts/Source_Sans_3/`. È disponibile nei pesi **400 Regular**, **600 SemiBold**, **700 Bold** con le rispettive varianti italic.
+Il font principale del kit CNR è **Source Sans Pro** (in Figma indicato come Source Sans Pro), self-hosted in `src/fonts/Source_Sans_Pro/`. È disponibile nei pesi **400 Regular**, **600 SemiBold**, **700 Bold** con le rispettive varianti italic.
 
 Lo stack tipografico include **Titillium Web** e **Titillium Sans Pro** come fallback (non caricati di default).
 
 {% capture callout %}
-Usa il selettore "Font principale" nella barra di sinistra per confrontare Source Sans 3 con le varianti legacy Titillium sulla documentazione.
+Usa il selettore "Font principale" nella barra di sinistra per confrontare Source Sans Pro con le varianti legacy Titillium sulla documentazione.
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
 ## Titillium (fallback legacy)
@@ -41,7 +41,7 @@ Ulteriori informazioni nella scheda [Tipografia](/docs/organizzare-i-contenuti/t
 
 ## Font complementari: Lora e Roboto Mono
 
-Oltre a Source Sans 3, Bootstrap Italia include due font complementari:
+Oltre a Source Sans Pro, Bootstrap Italia include due font complementari:
 
 - **Lora**: font con grazie (serif), ideale per testi lunghi, articoli e contenuti editoriali. Disponibile nei pesi 400 e 700 con varianti italic.
 
@@ -64,7 +64,7 @@ loadFonts(percorso, opzioni)
 - `percorso` (string): percorso della cartella contenente i font
 - `opzioni` (object, opzionale): 
   - `titillium`: `'web'` o `'sans-pro'` (solo se `'titillium'` è in `fonts`)
-  - `fonts`: array di famiglie da caricare (default: `['source-sans-3', 'lora', 'roboto-mono']`)
+  - `fonts`: array di famiglie da caricare (default: `['source-sans-pro', 'lora', 'roboto-mono']`)
 
 ### Esempi con moduli ES
 
@@ -72,13 +72,13 @@ Se usi un bundler (come mostrato nella [pagina Introduzione]({{ site.baseurl }}/
 ```js
 import { loadFonts } from 'bootstrap-italia'
 
-// Caricamento standard (Source Sans 3 + Lora + Roboto Mono)
+// Caricamento standard (Source Sans Pro + Lora + Roboto Mono)
 loadFonts('/fonts');
 
-// Solo Source Sans 3
-loadFonts('/fonts', { fonts: ['source-sans-3'] });
+// Solo Source Sans Pro
+loadFonts('/fonts', { fonts: ['source-sans-pro'] });
 
-// Titillium Sans Pro (legacy) al posto di Source Sans 3
+// Titillium Sans Pro (legacy) al posto di Source Sans Pro
 loadFonts('/fonts', { titillium: 'sans-pro', fonts: ['titillium', 'lora', 'roboto-mono'] });
 ```
 

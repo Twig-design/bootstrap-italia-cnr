@@ -7,22 +7,22 @@
       if (stored === 'sans-pro') {
         this.currentFont = 'sans-pro';
       } else if (stored === 'web') {
-        // 'web' era il default legacy — migra a Source Sans 3
-        this.currentFont = 'source-sans-3';
-        localStorage.setItem('docs-font-variant', 'source-sans-3');
+        // 'web' era il default legacy — migra a Source Sans Pro
+        this.currentFont = 'source-sans-pro';
+        localStorage.setItem('docs-font-variant', 'source-sans-pro');
       } else {
-        this.currentFont = 'source-sans-3';
-        if (stored !== 'source-sans-3') {
-          localStorage.setItem('docs-font-variant', 'source-sans-3');
+        this.currentFont = 'source-sans-pro';
+        if (stored !== 'source-sans-pro') {
+          localStorage.setItem('docs-font-variant', 'source-sans-pro');
         }
       }
       this.fontStacks = {
-        'source-sans-3': "'Source Sans 3', 'Titillium Web', 'Titillium Sans Pro', Geneva, Tahoma, sans-serif",
+        'source-sans-pro': "'Source Sans Pro', 'Titillium Web', 'Titillium Sans Pro', Geneva, Tahoma, sans-serif",
         web: "'Titillium Web', Geneva, Tahoma, sans-serif",
         'sans-pro': "'Titillium Sans Pro', Geneva, Tahoma, sans-serif",
       };
       this.fontNames = {
-        'source-sans-3': 'Source Sans 3',
+        'source-sans-pro': 'Source Sans Pro',
         web: 'Titillium Web',
         'sans-pro': 'Titillium Sans Pro',
       };
@@ -37,8 +37,8 @@
 
     loadFont(variant) {
       document.querySelectorAll('style[data-font-switcher]').forEach(el => el.remove());
-      const fonts = variant === 'source-sans-3'
-        ? ['source-sans-3', 'lora', 'roboto-mono']
+      const fonts = variant === 'source-sans-pro'
+        ? ['source-sans-pro', 'lora', 'roboto-mono']
         : ['titillium', 'lora', 'roboto-mono'];
       const options = { fonts };
       if (variant === 'web' || variant === 'sans-pro') {
@@ -55,8 +55,8 @@
     updateFontStack(variant) {
       document.querySelectorAll('style[data-font-switcher-override]').forEach(el => el.remove());
 
-      // Source Sans 3: usa lo stack da --bsi-font-sans nel CSS compilato (niente override)
-      if (variant === 'source-sans-3') {
+      // Source Sans Pro: usa lo stack da --bsi-font-sans nel CSS compilato (niente override)
+      if (variant === 'source-sans-pro') {
         return;
       }
 

@@ -69,7 +69,7 @@ del {
   display: flex;
   align-items: center;
   padding: var(--#{$prefix}spacing-3xs) var(--#{$prefix}spacing-m);
-  font: var(--#{$prefix}body-font-size);
+  font-size: var(--#{$prefix}body-font-size);
   text-decoration: none;
 }
 
@@ -245,9 +245,9 @@ blockquote,
 blockquote,
 .blockquote {
   margin: var(--#{$prefix}spacing-m) 0;
-  margin-left: var(--#{$prefix}spacin-inline-xs);
+  margin-left: var(--#{$prefix}spacing-s);
   padding: var(--#{$prefix}spacing-s);
-  border-left: var(--#{$prefix}border-thick) solid var(--#{$prefix}border-color-secondary);
+  border-left: var(--#{$prefix}border-thick) solid var(--#{$prefix}color-border-secondary);
   font-size: var(--#{$prefix}body-font-size);
   line-height: var(--#{$prefix}body-leading);
 
@@ -256,8 +256,8 @@ blockquote,
   }
 
   &.text-end {
-    margin-right: var(--#{$prefix}spacin-inline-xs);
-    border-right: var(--#{$prefix}border-thick) solid var(--#{$prefix}border-color-secondary);
+    margin-right: var(--#{$prefix}spacing-s);
+    border-right: var(--#{$prefix}border-thick) solid var(--#{$prefix}color-border-secondary);
   }
 
   &.text-center,

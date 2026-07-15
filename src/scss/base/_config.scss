@@ -42,7 +42,7 @@ $color-primary-blue-100: #d5e6fa !default;
 $color-primary-blue-200: #aad1f8 !default;
 $color-primary-blue-300: #8dbdf2 !default;
 $color-primary-blue-400: #1d85ed !default;
-$color-primary-blue-500: #005bb3 !default;
+$color-primary-blue-500: #0059b3 !default;
 $color-primary-blue-600: #002f5f !default;
 $color-primary-blue-700: #002447 !default;
 $color-primary-blue-800: #001a33 !default;
@@ -61,7 +61,7 @@ $theme-primary-deep: $color-primary-blue-800 !default;
 
 // Error
 $color-error-100: #fdecec !default;
-$color-error-300: #f89c9c !default;
+$color-error-300: #f09c9c !default;
 $color-error-500: #dc2626 !default;
 $color-error-600: #c21f1f !default;
 $color-error-800: #7f1d1d !default;
@@ -96,7 +96,7 @@ $color-neutral-400: #a9b7c4 !default;
 $color-neutral-500: #8b9cac !default;
 $color-neutral-600: #60758a !default;
 $color-neutral-700: #4c5d73 !default;
-$color-neutral-800: #334b5c !default;
+$color-neutral-800: #394b5c !default;
 
 // ============================================================================
 // COLOR CONTRAST (per la funzione color-contrast)
@@ -211,7 +211,7 @@ $color-orange-300: #ffa38f !default;
 $color-orange-400: #ff916a !default;
 $color-orange-500: #f97a48 !default;
 $color-orange-600: #f1722f !default;
-$color-orange-700: #e65319 !default;
+$color-orange-700: #e6531a !default;
 $color-orange-800: #a03f17 !default;
 $color-orange-900: #702b0f !default;
 
@@ -328,7 +328,7 @@ $color-fisica-800: #686c74 !default;
 // Ambiente — Scienze del sistema terra e tecnologie per l'ambiente
 $color-ambiente-200: #d2e8f7 !default;
 $color-ambiente-500: #78b3e0 !default;
-$color-ambiente-600: #4579ac !default;
+$color-ambiente-600: #579acd !default;
 $color-ambiente-800: #2c5f88 !default;
 
 // Biomedica — Scienze biomediche
@@ -346,8 +346,8 @@ $color-ingegneria-800: #7a0725 !default;
 // Scienze umane
 $color-scienzeumane-200: #fde1b5 !default;
 $color-scienzeumane-500: #f79d27 !default;
-$color-scienzeumane-600: #d67311 !default;
-$color-scienzeumane-800: #984a08 !default;
+$color-scienzeumane-600: #d67611 !default;
+$color-scienzeumane-800: #924a08 !default;
 
 // Chimica — Scienze chimiche
 $color-chimica-200: #dce6aa !default;
@@ -505,9 +505,9 @@ $neutral-2-b: 95 !default;
 // TYPOGRAPHY (UI Kit Italia / CNR)
 // ============================================================================
 
-$font-family-sans-primary: 'Source Sans 3' !default;
+$font-family-sans-primary: 'Source Sans Pro' !default;
 $font-family-sans-fallback: 'Titillium Web', 'Titillium Sans Pro' !default;
-$font-family-sans: 'Source Sans 3', 'Titillium Web', 'Titillium Sans Pro', Geneva, Tahoma, sans-serif !default;
+$font-family-sans: 'Source Sans Pro', 'Titillium Web', 'Titillium Sans Pro', Geneva, Tahoma, sans-serif !default;
 $font-family-serif: 'Lora', Georgia, serif !default;
 $font-family-mono: 'Roboto Mono', monospace !default;
 
@@ -525,6 +525,8 @@ $font-size-10: 48px !default;
 $font-size-11: 56px !default;
 
 // Font weights
+$font-weight-extra-light: 200 !default;
+$font-weight-light: 300 !default;
 $font-weight-regular: 400 !default;
 $font-weight-semibold: 600 !default;
 $font-weight-bold: 700 !default;
@@ -601,7 +603,9 @@ $lead-font-weight: $font-weight-regular !default;
 
 // Caption & label (WCAG 1.4.12 — 14px min line-height 20px)
 $caption-font-size: $font-size-2 !default;
-$caption-leading: 20px !default;
+$caption-leading: 16px !default;
+$caption-font-size-xs: $font-size-1 !default;
+$caption-leading-xs: 20px !default;
 $caption-font-weight-regular: $font-weight-regular !default;
 $caption-font-weight-semibold: $font-weight-semibold !default;
 

@@ -17,7 +17,7 @@ Le scelte tipografiche di Bootstrap Italia seguono le indicazioni del [Design sy
 ## Famiglie di caratteri
 
 Bootstrap Italia include tre famiglie di caratteri tipografici per garantire leggibilità e coerenza visiva:
-- **Source Sans 3**: font principale sans-serif per interfacce e testi (UI Kit CNR)
+- **Source Sans Pro**: font principale sans-serif per interfacce e testi (UI Kit CNR)
 - **Lora**: font serif per contenuti editoriali e testi lunghi
 - **Roboto Mono**: font monospace per codice, dati tabulari e numeri
 
@@ -25,13 +25,13 @@ Bootstrap Italia include tre famiglie di caratteri tipografici per garantire leg
 Per informazioni su come caricare i font (via JavaScript, CSS o bundle) consulta la [**pagina dedicata Font**]({{ site.baseurl }}/docs/come-iniziare/font/).
 {% endcapture %}{% include callout.html content=callout type="info" %}
 
-### Source Sans 3 (font principale)
+### Source Sans Pro (font principale)
 
-Il font principale è **Source Sans 3**, con **Titillium** nello stack come fallback. Nella documentazione puoi confrontare Source Sans 3 con Titillium Web e Titillium Sans Pro usando il selettore "Font principale" nella barra laterale.
+Il font principale è **Source Sans Pro**, con **Titillium** nello stack come fallback. Nella documentazione puoi confrontare Source Sans Pro con Titillium Web e Titillium Sans Pro usando il selettore "Font principale" nella barra laterale.
 
 Il font sans-serif è applicato di default; in caso di necessità è possibile usare la classe `.font-sans-serif`.
 
-{% comment %}Example name: Source Sans 3{% endcomment %}
+{% comment %}Example name: Source Sans Pro{% endcomment %}
 {% capture example %}
 <p class="font-sans-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
 <p class="font-sans-serif">abcdefghijklmnopqrstuvwxyz</p>

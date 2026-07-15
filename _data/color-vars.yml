@@ -157,7 +157,7 @@ border:
 background:
 - var: --bsi-color-background-primary
   swatch: bg
-  usage: "Sfondo primario (pulsanti, link, elementi di identità)"
+  usage: "Sfondo primario (pulsanti, link, elementi di identitÃ )"
 - var: --bsi-color-background-primary-lighter
   swatch: bg
   usage: "Sfondo primario molto chiaro (definisce sezioni di pagina)"
@@ -308,7 +308,7 @@ status:
 department-scale:
 - var: --bsi-color-fisica-200
   swatch: bg
-  usage: "Scienze fisiche e tecnologie della materia: tonalità chiara (sfondi soft, badge)"
+  usage: "Scienze fisiche e tecnologie della materia: tonalitÃ  chiara (sfondi soft, badge)"
 - var: --bsi-color-fisica-500
   swatch: bg
   usage: "Scienze fisiche e tecnologie della materia: colore principale del dipartimento"
@@ -320,7 +320,7 @@ department-scale:
   usage: "Scienze fisiche e tecnologie della materia: testo, icone e stati pressed"
 - var: --bsi-color-ambiente-200
   swatch: bg
-  usage: "Scienze del sistema terra e tecnologie per l'ambiente: tonalità chiara (sfondi soft, badge)"
+  usage: "Scienze del sistema terra e tecnologie per l'ambiente: tonalitÃ  chiara (sfondi soft, badge)"
 - var: --bsi-color-ambiente-500
   swatch: bg
   usage: "Scienze del sistema terra e tecnologie per l'ambiente: colore principale del dipartimento"
@@ -332,7 +332,7 @@ department-scale:
   usage: "Scienze del sistema terra e tecnologie per l'ambiente: testo, icone e stati pressed"
 - var: --bsi-color-biomedica-200
   swatch: bg
-  usage: "Scienze biomediche: tonalità chiara (sfondi soft, badge)"
+  usage: "Scienze biomediche: tonalitÃ  chiara (sfondi soft, badge)"
 - var: --bsi-color-biomedica-500
   swatch: bg
   usage: "Scienze biomediche: colore principale del dipartimento"
@@ -344,7 +344,7 @@ department-scale:
   usage: "Scienze biomediche: testo, icone e stati pressed"
 - var: --bsi-color-ingegneria-200
   swatch: bg
-  usage: "Ingegneria: tonalità chiara (sfondi soft, badge)"
+  usage: "Ingegneria: tonalitÃ  chiara (sfondi soft, badge)"
 - var: --bsi-color-ingegneria-500
   swatch: bg
   usage: "Ingegneria: colore principale del dipartimento"
@@ -356,7 +356,7 @@ department-scale:
   usage: "Ingegneria: testo, icone e stati pressed"
 - var: --bsi-color-scienzeumane-200
   swatch: bg
-  usage: "Scienze umane: tonalità chiara (sfondi soft, badge)"
+  usage: "Scienze umane: tonalitÃ  chiara (sfondi soft, badge)"
 - var: --bsi-color-scienzeumane-500
   swatch: bg
   usage: "Scienze umane: colore principale del dipartimento"
@@ -368,7 +368,7 @@ department-scale:
   usage: "Scienze umane: testo, icone e stati pressed"
 - var: --bsi-color-chimica-200
   swatch: bg
-  usage: "Scienze chimiche: tonalità chiara (sfondi soft, badge)"
+  usage: "Scienze chimiche: tonalitÃ  chiara (sfondi soft, badge)"
 - var: --bsi-color-chimica-500
   swatch: bg
   usage: "Scienze chimiche: colore principale del dipartimento"
@@ -380,7 +380,7 @@ department-scale:
   usage: "Scienze chimiche: testo, icone e stati pressed"
 - var: --bsi-color-agroalimentari-200
   swatch: bg
-  usage: "Scienze bio-agroalimentari: tonalità chiara (sfondi soft, badge)"
+  usage: "Scienze bio-agroalimentari: tonalitÃ  chiara (sfondi soft, badge)"
 - var: --bsi-color-agroalimentari-500
   swatch: bg
   usage: "Scienze bio-agroalimentari: colore principale del dipartimento"

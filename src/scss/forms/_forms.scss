@@ -6,6 +6,7 @@
 @use '../base/mixins/gradients' as *;
 @use '../base/mixins/transition' as *;
 @use '../base/mixins/focus' as *;
+@use '../base/mixins/box-shadow' as *;
 
 // Form properties are :root scoped to allow for easy customization of form elements.
 :root {

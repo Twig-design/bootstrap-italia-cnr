@@ -367,7 +367,7 @@ $icon-base: $color-text-base;
 
 $enable-caret: true !default;
 $enable-rounded: true !default;
-$enable-shadows: false !default;
+$enable-shadows: true !default;
 $enable-gradients: false !default;
 $enable-transitions: true !default;
 $enable-reduced-motion: true !default;
@@ -401,9 +401,9 @@ $spacers: (
 // scss-docs-end spacer-variables-maps
 
 // scss-docs-start box-shadow-variables
-$box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
-$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
-$box-shadow-lg: 0 1rem 3rem rgba($black, 0.175) !default;
+$box-shadow: $shadow-m !default;
+$box-shadow-sm: $shadow-s !default;
+$box-shadow-lg: $shadow-l !default;
 $box-shadow-inset: inset 0 1px 2px rgba($black, 0.075) !default;
 // scss-docs-end box-shadow-variables
 
@@ -524,7 +524,7 @@ $font-sizes: (
 $headings-margin-bottom: $spacer * 0.5 !default;
 $headings-font-family: null !default;
 $headings-font-style: null !default;
-$headings-font-weight: 500 !default;
+$headings-font-weight: $font-weight-bold !default;
 $headings-line-height: 1.2 !default;
 $headings-color: null !default;
 // scss-docs-end headings-variables
@@ -541,7 +541,7 @@ $display-font-sizes: (
 
 $display-font-family: null !default;
 $display-font-style: null !default;
-$display-font-weight: 300 !default;
+$display-font-weight: $font-weight-bold !default;
 $display-line-height: $headings-line-height !default;
 
 // Border Radius - using pixels instead or rems as it has to be consistent across devices
@@ -607,7 +607,7 @@ $mark-bg: $analogue-2-a1;
 $mark-padding: 0.1875em !default;
 
 $lead-font-size: $font-size-base * 1.25 !default;
-$lead-font-weight: 300 !default;
+$lead-font-weight: $font-weight-regular !default;
 
 // Paragraphs
 $paragraph-margin-bottom: 1rem !default;
@@ -660,7 +660,7 @@ $input-disabled-bg: $gray-disabled !default;
 $input-spacing-x: 0.5rem;
 $input-spacing-y: 0.375rem;
 $input-border-width: 0;
-$input-border-radius: 0;
+$input-border-radius: $border-radius !default;
 $input-group-addon-bg: $white !default;
 $input-height: 2.5rem;
 $form-group-margin-bottom: 3rem;
@@ -1030,7 +1030,7 @@ $table-bg-scale: -80% !default;
 
 // Progress
 $progress-height: 16px;
-$progress-border-radius: 0;
+$progress-border-radius: $border-radius !default;
 
 $progress-font-size: $font-size-base * 0.75 !default;
 $progress-bg: $gray-200 !default;
@@ -1116,7 +1116,7 @@ $breadcrumb-link-font-weight: 600;
 $breadcrumb-link-color: $color-text-secondary !default;
 $breadcrumb-link-x-padding: 0.5em;
 $breadcrumb-bg-dark: $neutral-1-a8 !default; // Missing in the UI kit
-$breadcrumb-border-radius: 0;
+$breadcrumb-border-radius: $border-radius !default;
 $breadcrumb-divider-color: $gray-600 !default;
 $breadcrumb-active-color: $gray-600 !default;
 $breadcrumb-divider: '/' !default;
@@ -1281,7 +1281,7 @@ $placeholder-opacity-min: 0.2 !default;
 $card-cap-bg: transparent !default;
 $card-spacer-y: 1rem !default;
 $card-spacer-x: 2rem !default;
-$card-border-radius: 0 !default;
+$card-border-radius: $border-radius !default;
 $card-body-spacer: 1rem !default;
 $card-title-spacer-y: $spacer * 0.5 !default;
 $card-border-width: $border-width !default;
@@ -1485,7 +1485,7 @@ $nav-pills-link-active-bg: $component-active-bg !default;
 
 $navbar-bg-color: $primary !default;
 $navbar-brand-font-size: 1rem !default;
-$navbar-toggler-border-radius: 0 !default;
+$navbar-toggler-border-radius: $border-radius !default;
 $navbar-dark-toggler-icon-bg: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTkuMnB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxMiAxMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSIxMDI0dXAiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSItLWhvbWUtLS1wYXJhbGxheC0tLW1vYmlsZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI0LjAwMDAwMCwgLTIwLjAwMDAwMCkiIGZpbGw9IiNGRkZGRkYiPgogICAgICAgICAgICA8ZyBpZD0iLW5ldHdvcmstc2xpbS1oZWFkZXIiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTI0LDI0IEwzNiwyNCBMMzYsMjYgTDI0LDI2IEwyNCwyNCBaIE0yNCwyMCBMMzIsMjAgTDMyLDIyIEwyNCwyMiBMMjQsMjAgWiBNMjQsMjggTDMyLDI4IEwzMiwzMCBMMjQsMzAgTDI0LDI4IFoiIGlkPSJpY29uLXNtYWxsLWJ1cmdlciI+PC9wYXRoPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=') !default;
 $navbar-dark-toggler-border-color: transparent !default;
 $navbar-padding-y: $spacer * 0.5 !default;
@@ -1587,7 +1587,7 @@ $link-list-footer-distance-bottom: 0.5rem;
 $pager-margin-bottom: 0.5rem;
 $pager-item-size-mobile: 2.5rem; // 40px
 $pager-item-size-tablet: 3rem; // 48px
-$pager-item-border-radius: 4px;
+$pager-item-border-radius: $border-radius !default;
 $pager-item-margin-right: 5px;
 $pager-item-current-color: $primary !default;
 $pager-item-current-border: 1px solid $primary !default;

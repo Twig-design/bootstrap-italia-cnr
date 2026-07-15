@@ -109,7 +109,9 @@
   --#{$prefix}font-weight-strong: #{$font-weight-bold};
   --#{$prefix}font-weight-solid: #{$font-weight-semibold};
   --#{$prefix}font-weight-base: #{$font-weight-regular};
-  --#{$prefix}font-weight-thin: #{tokens.$it-font-weight-light};
+  --#{$prefix}font-weight-light: #{$font-weight-light};
+  --#{$prefix}font-weight-extra-light: #{$font-weight-extra-light};
+  --#{$prefix}font-weight-thin: #{$font-weight-light};
   --#{$prefix}font-size-11: #{$font-size-11};
   --#{$prefix}font-size-10: #{$font-size-10};
   --#{$prefix}font-size-9: #{$font-size-9};
@@ -158,6 +160,8 @@
   --#{$prefix}lead-font-weight: #{$lead-font-weight};
   --#{$prefix}caption-font-size: #{$caption-font-size};
   --#{$prefix}caption-leading: #{$caption-leading};
+  --#{$prefix}caption-font-size-xs: #{$caption-font-size-xs};
+  --#{$prefix}caption-leading-xs: #{$caption-leading-xs};
   --#{$prefix}caption-font-weight-regular: #{$caption-font-weight-regular};
   --#{$prefix}caption-font-weight-semibold: #{$caption-font-weight-semibold};
   --#{$prefix}label-font-size: #{$label-font-size};

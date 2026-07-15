@@ -535,6 +535,7 @@ $utilities: map.merge(
       property: font-weight,
       class: fw,
       values: (
+        extralight: $font-weight-extra-light,
         light: $font-weight-light,
         lighter: $font-weight-lighter,
         normal: $font-weight-normal,
