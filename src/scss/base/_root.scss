@@ -302,6 +302,9 @@
   --#{$prefix}color-border-primary-active: #{$color-border-primary-active};
   --#{$prefix}color-border-primary-hover: #{$color-border-primary-hover};
   --#{$prefix}color-border-primary: #{$color-border-primary};
+  --#{$prefix}color-border-accent-active: #{$color-border-accent-active};
+  --#{$prefix}color-border-accent-hover: #{$color-border-accent-hover};
+  --#{$prefix}color-border-accent: #{$color-border-accent};
   --#{$prefix}color-outline-focus: #{tokens.$it-color-outline-focus};
 
   // Background colors

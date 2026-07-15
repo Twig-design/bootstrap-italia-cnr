@@ -247,7 +247,7 @@ blockquote,
   margin: var(--#{$prefix}spacing-m) 0;
   margin-left: var(--#{$prefix}spacing-s);
   padding: var(--#{$prefix}spacing-s);
-  border-left: var(--#{$prefix}border-thick) solid var(--#{$prefix}color-border-secondary);
+  border-left: var(--#{$prefix}border-thick) solid var(--#{$prefix}color-border-accent);
   font-size: var(--#{$prefix}body-font-size);
   line-height: var(--#{$prefix}body-leading);
 
@@ -257,7 +257,7 @@ blockquote,
 
   &.text-end {
     margin-right: var(--#{$prefix}spacing-s);
-    border-right: var(--#{$prefix}border-thick) solid var(--#{$prefix}color-border-secondary);
+    border-right: var(--#{$prefix}border-thick) solid var(--#{$prefix}color-border-accent);
   }
 
   &.text-center,
@@ -300,14 +300,24 @@ blockquote,
         color: var(--#{$prefix}color-text-inverse);
       }
     }
+
+    &.accent {
+      border-left: none;
+      background-color: var(--#{$prefix}color-background-accent);
+      color: var(--#{$prefix}color-text-inverse);
+      .blockquote-footer {
+        color: var(--#{$prefix}color-text-inverse);
+      }
+    }
   }
 }
 
 .blockquote-footer {
-  margin-top: 0;
-  margin-bottom: var(--#{$prefix}spacing-s);
+  margin-top: var(--#{$prefix}spacing-xs);
+  margin-bottom: 0;
   color: var(--#{$prefix}color-text-secondary);
   font-size: var(--#{$prefix}label-font-size-s);
+  font-style: italic;
   line-height: var(--#{$prefix}label-leading);
   &::before {
     content: '\2014\00A0'; // em dash, nbsp

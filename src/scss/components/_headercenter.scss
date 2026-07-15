@@ -67,8 +67,8 @@
     }
 
     .icon {
-      width: var(--#{$prefix}icon-size-s);
-      height: var(--#{$prefix}icon-size-s);
+      width: var(--#{$prefix}icon-size-m);
+      height: var(--#{$prefix}icon-size-m);
       margin-left: var(--#{$prefix}spacing-s);
       fill: var(--#{$prefix}header-social-color);
     }
@@ -82,7 +82,7 @@
   font-size: var(--#{$prefix}header-center-font-size);
 
   @include media-breakpoint-up(md) {
-    margin-left: 3rem; // 48px
+    margin-left: 5.25rem; // 84px
   }
 
   .rounded-icon {
@@ -100,7 +100,7 @@
     }
 
     @include media-breakpoint-up(lg) {
-      --#{$prefix}header-search-button-size: 3.5rem; // 56px
+      --#{$prefix}header-search-button-size: 3rem; // 48px
 
       &:hover {
         background: var(--#{$prefix}color-background-inverse-hover);

@@ -21,13 +21,14 @@
 
 $grid-item-df-proportion: 66.81222707423581%;
 $grid-item-df-double-proportion: 33.4061135371179%;
-$grid-item-text-size: 0.75rem;
-$grid-list-default-gap: 2px;
-$grid-list-text-gap: 8px;
+$grid-item-text-size: var(--#{$prefix}caption-font-size-xs);
+$grid-list-default-gap: 0.125rem; // 2px, kept in rem for Sass math
+$grid-list-text-gap: 0.5rem; // equals --#{$prefix}spacing-xxs
 $grid-item-sm-col: 50%;
 $grid-item-lg-col: 33.333333%;
 $grid-item-icon-size: 1.5rem;
-$grid-item-overlay: hsla(210, 54%, 20%, 0.85);
+$grid-item-overlay-primary: rgba($color-background-primary, 0.7);
+$grid-item-overlay-secondary: rgba($color-background-primary-deep, 0.7);
 
 // ---------------------------------------- //
 
@@ -73,7 +74,7 @@ $grid-item-overlay: hsla(210, 54%, 20%, 0.85);
       &:after {
         content: '';
         display: block;
-        background: $grid-item-overlay;
+        background: $grid-item-overlay-primary;
         position: absolute;
         left: 0;
         top: 0;
@@ -89,13 +90,12 @@ $grid-item-overlay: hsla(210, 54%, 20%, 0.85);
       bottom: 0;
       background: transparent;
       padding: var(--#{$prefix}spacing-xxs) calc(var(--#{$prefix}spacing-xxs) * 2);
-      color: $white;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+      color: var(--#{$prefix}color-text-inverse);
       .it-griditem-text {
-        color: #fff;
+        color: var(--#{$prefix}color-text-inverse);
       }
       .icon {
-        fill: #fff;
+        fill: var(--#{$prefix}icon-inverse);
       }
     }
 
@@ -106,7 +106,15 @@ $grid-item-overlay: hsla(210, 54%, 20%, 0.85);
     .figure-caption {
       position: absolute;
       z-index: 10;
-      color: #fff;
+      color: var(--#{$prefix}color-text-inverse);
+    }
+
+    &.it-grid-item-overlay-secondary {
+      .img-responsive-wrapper {
+        &:after {
+          background: $grid-item-overlay-secondary;
+        }
+      }
     }
   }
 

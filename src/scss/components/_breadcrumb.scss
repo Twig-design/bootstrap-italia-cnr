@@ -22,11 +22,11 @@
   --#{$prefix}breadcrumb-divider-flipped: var(--#{$prefix}breadcrumb-divider); // Controls the flipped divider for the breadcrumb.
   --#{$prefix}breadcrumb-font-size: var(--#{$prefix}label-font-size); // Controls the font size for the breadcrumb, using font tokens.
   --#{$prefix}breadcrumb-item-padding-x: var(--#{$prefix}spacing-xs); // Controls the horizontal padding for breadcrumb items, using spacing tokens.
-  --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-text-secondary); // Controls the link color for the breadcrumb, using color tokens.
+  --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-link); // Controls the link color for the breadcrumb, using color tokens.
   --#{$prefix}breadcrumb-link-font-weight: var(--#{$prefix}font-weight-solid); // Controls the link font weight for the breadcrumb, using font tokens.
   --#{$prefix}breadcrumb-margin: var(--#{$prefix}spacing-s); // Controls the margin for the breadcrumb, using spacing tokens.
   --#{$prefix}breadcrumb-padding: var(--#{$prefix}spacing-3xs); // Controls the padding for the breadcrumb, using spacing tokens.
-  --#{$prefix}breadcrumb-separator-color: var(--#{$prefix}color-background-secondary); // Controls the separator color for the breadcrumb, using color tokens.
+  --#{$prefix}breadcrumb-separator-color: var(--#{$prefix}color-border-secondary); // Controls the separator color for the breadcrumb, using color tokens.
   --#{$prefix}breadcrumb-separator-spacing: var(--#{$prefix}spacing-xxs); // Controls the separator spacing for the breadcrumb, using spacing tokens.
 }
 
@@ -84,13 +84,15 @@
   a {
     color: var(--#{$prefix}breadcrumb-link-color);
     font-weight: var(--#{$prefix}breadcrumb-link-font-weight);
+    text-decoration: underline;
     &:hover {
-      --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-link-secondary-hover);
+      --#{$prefix}breadcrumb-link-color: var(--#{$prefix}color-link-hover);
     }
   }
 
   // The breadcrumb item text with no link
   &.active {
+    --#{$prefix}breadcrumb-item-active-color: var(--#{$prefix}color-text-secondary);
     color: var(--#{$prefix}breadcrumb-item-active-color);
     font-weight: var(--#{$prefix}font-weight-regular);
     pointer-events: none;

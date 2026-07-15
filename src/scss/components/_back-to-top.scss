@@ -57,7 +57,7 @@
   }
 
   &:hover {
-    --backtop-background: var(--#{$prefix}color-background-primary-hover);
+    --#{$prefix}backtop-background: var(--#{$prefix}color-background-primary-hover);
     text-decoration: none;
   }
 
@@ -95,6 +95,14 @@
   &.shadow {
     &:hover {
       box-shadow: 0 0.3rem 0.75rem rgba(0, 0, 0, 0.3) !important;
+    }
+  }
+
+  // Accent version
+  &.accent {
+    --#{$prefix}backtop-background: var(--#{$prefix}color-background-accent);
+    &:hover {
+      --#{$prefix}backtop-background: var(--#{$prefix}color-background-accent-hover);
     }
   }
 
