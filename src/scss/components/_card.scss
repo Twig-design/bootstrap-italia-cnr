@@ -17,7 +17,7 @@
 .it-card {
   --#{$prefix}card-background: var(--#{$prefix}color-background-inverse); // Controls the card background color, using color tokens
   --#{$prefix}card-border-color: var(--#{$prefix}color-border-subtle); // Controls the card border color, using color tokens
-  --#{$prefix}card-border-radius: var(--#{$prefix}radius-smooth); // Controls the outer border radius of the card, using radius tokens
+  --#{$prefix}card-border-radius: 24px; // Controls the outer border radius of the card (24px per CNR design)
   --#{$prefix}card-border-radius-inner: calc(
     var(--#{$prefix}card-border-radius) - var(--#{$prefix}card-border-outside-width)
   ); // Controls the inner border radius of the card
@@ -64,6 +64,11 @@
   word-break: break-word;
   overflow-wrap: break-word;
   background-clip: border-box;
+  border-radius: var(--#{$prefix}card-border-radius);
+
+  &.rounded {
+    border-radius: var(--#{$prefix}card-border-radius) !important;
+  }
 
   // Card title styles
   .it-card-title {

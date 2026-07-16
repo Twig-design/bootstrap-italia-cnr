@@ -26,6 +26,7 @@
   --#{$prefix}dimmer-heading-size: var(--#{$prefix}heading-3-font-size); // Controls the heading size of the dimmer, using typography tokens.
   --#{$prefix}dimmer-icon-gap: var(--#{$prefix}spacing-m); // Controls the gap between the icon and the text of the dimmer, using spacing tokens.
   --#{$prefix}dimmer-padding: var(--#{$prefix}spacing-l); // Controls the padding of the dimmer, using spacing tokens.
+  --#{$prefix}dimmer-border-radius: var(--#{$prefix}radius-rounded); // Controls the border radius of the dimmer (48px per CNR design).
   --#{$prefix}dimmer-text-color: var(--#{$prefix}color-text-inverse); // Controls the text color of the dimmer, using color tokens.
 }
 
@@ -35,6 +36,7 @@
 .dimmer {
   display: flex;
   background-color: var(--#{$prefix}dimmer-background);
+  border-radius: var(--#{$prefix}dimmer-border-radius);
   position: absolute;
   top: 0;
   bottom: 0;

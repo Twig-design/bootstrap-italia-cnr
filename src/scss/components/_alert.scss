@@ -19,6 +19,7 @@
   --#{$prefix}alert-background-color: var(--#{$prefix}color-background-inverse); // Controls the background color for the alert, using color tokens.
   --#{$prefix}alert-border-color: var(--#{$prefix}color-border-secondary); // Controls the external border color for the alert, using color tokens.
   --#{$prefix}alert-border-size: 0.5rem; // Controls the border size for the alert.
+  --#{$prefix}alert-border-radius: 16px; // Controls the border radius for the alert (16px per CNR design).
   --#{$prefix}alert-heading-color: var(--#{$prefix}color-text-base); // Controls the heading color for the alert, using color tokens.
   --#{$prefix}alert-icon-spacing: var(--#{$prefix}icon-spacing); // Controls the icon spacing for the alert, using spacing tokens.
   --#{$prefix}alert-spacing-inset: var(--#{$prefix}spacing-s); // Controls the inset spacing for the alert, using spacing tokens.
@@ -35,8 +36,13 @@
   margin-bottom: var(--#{$prefix}alert-margin);
   padding: var(--#{$prefix}alert-spacing-inset);
   border: 1px solid var(--#{$prefix}alert-border-color);
+  border-radius: var(--#{$prefix}alert-border-radius);
   background-color: var(--#{$prefix}alert-background-color);
   color: var(--#{$prefix}alert-text-color);
+
+  &.rounded {
+    border-radius: var(--#{$prefix}alert-border-radius) !important;
+  }
 
   @include media-breakpoint-up(lg) {
     --#{$prefix}alert-spacing-inset: var(-#{$prefix}spacing-inset-m);
