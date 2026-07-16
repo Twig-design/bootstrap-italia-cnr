@@ -14,14 +14,21 @@
 
 .sidebar-wrapper {
   --#{$prefix}sidebar-padding: var(--#{$prefix}spacing-m); // Controls the padding for the sidebar, using spacing tokens.
-  --#{$prefix}sidebar-background-color: transparent; // Controls the background color for the sidebar.
+  --#{$prefix}sidebar-background-color: var(--#{$prefix}color-background-inverse); // Controls the background color for the sidebar, using color tokens.
   --#{$prefix}sidebar-heading-font-size: var(--#{$prefix}heading-6-font-size); // Controls the heading font size for the sidebar, using font tokens.
   --#{$prefix}sidebar-heading-color: var(--#{$prefix}color-text-secondary); // Controls the heading color for the sidebar, using color tokens.
+  --#{$prefix}sidebar-heading-letter-spacing: #{$sidebar-heading-letter-spacing}; // Controls the heading letter spacing for the sidebar.
   --#{$prefix}sidebar-link-padding-x: var(--#{$prefix}spacing-s); // Controls the link horizontal padding for the sidebar, using spacing tokens.
-  --#{$prefix}sidebar-link-padding-y: var(--#{$prefix}spacing-xs); // Controls the link vertical padding for the sidebar, using spacing tokens.
+  --#{$prefix}sidebar-link-padding-y: var(--#{$prefix}spacing-s); // Controls the link vertical padding for the sidebar, using spacing tokens.
   --#{$prefix}sidebar-link-sublist-indent: var(--#{$prefix}spacing-m); // Controls the sublist indent for the sidebar, using spacing tokens.
   --#{$prefix}sidebar-link-font-size: var(--#{$prefix}label-font-size); // Controls the link font size for the sidebar, using font tokens.
   --#{$prefix}sidebar-link-line-height: var(--#{$prefix}body-line-height); // Controls the link line height for the sidebar, using font tokens.
+  --#{$prefix}sidebar-link-color: var(--#{$prefix}color-link); // Controls the link color for the sidebar, using color tokens.
+  --#{$prefix}sidebar-link-hover-color: var(--#{$prefix}color-link-hover); // Controls the link hover color for the sidebar, using color tokens.
+  --#{$prefix}sidebar-link-active-color: var(--#{$prefix}color-link-active); // Controls the link active color for the sidebar, using color tokens.
+  --#{$prefix}sidebar-icon-color: var(--#{$prefix}icon-primary); // Controls the icon color for the sidebar, using icon tokens.
+  --#{$prefix}sidebar-icon-hover-color: var(--#{$prefix}icon-primary-hover); // Controls the icon hover color for the sidebar, using icon tokens.
+  --#{$prefix}sidebar-icon-active-color: var(--#{$prefix}icon-primary-active); // Controls the icon active color for the sidebar, using icon tokens.
   --#{$prefix}sidebar-link-active-line-width: 4px; // Controls the active line width for the sidebar.
   --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle); // Controls the divider color for the sidebar, using color tokens.
   --#{$prefix}sidebar-link-active-border-color: var(--#{$prefix}color-border-primary); // Controls the active border color for the sidebar, using color tokens.
@@ -40,7 +47,9 @@
     padding-left: var(--#{$prefix}spacing-s);
     font-size: var(--#{$prefix}sidebar-heading-font-size);
     font-weight: var(--#{$prefix}font-weight-solid);
+    line-height: var(--#{$prefix}heading-line-height);
     text-transform: uppercase;
+    letter-spacing: var(--#{$prefix}sidebar-heading-letter-spacing);
     color: var(--#{$prefix}sidebar-heading-color);
   }
 
@@ -50,11 +59,31 @@
     padding: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-x);
     font-size: var(--#{$prefix}sidebar-link-font-size);
     line-height: var(--#{$prefix}sidebar-link-line-height);
+    color: var(--#{$prefix}sidebar-link-color);
     text-transform: var(--#{$prefix}sidebar-text-transform, none); // Default to none if not set
+
+    &:hover:not(.disabled),
+    &:hover:not(.disabled) span {
+      color: var(--#{$prefix}sidebar-link-hover-color);
+    }
+
+    .icon {
+      fill: var(--#{$prefix}sidebar-icon-color);
+    }
+
+    &:hover:not(.disabled) .icon {
+      fill: var(--#{$prefix}sidebar-icon-hover-color);
+    }
+
+    span {
+      text-decoration: none;
+    }
 
     // Active indicator: support both .active class and semantic aria-current
     &.active,
     &[aria-current='page'] {
+      color: var(--#{$prefix}sidebar-link-active-color);
+
       &::after {
         position: absolute;
         top: 0;
@@ -65,15 +94,15 @@
         width: var(--#{$prefix}sidebar-link-active-line-width);
         background-color: var(--#{$prefix}sidebar-link-active-border-color);
       }
-    }
 
-    span {
-      text-decoration: none;
-    }
+      .icon {
+        fill: var(--#{$prefix}sidebar-icon-active-color);
+      }
 
-    &.active span,
-    &[aria-current='page'] span {
-      text-decoration: underline;
+      span {
+        color: var(--#{$prefix}sidebar-link-active-color);
+        text-decoration: underline;
+      }
     }
   }
 
@@ -95,7 +124,7 @@
     content: '';
     display: block;
     height: 1px;
-    margin: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-y) 0;
+    margin: var(--#{$prefix}sidebar-link-padding-y) var(--#{$prefix}sidebar-link-padding-x) var(--#{$prefix}sidebar-link-padding-y) 0;
     background: var(--#{$prefix}sidebar-divider-color);
   }
 
@@ -129,8 +158,14 @@
 }
 
 .sidebar-wrapper.theme-dark {
-  --#{$prefix}sidebar-background-color: var(--#{$prefix}color-background-secondary-deep);
+  --#{$prefix}sidebar-background-color: var(--#{$prefix}color-background-primary);
   --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle);
   --#{$prefix}sidebar-heading-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}sidebar-link-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}sidebar-link-hover-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}sidebar-link-active-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}sidebar-icon-color: var(--#{$prefix}icon-inverse);
+  --#{$prefix}sidebar-icon-hover-color: var(--#{$prefix}icon-inverse);
+  --#{$prefix}sidebar-icon-active-color: var(--#{$prefix}icon-inverse);
   --#{$prefix}sidebar-link-active-border-color: var(--#{$prefix}color-border-inverse);
 }
