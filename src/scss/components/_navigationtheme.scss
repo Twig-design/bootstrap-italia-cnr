@@ -18,12 +18,12 @@
 //
 
 :root {
-  --navigation-dark-bg-color: #000000;
-  --navigation-dark-text-color: #ffffff;
-  --navigation-light-megamenu-separator-color: #e0e0e0;
-  --navigation-light-bg-color: #f8f9fa;
-  --navigation-light-text-color: #333333;
-  --dropdown-box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 6px;
+  --navigation-dark-bg-color: #{$navigation-dark-bg-color};
+  --navigation-dark-text-color: #{$navigation-dark-text-color};
+  --navigation-light-bg-color: #{$navigation-light-bg-color};
+  --navigation-light-text-color: #{$navigation-light-text-color};
+  --navigation-light-megamenu-separator-color: #{$navigation-light-megamenu-separator-color};
+  --dropdown-box-shadow: #{$box-shadow};
 }
 
 @include media-breakpoint-up(lg) {

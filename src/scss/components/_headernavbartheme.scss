@@ -19,7 +19,7 @@
 @media (max-width: #{map.get($grid-breakpoints, lg)}) {
   .it-header-center-wrapper.theme-light + .it-header-navbar-wrapper {
     .custom-navbar-toggler .icon {
-      fill: var(--#{$primar}icon-primary);
+      fill: var(--#{$prefix}icon-primary);
     }
   }
   .it-header-navbar-wrapper {
@@ -42,6 +42,7 @@
               &.megamenu {
                 // vertical cta
                 .dropdown-menu {
+                  background: $navigation-dark-bg-color;
                   a.it-heading-link,
                   a.it-footer-link {
                     color: $navigation-dark-text-color;
@@ -101,6 +102,7 @@
             ul {
               li {
                 a {
+                  color: $navigation-dark-text-color;
                   &.list-item.active {
                     color: $navigation-dark-text-color;
 

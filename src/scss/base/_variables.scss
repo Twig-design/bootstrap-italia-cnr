@@ -1550,16 +1550,15 @@ $navigation-disabled-item-mobile-opacity: 0.6 !default;
 $navigation-hamburger-size: 24px;
 
 // navigation dark theme (mobile)
-$navigation-dark-bg-color: $primary !default; // missing in UI kit
+$navigation-dark-bg-color: $color-background-primary !default; // missing in UI kit
 $navigation-dark-text-color: $white !default; // missing in UI kit
-$navigation-dark-bg-color: $primary-b1 !default; // missing in UI kit
-$navigation-dark-separator-color: $primary-c5 !default; // missing in UI kit
+$navigation-dark-separator-color: $color-primary-blue-400 !default; // missing in UI kit
 
 // navigation light theme (desktop)
 $navigation-light-bg-color: $white !default;
-$navigation-light-text-color: $primary !default;
-$navigation-light-separator-color: $neutral-1-a2 !default;
-$navigation-light-megamenu-separator-color: $gray-border !default; // UI kit
+$navigation-light-text-color: $color-text-primary !default;
+$navigation-light-separator-color: $color-border-subtle !default;
+$navigation-light-megamenu-separator-color: $color-border-subtle !default; // UI kit
 
 //inline
 $inline-menu-line-width: 2px;
