@@ -29,6 +29,20 @@
   --#{$prefix}sidebar-icon-color: var(--#{$prefix}icon-primary); // Controls the icon color for the sidebar, using icon tokens.
   --#{$prefix}sidebar-icon-hover-color: var(--#{$prefix}icon-primary-hover); // Controls the icon hover color for the sidebar, using icon tokens.
   --#{$prefix}sidebar-icon-active-color: var(--#{$prefix}icon-primary-active); // Controls the icon active color for the sidebar, using icon tokens.
+  --#{$prefix}sidebar-secondary-link-color: var(--#{$prefix}color-text-secondary); // Controls the secondary link color for the sidebar, using color tokens.
+  --#{$prefix}sidebar-secondary-link-hover-color: var(
+    --#{$prefix}color-link-hover
+  ); // Controls the secondary link hover color for the sidebar, using color tokens.
+  --#{$prefix}sidebar-secondary-link-active-color: var(
+    --#{$prefix}color-text-primary
+  ); // Controls the secondary link active color for the sidebar, using color tokens.
+  --#{$prefix}sidebar-secondary-icon-color: var(--#{$prefix}icon-secondary); // Controls the secondary icon color for the sidebar, using icon tokens.
+  --#{$prefix}sidebar-secondary-icon-hover-color: var(
+    --#{$prefix}icon-primary-hover
+  ); // Controls the secondary icon hover color for the sidebar, using icon tokens.
+  --#{$prefix}sidebar-secondary-icon-active-color: var(
+    --#{$prefix}icon-primary-active
+  ); // Controls the secondary icon active color for the sidebar, using icon tokens.
   --#{$prefix}sidebar-link-active-line-width: 4px; // Controls the active line width for the sidebar.
   --#{$prefix}sidebar-divider-color: var(--#{$prefix}color-border-subtle); // Controls the divider color for the sidebar, using color tokens.
   --#{$prefix}sidebar-link-active-border-color: var(--#{$prefix}color-border-primary); // Controls the active border color for the sidebar, using color tokens.
@@ -106,6 +120,37 @@
     }
   }
 
+  // Secondary link list color overrides
+  .sidebar-linklist-wrapper.linklist-secondary .link-list-wrapper ul li a {
+    color: var(--#{$prefix}sidebar-secondary-link-color);
+
+    &:hover:not(.disabled),
+    &:hover:not(.disabled) span {
+      color: var(--#{$prefix}sidebar-secondary-link-hover-color);
+    }
+
+    .icon {
+      fill: var(--#{$prefix}sidebar-secondary-icon-color);
+    }
+
+    &:hover:not(.disabled) .icon {
+      fill: var(--#{$prefix}sidebar-secondary-icon-hover-color);
+    }
+
+    &.active,
+    &[aria-current='page'] {
+      color: var(--#{$prefix}sidebar-secondary-link-active-color);
+
+      .icon {
+        fill: var(--#{$prefix}sidebar-secondary-icon-active-color);
+      }
+
+      span {
+        color: var(--#{$prefix}sidebar-secondary-link-active-color);
+      }
+    }
+  }
+
   .sidebar-linklist-wrapper .link-list-wrapper ul.link-sublist {
     padding-inline-start: 0; // Reset padding for sublist from _link-list.scss
 
@@ -167,5 +212,11 @@
   --#{$prefix}sidebar-icon-color: var(--#{$prefix}icon-inverse);
   --#{$prefix}sidebar-icon-hover-color: var(--#{$prefix}icon-inverse);
   --#{$prefix}sidebar-icon-active-color: var(--#{$prefix}icon-inverse);
+  --#{$prefix}sidebar-secondary-link-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}sidebar-secondary-link-hover-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}sidebar-secondary-link-active-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}sidebar-secondary-icon-color: var(--#{$prefix}icon-inverse);
+  --#{$prefix}sidebar-secondary-icon-hover-color: var(--#{$prefix}icon-inverse);
+  --#{$prefix}sidebar-secondary-icon-active-color: var(--#{$prefix}icon-inverse);
   --#{$prefix}sidebar-link-active-border-color: var(--#{$prefix}color-border-inverse);
 }
