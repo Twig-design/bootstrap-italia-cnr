@@ -75,11 +75,11 @@
 
       // Gap fallback
       > * {
-        margin: 0.25rem;
+        margin: var(--#{$prefix}spacing-3xs);
       }
 
-      @supports (gap: 0.5rem) {
-        gap: 0.5rem;
+      @supports (gap: var(--#{$prefix}spacing-xxs)) {
+        gap: var(--#{$prefix}spacing-xxs);
 
         > * {
           margin: 0;
@@ -389,7 +389,7 @@
 
     &.rounded {
       &::after {
-        border-radius: $border-radius $border-radius 0 0;
+        border-radius: var(--#{$prefix}card-border-radius-inner) var(--#{$prefix}card-border-radius-inner) 0 0;
       }
     }
 
@@ -425,17 +425,13 @@
       flex-wrap: wrap-reverse;
       justify-content: space-between;
       align-items: center;
-      margin-top: calc(2 * var(--#{$prefix}card-title-spacer-y));
-      margin-bottom: var(--#{$prefix}card-title-spacer-y);
-      padding: 0 var(--#{$prefix}card-spacer-x);
-
       // Gap fallback
       > * {
-        margin: 0.5rem;
+        margin: var(--#{$prefix}spacing-xxs);
       }
 
-      @supports (gap: 1rem) {
-        gap: 1rem;
+      @supports (gap: var(--#{$prefix}spacing-s)) {
+        gap: var(--#{$prefix}spacing-s);
 
         > * {
           margin: 0;
@@ -447,14 +443,14 @@
         max-width: 100%;
 
         .it-card-profile-name {
-          margin-bottom: 0.25rem;
+          margin-bottom: var(--#{$prefix}spacing-3xs);
         }
 
         .it-card-profile-role,
         .it-card-place-type {
-          font-weight: 600;
-          font-size: 1rem;
-          line-height: 1.5rem;
+          font-weight: var(--#{$prefix}font-weight-solid);
+          font-size: var(--#{$prefix}body-font-size);
+          line-height: var(--#{$prefix}font-leading-5);
           margin-bottom: 0;
         }
       }
@@ -472,7 +468,7 @@
           justify-content: center;
           align-items: center;
 
-          background-color: $color-background-primary-lighter;
+          background-color: var(--#{$prefix}color-background-primary-lighter);
         }
       }
     }
@@ -645,7 +641,7 @@ ul.it-card-list {
 
 // Improved responsive it-card-group with a @container aware twist
 .it-card-group {
-  --#{$prefix}card-group-gap: 24px;
+  --#{$prefix}card-group-gap: var(--#{$prefix}spacing-m);
   display: flex;
   flex-wrap: wrap;
   gap: var(--#{$prefix}card-group-gap);
