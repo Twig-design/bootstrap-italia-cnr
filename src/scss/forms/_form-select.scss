@@ -76,7 +76,7 @@
     &:active,
     &:focus,
     &:hover {
-      color: $select-label-color;
+      color: var(--#{$prefix}color-text-base);
       font-weight: normal;
     }
   }
@@ -96,7 +96,7 @@
     }
 
     .bootstrap-select {
-      background-color: $input-disabled-bg;
+      background-color: var(--#{$prefix}color-background-disabled);
 
       & > .dropdown-toggle.bs-placeholder {
         color: $color-text-base;
@@ -108,7 +108,7 @@
   .dropdown-menu {
     padding: 0;
     margin: 0;
-    box-shadow: $select-dd-shadow;
+    box-shadow: var(--#{$prefix}shadow-m);
   }
 
   .dropdown,
@@ -135,12 +135,12 @@
 
   > label {
     position: absolute;
-    color: $select-label-color;
+    color: var(--#{$prefix}color-text-base);
     font-size: $select-label-size;
     display: block;
     font-weight: $select-label-weight;
     padding: 0 $input-spacing-x;
-    line-height: calc(2.5rem - 1px);
+    line-height: calc(var(--#{$prefix}form-control-height) - 1px);
     top: 0;
     transform: translateY(-75%);
   }
@@ -150,7 +150,7 @@
     border-radius: 0;
     border: none;
     box-shadow: none;
-    color: $select-label-color;
+    color: var(--#{$prefix}color-text-base);
     padding: $select-button-padding;
     font-size: $select-button-text-size;
     font-weight: bold;
@@ -175,7 +175,7 @@
         align-items: center;
 
         .icon {
-          margin-right: $v-gap;
+          margin-right: var(--#{$prefix}spacing-xs);
           width: $select-dd-icon-size;
           height: $select-dd-icon-size;
           flex-shrink: 0;
@@ -188,7 +188,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        background: $select-label-color;
+        background: var(--#{$prefix}color-text-base);
         bottom: 0;
         transition: all 0.3s;
         transform-origin: bottom;
@@ -224,11 +224,11 @@
     &.bootstrap-select {
       //search
       .bs-searchbox {
-        padding: ($v-gap) $v-gap * 3;
+        padding: (var(--#{$prefix}spacing-xs)) var(--#{$prefix}spacing-l);
 
         input[type='text'] {
           padding: 0;
-          border-bottom: 1px solid $select-dd-small-separator-bg;
+          border-bottom: 1px solid var(--#{$prefix}color-border-secondary);
           font-size: $select-dd-text-size;
           font-weight: 600;
 
@@ -240,7 +240,7 @@
       }
 
       .no-results {
-        padding: ($v-gap) $v-gap * 3;
+        padding: (var(--#{$prefix}spacing-xs)) var(--#{$prefix}spacing-l);
         background: transparent;
         margin: 0;
       }
@@ -250,7 +250,7 @@
         .text {
           font-size: $select-dd-header-size;
           text-transform: uppercase;
-          color: $select-label-color;
+          color: var(--#{$prefix}color-text-base);
           font-weight: $select-dd-header-w;
         }
       }
@@ -274,7 +274,7 @@
       }
 
       .btn {
-        height: 2.5rem;
+        height: var(--#{$prefix}form-control-height);
       }
 
       // select deselect
@@ -284,16 +284,16 @@
 
         .btn-block {
           display: block;
-          padding: ($v-gap) $v-gap * 3;
+          padding: (var(--#{$prefix}spacing-xs)) var(--#{$prefix}spacing-l);
 
           .btn {
             padding: 0;
             display: inline-block;
             font-size: $select-dd-text-size;
-            color: $select-dd-link-color;
+            color: var(--#{$prefix}color-text-base);
             font-weight: normal;
             width: auto;
-            margin-right: $v-gap * 3;
+            margin-right: var(--#{$prefix}spacing-l);
 
             &:active,
             &:focus {
@@ -311,10 +311,10 @@
           display: block;
           height: 1px;
           width: $select-dd-small-separator-width;
-          background: $select-dd-small-separator-bg;
+          background: var(--#{$prefix}color-border-secondary);
           position: absolute;
-          bottom: -$v-gap;
-          left: $v-gap * 3;
+          bottom: calc(-1 * var(--#{$prefix}spacing-xs));
+          left: var(--#{$prefix}spacing-l);
         }
       }
 
@@ -324,23 +324,23 @@
           .filter-option-inner-inner {
             .select-pill {
               font-size: $select-dd-pill-font-size;
-              padding: $v-gap * 0.5 $v-gap;
-              border: 1px solid $select-label-color;
-              color: $select-label-color;
+              padding: var(--#{$prefix}spacing-xxs) var(--#{$prefix}spacing-xs);
+              border: 1px solid var(--#{$prefix}color-text-base);
+              color: var(--#{$prefix}color-text-base);
               line-height: 1;
-              border-radius: $v-gap * 3;
+              border-radius: var(--#{$prefix}spacing-l);
               display: flex;
               align-items: center;
               margin-right: $select-dd-pill-distance;
 
               svg {
-                fill: $select-label-color;
+                fill: var(--#{$prefix}color-text-base);
                 margin-right: 0;
               }
             }
 
             .icon {
-              margin-right: $v-gap;
+              margin-right: var(--#{$prefix}spacing-xs);
               width: $select-dd-icon-size;
               height: $select-dd-icon-size;
               flex-shrink: 0;
@@ -350,11 +350,11 @@
             .form-check [type='checkbox'] + label,
             .form-check [type='radio'] + label {
               font-size: $select-dd-pill-font-size;
-              padding: $v-gap * 0.5 $v-gap;
-              border: 1px solid $select-label-color;
-              color: $select-label-color;
+              padding: var(--#{$prefix}spacing-xxs) var(--#{$prefix}spacing-xs);
+              border: 1px solid var(--#{$prefix}color-text-base);
+              color: var(--#{$prefix}color-text-base);
               line-height: 1;
-              border-radius: $v-gap * 3;
+              border-radius: var(--#{$prefix}spacing-l);
               display: flex;
               align-items: center;
               margin-right: $select-dd-pill-distance;
@@ -371,20 +371,20 @@
       }
 
       .dropdown-menu {
-        top: calc(-100% - #{$v-gap}) !important;
-        padding: $v-gap 0;
+        top: calc(-100% - var(--#{$prefix}spacing-xs)) !important;
+        padding: var(--#{$prefix}spacing-xs) 0;
 
         &[x-placement='top-start'] {
           top: auto !important;
-          bottom: -$v-gap !important;
+          bottom: calc(-1 * var(--#{$prefix}spacing-xs)) !important;
           transform: none !important;
         }
 
         li {
           a {
             font-size: $select-dd-text-size;
-            padding: ($v-gap) $v-gap * 3;
-            color: $select-dd-link-color;
+            padding: (var(--#{$prefix}spacing-xs)) var(--#{$prefix}spacing-l);
+            color: var(--#{$prefix}color-text-base);
             white-space: inherit;
 
             &.icon-options-li {
@@ -394,7 +394,7 @@
             }
 
             &.selected {
-              color: $select-dd-link-color-active;
+              color: var(--#{$prefix}color-text-primary-active);
               text-decoration: underline;
 
               span.select-pill-text {
@@ -402,7 +402,7 @@
               }
 
               span.check-mark {
-                color: $select-dd-link-color;
+                color: var(--#{$prefix}color-text-base);
               }
             }
 
@@ -414,7 +414,7 @@
 
             span.check-mark {
               top: $select-dd-icon-flag-top;
-              right: $v-gap * 3;
+              right: var(--#{$prefix}spacing-l);
 
               &:after {
                 content: '';
@@ -437,8 +437,8 @@
               }
 
               .icon {
-                fill: $select-dd-link-color;
-                margin-right: $v-gap;
+                fill: var(--#{$prefix}color-text-base);
+                margin-right: var(--#{$prefix}spacing-xs);
                 width: $select-dd-icon-size;
                 height: $select-dd-icon-size;
                 flex-shrink: 0;
@@ -448,9 +448,9 @@
                 display: block;
                 height: 1px;
                 width: $select-dd-small-separator-width;
-                background: $select-dd-small-separator-bg;
+                background: var(--#{$prefix}color-border-secondary);
                 position: absolute;
-                bottom: -$v-gap;
+                bottom: calc(-1 * var(--#{$prefix}spacing-xs));
               }
             }
 
@@ -464,7 +464,7 @@
 
             &.active {
               background: transparent;
-              color: $neutral-1-a10;
+              color: var(--#{$prefix}color-text-base);
 
               span.text {
                 text-decoration: underline;
@@ -473,7 +473,7 @@
           }
 
           &.disabled a {
-            color: $gray-disabled;
+            color: var(--#{$prefix}color-text-disabled);
           }
         }
       }
@@ -492,7 +492,7 @@ fieldset:disabled .bootstrap-select-wrapper {
   }
 
   button {
-    background-color: $input-disabled-bg;
+    background-color: var(--#{$prefix}color-background-disabled);
     opacity: 1;
 
     &.btn-light {

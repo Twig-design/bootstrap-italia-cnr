@@ -9,7 +9,7 @@
     width: fit-content;
     input[type='number'] {
       width: auto;
-      transition: all va(--#{$prefix}transition-instant);
+      transition: all var(--#{$prefix}transition-instant);
     }
   }
 
