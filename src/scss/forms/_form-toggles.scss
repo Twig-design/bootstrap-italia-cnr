@@ -14,10 +14,8 @@
 //
 
 .toggles {
-  --#{$prefix}toggle-track-width: calc(
-    var(--#{$prefix}spacing-xl) + var(--#{$prefix}spacing-l)
-  ); // Controls the width of the toggle track, derived from spacing tokens.
-  --#{$prefix}toggle-track-height: var(--#{$prefix}spacing-xl); // Controls the height of the toggle track, using spacing tokens.
+  --#{$prefix}toggle-track-width: 3.5rem; // Controls the width of the toggle track.
+  --#{$prefix}toggle-track-height: 2rem; // Controls the height of the toggle track.
   --#{$prefix}toggle-track-border-radius: var(--#{$prefix}radius-rounded); // Controls the border radius of the track, using radius tokens.
   --#{$prefix}toggle-track-background: var(--#{$prefix}color-background-secondary-light); // Controls the default background of the track, using color tokens.
   --#{$prefix}toggle-track-background-checked: var(
@@ -27,8 +25,8 @@
     --#{$prefix}color-background-disabled
   ); // Controls the background of the track when disabled, using color tokens.
   --#{$prefix}toggle-track-transition: background 0.3s ease; // Controls the transition for the track background.
-  --#{$prefix}toggle-knob-size: var(--#{$prefix}spacing-l); // Controls the width and height of the knob, using spacing tokens.
-  --#{$prefix}toggle-knob-offset: var(--#{$prefix}spacing-xxs); // Controls the top and left offset of the knob inside the track, using spacing tokens.
+  --#{$prefix}toggle-knob-size: 1.5rem; // Controls the width and height of the knob.
+  --#{$prefix}toggle-knob-offset: 0.25rem; // Controls the top and left offset of the knob inside the track.
   --#{$prefix}toggle-knob-border-radius: 50%; // Controls the border radius of the knob.
   --#{$prefix}toggle-knob-background: var(--#{$prefix}color-background-inverse); // Controls the background color of the knob, using color tokens.
   --#{$prefix}toggle-knob-shadow-color: var(--#{$prefix}color-text-muted); // Controls the shadow/aura color behind the knob, using color tokens.
