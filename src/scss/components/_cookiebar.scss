@@ -17,6 +17,8 @@
 //
 
 .cookiebar {
+  --#{$prefix}cookiebar-background: var(--#{$prefix}color-background-primary); // Controls the background color of the cookiebar, using color tokens.
+
   bottom: 0;
   left: 0;
   right: 0;
@@ -24,7 +26,7 @@
   position: fixed;
   width: 100%;
   z-index: $zindex-cookiebar;
-  background-color: $neutral-1-a8;
+  background-color: var(--#{$prefix}cookiebar-background);
   padding: $v-gap * 3 $v-gap * 4;
 
   &.cookiebar-top {
