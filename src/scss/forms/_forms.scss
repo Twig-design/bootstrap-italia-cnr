@@ -21,7 +21,7 @@
   --#{$prefix}form-control-font-size: var(--#{$prefix}body-font-size);
   --#{$prefix}form-group-spacing-y: var(--#{$prefix}spacing-m);
   --#{$prefix}form-checkbox-border-color: var(--#{$prefix}color-border-secondary);
-  --#{$prefix}form-checkbox-border-radius: var(--#{$prefix}radius-smooth);
+  --#{$prefix}form-checkbox-border-radius: 4px; // Controls the border radius of checkboxes.
   --#{$prefix}form-checked-color: var(--#{$prefix}color-background-primary);
   --#{$prefix}form-file-button-color: var(--#{$prefix}color-text-base);
   --#{$prefix}form-file-button-background: var(--#{$prefix}color-background-inverse);
@@ -346,7 +346,7 @@ input::-webkit-datetime-edit {
       top: 0;
       width: 20px;
       height: 20px;
-      border-radius: var(--#{$prefix}form-control-border-radius);
+      border-radius: var(--#{$prefix}form-checkbox-border-radius);
     }
 
     &:checked + label::before {

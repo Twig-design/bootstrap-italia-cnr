@@ -34,7 +34,7 @@
   @include transition($form-check-transition);
 
   &[type='checkbox'] {
-    @include border-radius($form-check-input-border-radius);
+    border-radius: var(--#{$prefix}form-checkbox-border-radius);
   }
 
   &[type='radio'] {

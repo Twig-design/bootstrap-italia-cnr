@@ -17,10 +17,12 @@
   --#{$prefix}toggle-track-width: 3.5rem; // Controls the width of the toggle track.
   --#{$prefix}toggle-track-height: 2rem; // Controls the height of the toggle track.
   --#{$prefix}toggle-track-border-radius: var(--#{$prefix}radius-rounded); // Controls the border radius of the track, using radius tokens.
-  --#{$prefix}toggle-track-background: var(--#{$prefix}color-background-secondary-light); // Controls the default background of the track, using color tokens.
+  --#{$prefix}toggle-track-background: var(
+    --#{$prefix}color-background-primary-deep
+  ); // Controls the default (unchecked) background of the track, using color tokens.
   --#{$prefix}toggle-track-background-checked: var(
     --#{$prefix}color-background-primary
-  ); // Controls the background of the track when checked, using color tokens.
+  ); // Controls the background of the track when checked (lighter blue), using color tokens.
   --#{$prefix}toggle-track-background-disabled: var(
     --#{$prefix}color-background-disabled
   ); // Controls the background of the track when disabled, using color tokens.
