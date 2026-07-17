@@ -133,7 +133,7 @@
     content: '';
     width: var(--#{$prefix}dropdown-notch-base-size);
     height: var(--#{$prefix}dropdown-notch-base-size);
-    border-radius: var(--#{$prefix}dropdown-border-radius);
+    border-radius: 4px;
     background-color: var(--#{$prefix}dropdown-background);
     transform: rotate(45deg);
   }

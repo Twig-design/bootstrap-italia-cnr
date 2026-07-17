@@ -21,7 +21,7 @@
 .modal {
   --#{$prefix}modal-bg: var(--#{$prefix}color-background-inverse); // Controls the background for the modal, using color tokens.
   --#{$prefix}modal-border-color: transparent; // Controls the border color for the modal.
-  --#{$prefix}modal-border-radius: var(--#{$prefix}radius-smooth); // Controls the border radius for the modal, using radius tokens.
+  --#{$prefix}modal-border-radius: 16px; // Controls the border radius for the modal (16px per CNR design).
   --#{$prefix}modal-border-width: 0; // Controls the border width for the modal.
   --#{$prefix}modal-box-shadow: var(--#{$prefix}elevation-medium); // Controls the box shadow for the modal, using elevation tokens.
   --#{$prefix}modal-footer-bg: transparent; // Controls the footer background for the modal.
@@ -30,7 +30,9 @@
   --#{$prefix}modal-footer-gap: var(--#{$prefix}spacing-s); // Controls the footer gap for the modal, using spacing tokens.
   --#{$prefix}modal-header-border-color: var(--#{$prefix}color-border-subtle); // Controls the header border color for the modal, using color tokens.
   --#{$prefix}modal-header-border-width: 0; // Controls the header border width for the modal.
-  --#{$prefix}modal-inner-border-radius: var(--#{$prefix}radius-smooth); // Controls the inner border radius for the modal, using radius tokens.
+  --#{$prefix}modal-inner-border-radius: calc(
+    var(--#{$prefix}modal-border-radius) - var(--#{$prefix}modal-border-width)
+  ); // Controls the inner border radius for the modal, derived from the outer radius.
   --#{$prefix}modal-margin: auto; // Controls the margin for the modal.
   --#{$prefix}modal-padding: var(--#{$prefix}spacing-m); // Controls the padding for the modal, using spacing tokens.
   --#{$prefix}modal-title-font-size: var(--#{$prefix}heading-5-font-size); // Controls the title font size for the modal, using font tokens.

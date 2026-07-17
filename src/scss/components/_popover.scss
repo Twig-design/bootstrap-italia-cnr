@@ -27,7 +27,7 @@
   --#{$prefix}popover-bg: #{$popover-bg};
   --#{$prefix}popover-box-shadow: #{$popover-box-shadow};
   --#{$prefix}popover-border-color: #{$popover-border-color};
-  --#{$prefix}popover-border-radius: #{$popover-border-radius};
+  --#{$prefix}popover-border-radius: 16px; // Controls the border radius for the popover (16px per CNR design).
   --#{$prefix}popover-border-width: #{$popover-border-width};
   @include rfs($popover-font-size, --#{$prefix}popover-font-size);
   --#{$prefix}popover-header-bg: #{$popover-header-bg};
@@ -35,7 +35,9 @@
   @include rfs($popover-header-font-size, --#{$prefix}popover-header-font-size);
   --#{$prefix}popover-header-padding-x: #{$popover-header-padding-x};
   --#{$prefix}popover-header-padding-y: #{$popover-header-padding-y};
-  --#{$prefix}popover-inner-border-radius: #{$popover-inner-border-radius};
+  --#{$prefix}popover-inner-border-radius: calc(
+    var(--#{$prefix}popover-border-radius) - var(--#{$prefix}popover-border-width)
+  ); // Controls the inner border radius for the popover, derived from the outer radius.
   --#{$prefix}popover-max-width: #{$popover-max-width};
   --#{$prefix}popover-zindex: #{$zindex-popover};
 }
