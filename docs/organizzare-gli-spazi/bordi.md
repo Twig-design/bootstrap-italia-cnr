@@ -66,7 +66,7 @@ Classi per arrotondare facilmente gli angoli di un elemento.
 
 ## Arrotondamento brand
 
-Per etichette, immagini e banner con l'angolo superiore destro retto (stile CNR) sono disponibili le classi utility `.rounded-brand-sm`, `.rounded-brand-md` e `.rounded-brand-lg`.
+Per etichette, immagini e banner con l'angolo inferiore destro retto (stile CNR) sono disponibili le classi utility `.rounded-brand-sm`, `.rounded-brand-md` e `.rounded-brand-lg`.
 
 {% capture example %}
 <div class="d-flex flex-wrap gap-3 align-items-end">
@@ -80,9 +80,9 @@ I valori sono esposti anche come variabili CSS globali:
 
 | Classe utility | Variabile CSS | Valore |
 | -------------- | ------------- | ------ |
-| `.rounded-brand-sm` | `--bsi-radius-brand-sm` | `16px 0 16px 16px` |
-| `.rounded-brand-md` | `--bsi-radius-brand-md` | `32px 0 32px 32px` |
-| `.rounded-brand-lg` | `--bsi-radius-brand-lg` | `48px 0 48px 48px` |
+| `.rounded-brand-sm` | `--bsi-radius-brand-sm` | `16px 16px 0 16px` |
+| `.rounded-brand-md` | `--bsi-radius-brand-md` | `32px 32px 0 32px` |
+| `.rounded-brand-lg` | `--bsi-radius-brand-lg` | `48px 48px 0 48px` |
 {: .table .table-cols-equal .mb-4}
 
 Per gli altri token di arrotondamento e spessore bordo (`--bsi-radius-smooth`, `--bsi-border-thick`, ecc.) consulta la pagina [Variabili CSS]({{ site.baseurl }}/docs/personalizzare-la-libreria/variabili-css/).

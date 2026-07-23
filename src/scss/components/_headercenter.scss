@@ -160,3 +160,16 @@
     fill: var(--#{$prefix}header-brand-icon-color);
   }
 }
+
+// Remove unwanted top margin from headings inside the header
+.it-header-center-wrapper,
+.it-header-slim-wrapper {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3 {
+    margin-top: 0;
+  }
+}

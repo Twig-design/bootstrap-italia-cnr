@@ -156,10 +156,10 @@ $border-double: 2px !default;
 $border-thick: 4px !default;
 $border-broad: 8px !default;
 
-// Brand corner radius — top-right square (labels, images, banners)
-$radius-brand-sm: 16px 0 16px 16px !default;
-$radius-brand-md: 32px 0 32px 32px !default;
-$radius-brand-lg: 48px 0 48px 48px !default;
+// Brand corner radius — bottom-right square (labels, images, banners)
+$radius-brand-sm: 16px 16px 0 16px !default;
+$radius-brand-md: 32px 32px 0 32px !default;
+$radius-brand-lg: 48px 48px 0 48px !default;
 
 // Shadows — shadow-s / shadow-m / shadow-l (UI Kit Italia)
 $shadow-s-x: 0 !default;
@@ -511,10 +511,10 @@ $neutral-2-b: 95 !default;
 // ============================================================================
 
 $font-family-sans-primary: 'Source Sans Pro' !default;
-$font-family-sans-fallback: 'Titillium Web', 'Titillium Sans Pro' !default;
-$font-family-sans: 'Source Sans Pro', 'Titillium Web', 'Titillium Sans Pro', Geneva, Tahoma, sans-serif !default;
-$font-family-serif: 'Lora', Georgia, serif !default;
-$font-family-mono: 'Roboto Mono', monospace !default;
+$font-family-sans-fallback: 'Source Sans Pro' !default;
+$font-family-sans: 'Source Sans Pro', sans-serif !default;
+$font-family-serif: 'Source Sans Pro', sans-serif !default;
+$font-family-mono: 'Source Sans Pro', sans-serif !default;
 
 // Font scale
 $font-size-1: 12px !default;
