@@ -21,6 +21,10 @@
     background: transparent;
   }
 
+  .navbar-nav .nav-link {
+    font-style: italic;
+  }
+
   @include media-breakpoint-up(lg) {
     background: var(--#{$prefix}header-nav-background);
 

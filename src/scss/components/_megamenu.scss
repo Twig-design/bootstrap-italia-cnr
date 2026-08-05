@@ -19,6 +19,9 @@
   --#{$prefix}megamenu-background-color: var(--#{$prefix}color-background-inverse); // Controls the background color for the megamenu, using color tokens.
   --#{$prefix}megamenu-content-spacing: var(--#{$prefix}spacing-m); // Controls the spacing for the megamenu, using spacing tokens.
   --#{$prefix}megamenu-content-border-color: var(--#{$prefix}color-border-subtle); // Controls the border color for the megamenu, using color tokens.
+  --#{$prefix}megamenu-border-radius: var(--#{$prefix}radius-smooth); // Controls megamenu panel corner radius (bottom corners).
+  --#{$prefix}megamenu-box-shadow: var(--#{$prefix}elevation-medium); // Controls megamenu panel shadow.
+  --#{$prefix}megamenu-link-color: #{$color-info-500}; // Bright blue for links on white panel (Figma).
 }
 
 // Styles
@@ -70,13 +73,28 @@
 
   .it-heading-link,
   .it-footer-link {
+    color: var(--#{$prefix}megamenu-link-color);
     font-size: var(--#{$prefix}heading-6-font-size);
     font-weight: var(--#{$prefix}font-weight-solid);
     line-height: var(--#{$prefix}heading-leading);
     text-decoration: none;
     &:hover,
     &:focus {
+      color: var(--#{$prefix}megamenu-link-color);
       text-decoration: underline;
+    }
+
+    .icon {
+      fill: var(--#{$prefix}megamenu-link-color);
+    }
+  }
+
+  .list-item,
+  .dropdown-item {
+    color: var(--#{$prefix}megamenu-link-color);
+
+    .icon {
+      fill: var(--#{$prefix}megamenu-link-color);
     }
   }
 
@@ -140,11 +158,6 @@
 
 @include media-breakpoint-up(lg) {
   .navbar-nav .megamenu {
-    a.dropdown-toggle:before,
-    button.dropdown-toggle:before {
-      z-index: 2;
-    }
-
     .dropdown-menu {
       z-index: 1;
     }

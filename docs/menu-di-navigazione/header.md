@@ -16,12 +16,12 @@ toc: true
  }
 </style>
 
-L'header di un sito della Pubblica Amministrazione è solitamente composto di 3 elementi principali:
+L'header di un sito CNR è solitamente composto di 4 elementi principali:
 
-- Un cosiddetto **Slim Header**, una sottile fascia dello stesso colore o, preferibilmente, di colore lievemente diverso rispetto al tema principale del sito, che mostra appartenenza e alcuni link funzionali con impatto globale o esterno al sito stesso.
-- Un **Header Centrale** che identifica in modo chiaro il sito attraverso logo, testo e social, e può contenere un link per effettuare ricerche sul sito.
-- Un **Header Nav** dedicato alla navigazione, visibile su schermi di grandi dimensioni e attraverso il classico pulsante di tipo "burger menu"
-  (<svg class="icon icon-primary"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-burger"></use></svg>) su dispositivi mobili.
+- Uno **Slim Header**, una sottile fascia dello stesso colore del tema principale, con selettore lingua e menu “Esplora i siti del CNR”. Gli stili per ente di appartenenza e pulsante Accedi restano disponibili per usi opzionali.
+- Un **Header Centrale** che identifica in modo chiaro il sito attraverso logo e titolo, e può contenere un link per effettuare ricerche sul sito.
+- Un **Header Nav** dedicato alla navigazione principale (a sinistra) e a link di servizio come News, Eventi, Contatti (a destra tramite `.navbar-secondary`).
+- Una fascia **Esplora come** con pulsanti pillola (`.btn.btn-primary.btn-icon`) per i profili di utenza e un eventuale menu Dipartimenti.
 
 {% capture callout %}
 
@@ -36,8 +36,8 @@ Maggiori dettagli sull'accessibilità del componente **megamenu** nella [relativ
 
 ## Slim Header
 
-Lo **Slim Header** mostra un'intestazione, solitamente con riferimento all'ente di appartenenza del progetto o riferimenti utili, oltre ad un eventuale menu per il cambio lingua e l'accesso ad area riservata.  
-Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/).
+Lo **Slim Header** mostra azioni globali allineate a destra: selettore lingua e menu “Esplora i siti del CNR”, entrambi gestiti con il componente [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/).  
+Restano supportati (ma non usati nell’esempio CNR) l’intestazione ente di appartenenza a sinistra e il pulsante Accedi.
 
 {% comment %}Example name: Slim header{% endcomment %}
 {% capture example %}
@@ -47,27 +47,12 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
     <div class="row">
       <div class="col-12">
         <div class="it-header-slim-wrapper-content">
-          <a class="d-none d-lg-block navbar-brand" href="#">Ente appartenenza</a>
-          <div class="nav-mobile">
-            <nav aria-label="Navigazione accessoria">
-              <a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu1a" role="button" aria-expanded="false" aria-controls="menu4">
-                <span>Ente appartenenza</span>
-                <svg class="icon" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
-              </a>
-              <div class="link-list-wrapper collapse" id="menu1a">
-                <ul class="link-list">
-                  <li><a class="dropdown-item list-item" href="#">Link 1</a></li>
-                  <li><a class="list-item active" href="#" aria-current="page">Link 2 (Attivo)</a></li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-          <div class="it-header-slim-right-zone">
+          <div class="it-header-slim-right-zone ms-auto">
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="visually-hidden">Selezione lingua: lingua selezionata</span>
                 <span>ITA</span>
-                <svg class="icon d-none d-lg-block"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+                <svg class="icon d-none d-lg-block" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
               </a>
               <div class="dropdown-menu">
                 <div class="row">
@@ -82,8 +67,24 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
                 </div>
               </div>
             </div>
-            <div class="it-access-top-wrapper">
-              <a class="btn btn-primary btn-xs" href="#">Accedi</a>
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>Esplora i siti del CNR</span>
+                <svg class="icon d-none d-lg-block" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+              </a>
+              <div class="dropdown-menu">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="link-list-wrapper">
+                      <ul class="link-list">
+                        <li><a class="dropdown-item list-item" href="#"><span>Sito istituzionale</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Portale della ricerca</span></a></li>
+                        <li><a class="dropdown-item list-item" href="#"><span>Amministrazione trasparente</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -94,9 +95,9 @@ Il cambio lingua è gestito con il componente [dropdown]({{ site.baseurl }}/docs
 
 {% endcapture %}{% include example.html content=example %}
 
-#### Zona destra con pulsante full-responsive
+#### Zona destra con pulsante Accedi (opzionale)
 
-Per trasformare il pulsante di _action_ situato nell'elemento identificato con `.it-header-slim-right-zone` e renderlo _full-responsive_ è sufficiente applicare la classe `.btn-full` alla classe `.btn` del link/pulsante.
+Per aggiungere un pulsante di _action_ (es. Accedi) nell'elemento `.it-header-slim-right-zone` usare `.it-access-top-wrapper`. Per renderlo _full-responsive_ applicare anche `.btn-full` al `.btn`.
 
 Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da `.theme-light`.
 
@@ -865,6 +866,102 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
     </div>
   </div>
 </div>
+{% endcapture %}{% include example.html content=example %}
+
+## Esplora come (audience bar)
+
+Fascia opzionale sotto la navigazione principale. Usa i [pulsanti con icona]({{ site.baseurl }}/docs/componenti/buttons/#pulsanti-con-icona) (`.btn.btn-primary.btn-xs.btn-icon`) come trigger di [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/): sull’header scuro diventano pillole bianche con testo e icona blu chiaro.
+
+{% comment %}Example name: Header audience bar{% endcomment %}
+{% capture example %}
+
+<div class="it-header-audience-wrapper">
+  <div class="container-xxl">
+    <div class="it-header-audience-content">
+      <span class="it-header-audience-label">Esplora come:</span>
+      <div class="it-header-audience-pills">
+        <div class="dropdown">
+          <button class="btn btn-primary btn-xs btn-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="docs-audience-cittadinanza">
+            <svg class="icon icon-xs" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use></svg>
+            <span>Cittadinanza</span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="docs-audience-cittadinanza">
+            <div class="link-list-wrapper">
+              <ul class="link-list">
+                <li>
+                  <a class="list-item dropdown-item" href="#">
+                    <svg class="icon icon-sm me-2" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                    <span>Mostre e musei scientifici</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="list-item dropdown-item" href="#">
+                    <svg class="icon icon-sm me-2" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                    <span>Scienza per i cittadini</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-primary btn-xs btn-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="docs-audience-ricercatori">
+            <svg class="icon icon-xs" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-user"></use></svg>
+            <span>Ricercatori</span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="docs-audience-ricercatori">
+            <div class="link-list-wrapper">
+              <ul class="link-list">
+                <li>
+                  <a class="list-item dropdown-item" href="#">
+                    <svg class="icon icon-sm me-2" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                    <span>Opportunità di ricerca</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-primary btn-xs btn-icon" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="docs-audience-pa">
+            <svg class="icon icon-xs" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-pa"></use></svg>
+            <span>PA</span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="docs-audience-pa">
+            <div class="link-list-wrapper">
+              <ul class="link-list">
+                <li>
+                  <a class="list-item dropdown-item" href="#">
+                    <svg class="icon icon-sm me-2" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use></svg>
+                    <span>Servizi per la PA</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="it-header-audience-extra">
+        <div class="dropdown">
+          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img class="it-header-audience-dept-logo" src="{{site.baseurl}}/docs/assets/img/icons/cnr_logo.png" alt="" width="48" height="43" aria-hidden="true">
+            <span>I dipartimenti</span>
+            <svg class="icon" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
+          </a>
+          <div class="dropdown-menu dropdown-menu-end">
+            <div class="link-list-wrapper">
+              <ul class="link-list">
+                <li><a class="dropdown-item list-item" href="#"><span>Scienze fisiche</span></a></li>
+                <li><a class="dropdown-item list-item" href="#"><span>Scienze chimiche</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endcapture %}{% include example.html content=example %}
 
 ## Header Completa

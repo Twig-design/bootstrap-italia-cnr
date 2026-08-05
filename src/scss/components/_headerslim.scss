@@ -90,6 +90,11 @@
   .header-slim-right-zone {
     display: flex;
     align-items: center;
+    gap: var(--#{$prefix}spacing-m);
+
+    > .nav-item + .nav-item {
+      margin-left: 0; // gap handles spacing between ITA and Esplora i siti
+    }
   }
 
   // Secondary nav
@@ -156,10 +161,4 @@
 .header-slim-right-zone,
 .it-access-top-wrapper {
   margin-left: var(--#{$prefix}spacing-m);
-}
-
-.it-header-slim-right-zone {
-  .btn-primary:hover {
-    --#{$prefix}btn-background: var(--#{$prefix}color-background-primary-deep); // Override default hover color
-  }
 }

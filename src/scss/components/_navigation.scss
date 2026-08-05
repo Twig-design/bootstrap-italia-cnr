@@ -113,38 +113,10 @@
   .nav-item.megamenu {
     position: static;
 
-    > a.dropdown-toggle,
-    > button.dropdown-toggle {
-      position: relative;
-
-      &:before {
-        position: absolute;
-        top: auto;
-        bottom: -14px;
-        left: 24px;
-        content: '';
-        display: block;
-        width: 18px;
-        height: 18px;
-        border-radius: var(--#{$prefix}radius-smooth);
-        opacity: 0;
-        background-color: var(--#{$prefix}color-background-inverse);
-        transform: rotate(45deg);
-        transition: opacity calc(var($dropdown-menu-animation-speed) * 0.5) cubic-bezier(0.1, 0.57, 0.36, 0.99);
-      }
-    }
-
+    // Nessuna freccia/notch sul megamenu (i dropdown audience sotto restano invariati)
+    > a.dropdown-toggle:before,
     > button.dropdown-toggle:before {
-      bottom: calc(var($dropdown-menu-notch-base-size) * -1 - 8);
-    }
-
-    a.dropdown-toggle,
-    button.dropdown-toggle {
-      &.show {
-        &:before {
-          opacity: 1;
-        }
-      }
+      display: none;
     }
   }
 
@@ -153,6 +125,8 @@
       right: var(--#{$prefix}navbar-spacing-inset);
       left: var(--#{$prefix}navbar-spacing-inset);
       min-width: auto;
+      border-radius: 0 0 var(--#{$prefix}megamenu-border-radius) var(--#{$prefix}megamenu-border-radius);
+      box-shadow: var(--#{$prefix}megamenu-box-shadow);
       animation-timing-function: cubic-bezier(0.1, 0.57, 0.36, 0.99);
       @include media-breakpoint-up(lg) {
         right: 0;

@@ -24,11 +24,11 @@
   --#{$prefix}header-brand-spacing: var(--#{$prefix}spacing-xxs); // Controls the brand spacing for the header, using spacing tokens.
   --#{$prefix}header-brand-tagline-size: var(--#{$prefix}body-font-size); // Controls the brand tagline size for the header, using font tokens
   --#{$prefix}header-brand-title-size: var(--#{$prefix}heading-5-font-size); // Controls the brand title size for the header, using font tokens.
-  --#{$prefix}header-center-background: var(--#{$prefix}color-background-primary); // Controls the center background for the header, using color tokens.
+  --#{$prefix}header-center-background: var(--#{$prefix}color-background-primary); // #002F5F — fascia logo/nav
   --#{$prefix}header-center-font-size: var(--#{$prefix}label-font-size-s); // Controls the center font size for the header, using font tokens.
   --#{$prefix}header-center-height: 5rem; // Controls the header center height.
   --#{$prefix}header-center-text-color: var(--#{$prefix}color-text-inverse); // Controls the center text color for the header, using color tokens
-  --#{$prefix}header-nav-background: var(--#{$prefix}color-background-primary); // Controls the nav background for the header, using color tokens
+  --#{$prefix}header-nav-background: var(--#{$prefix}color-background-primary); // #002F5F — stessa fascia del logo
   --#{$prefix}header-nav-secondary-font-size: var(--#{$prefix}label-font-size); // Controls the nav secondary font size for the header, using font tokens
   --#{$prefix}header-nav-text-color: var(--#{$prefix}color-link); // Controls the nav text color for the header, using color tokens
   --#{$prefix}header-search-button-background: var(
@@ -38,13 +38,19 @@
   --#{$prefix}header-search-button-size: 3rem; // Controls the header search button size.
   --#{$prefix}header-search-icon-color: var(--#{$prefix}icon-inverse); // Controls the search icon color for the header, using icon tokens.
   --#{$prefix}header-search-icon-size: 1.5rem; // Controls the header search icon size.
-  --#{$prefix}header-slim-background: var(--#{$prefix}color-blue-30); // Controls the header slim background, using color tokens.
+  --#{$prefix}header-slim-background: var(--#{$prefix}color-background-primary-muted); // #002447 — fascia alta
   --#{$prefix}header-slim-border-color: hsla(0, 0%, 100%, 0.2); // Controls the header slim border color.
   --#{$prefix}header-slim-font-size: var(--#{$prefix}label-font-size-s); // Controls the slim font size for the header, using font tokens.
   --#{$prefix}header-slim-height: 3rem; // Controls the header slim height.
   --#{$prefix}header-slim-text-color: var(--#{$prefix}color-text-inverse); // Controls the slim text color for the header, using color tokens.
   --#{$prefix}header-social-color: var(--#{$prefix}icon-inverse); // Controls the social color for the header, using icon tokens.
   --#{$prefix}header-spacing-inset: var(--#{$prefix}spacing-xxs); // Controls the inset spacing for the header, using spacing tokens.
+  --#{$prefix}header-audience-background: var(--#{$prefix}color-background-primary-muted); // #002447 — fascia Esplora come
+  --#{$prefix}header-audience-label-color: var(--#{$prefix}color-text-inverse); // Controls the "Esplora come" label color.
+  --#{$prefix}header-audience-label-size: var(--#{$prefix}label-font-size); // Controls the audience label font size.
+  --#{$prefix}header-audience-spacing: var(--#{$prefix}spacing-l); // 32px — padding verticale fascia Esplora come
+  --#{$prefix}header-audience-gap: var(--#{$prefix}spacing-xs); // Controls gap between audience pills.
+  --#{$prefix}header-audience-btn-color: #{$color-info-500}; // Bright blue for pill text/icons on white (Figma).
 
   @include media-breakpoint-up(md) {
     --#{$prefix}header-brand-size: 3rem;
@@ -130,6 +136,11 @@
                   margin-right: var(--#{$prefix}spacing-xxs);
                   fill: var(--#{$prefix}header-brand-icon-color);
                 }
+
+                .it-brand-logo {
+                  height: 2rem;
+                  width: auto;
+                }
               }
             }
           }
@@ -208,5 +219,206 @@
   &.theme-light,
   &.theme-light-desk {
     border-bottom: 1px solid var(--#{$prefix}header-slim-border-color);
+  }
+
+  // CNR: voci di navigazione in italic (Source Sans Pro italic)
+  .navbar-nav {
+    .nav-link,
+    .nav-link span {
+      font-style: italic;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .navbar .navbar-collapsable .menu-wrapper {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      background: transparent;
+
+      .navbar-nav {
+        padding: 0;
+
+        &.navbar-secondary {
+          display: flex;
+          justify-content: flex-end;
+
+          .nav-link {
+            font-size: var(--#{$prefix}header-nav-secondary-font-size);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Primary buttons on dark header → white surface; audience pills use bright blue text
+.it-header-slim-wrapper,
+.it-header-center-wrapper,
+.it-header-navbar-wrapper {
+  .btn-primary,
+  a.btn-primary {
+    --#{$prefix}btn-text-color: var(--#{$prefix}color-text-primary);
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-inverse);
+
+    &:hover {
+      --#{$prefix}btn-background: color-mix(in srgb, var(--#{$prefix}color-background-inverse) 85%, black);
+    }
+
+    &:active {
+      --#{$prefix}btn-background: color-mix(in srgb, var(--#{$prefix}color-background-inverse) 80%, black);
+    }
+  }
+}
+
+// Audience bar — "Esplora come" pills (reuse .btn.btn-primary.btn-icon as dropdown triggers)
+.it-header-audience-wrapper {
+  background: var(--#{$prefix}header-audience-background);
+  color: var(--#{$prefix}header-audience-label-color);
+
+  .it-header-audience-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--#{$prefix}header-audience-gap);
+    padding-top: var(--#{$prefix}header-audience-spacing);
+    padding-bottom: var(--#{$prefix}header-audience-spacing);
+
+    @include media-breakpoint-up(lg) {
+      padding-right: var(--#{$prefix}header-spacing-inset);
+      padding-left: var(--#{$prefix}header-spacing-inset);
+    }
+  }
+
+  .it-header-audience-label {
+    margin-right: var(--#{$prefix}spacing-xxs);
+    color: var(--#{$prefix}header-audience-label-color);
+    font-size: var(--#{$prefix}header-audience-label-size);
+    font-weight: var(--#{$prefix}font-weight-solid);
+    white-space: nowrap;
+  }
+
+  .it-header-audience-pills {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--#{$prefix}header-audience-gap);
+
+    .dropdown {
+      position: relative;
+    }
+
+    .btn,
+    .btn-primary,
+    a.btn-primary,
+    button.btn-primary {
+      --#{$prefix}btn-border-radius: var(--#{$prefix}radius-smooth); // 8px — non pillola troppo arrotondata
+      --#{$prefix}btn-text-color: var(--#{$prefix}header-audience-btn-color);
+      --#{$prefix}btn-background: var(--#{$prefix}color-background-inverse);
+      border: 0;
+      box-shadow: none;
+
+      .icon {
+        fill: var(--#{$prefix}header-audience-btn-color);
+      }
+
+      &:hover,
+      &:focus,
+      &[aria-expanded='true'] {
+        --#{$prefix}btn-background: var(--#{$prefix}color-background-primary-lighter);
+        --#{$prefix}btn-text-color: var(--#{$prefix}header-audience-btn-color);
+      }
+    }
+
+    // Hide Bootstrap caret — Figma pills have no chevron
+    .dropdown-toggle::after {
+      display: none;
+    }
+
+    .dropdown-menu {
+      --#{$prefix}dropdown-border-radius: var(--#{$prefix}radius-smooth);
+      --#{$prefix}dropdown-box-shadow: var(--#{$prefix}elevation-medium);
+      min-width: 16rem;
+      max-width: min(40rem, 92vw);
+      padding: var(--#{$prefix}spacing-s);
+      border-radius: var(--#{$prefix}radius-smooth);
+      box-shadow: var(--#{$prefix}elevation-medium);
+
+      // Layout a colonne (come Figma): voci affiancate, testo che va a capo nella colonna
+      &:has(.row) {
+        min-width: min(36rem, 90vw);
+      }
+
+      .row {
+        --bs-gutter-x: var(--#{$prefix}spacing-s);
+      }
+
+      [class*='col-'] {
+        min-width: 0; // permette wrap del testo nelle colonne flex/grid
+      }
+
+      .list-item,
+      .dropdown-item {
+        align-items: flex-start;
+        width: 100%;
+        max-width: 100%;
+        color: var(--#{$prefix}header-audience-btn-color);
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: normal;
+        hyphens: auto;
+
+        .icon {
+          flex-shrink: 0;
+          margin-top: 0.15em;
+          fill: var(--#{$prefix}header-audience-btn-color);
+        }
+
+        span {
+          flex: 1 1 auto;
+          min-width: 0;
+        }
+      }
+    }
+  }
+
+  .it-header-audience-extra {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    .dropdown-toggle {
+      display: flex;
+      align-items: center;
+      gap: var(--#{$prefix}spacing-xxs);
+      color: var(--#{$prefix}header-audience-label-color);
+      font-size: var(--#{$prefix}header-audience-label-size);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      .it-header-audience-dept-logo {
+        display: block;
+        width: auto;
+        height: 2.75rem; // più grande, allineato agli screenshot Figma
+        object-fit: contain;
+        mix-blend-mode: lighten; // sfondo nero del PNG diventa trasparente sulla fascia scura
+      }
+
+      .icon:last-of-type {
+        width: var(--#{$prefix}icon-size-xs);
+        height: var(--#{$prefix}icon-size-xs);
+        margin-left: var(--#{$prefix}icon-spacing);
+        fill: currentColor;
+      }
+
+      &[aria-expanded='true'] .icon:last-of-type {
+        transform: scaleY(-1);
+      }
+    }
   }
 }

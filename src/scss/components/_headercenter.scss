@@ -135,9 +135,9 @@
     .it-brand-title {
       margin-bottom: 0;
       font-size: var(--#{$prefix}header-brand-title-size);
-      font-weight: var(--#{$prefix}heading-font-weight);
+      font-weight: var(--#{$prefix}font-weight-base);
       letter-spacing: unset;
-      line-height: var(--#{$prefix}heading-leading);
+      line-height: var(--#{$prefix}heading-5-leading, 1.2);
 
       @include media-breakpoint-up(lg) {
         margin-bottom: var(--#{$prefix}spacing-3xs);
@@ -158,6 +158,18 @@
     height: var(--#{$prefix}header-brand-size);
     margin-right: var(--#{$prefix}spacing-xxs);
     fill: var(--#{$prefix}header-brand-icon-color);
+  }
+
+  // Full wordmark logo (SVG/PNG), e.g. CNR lockup
+  .it-brand-logo {
+    display: block;
+    width: auto;
+    height: 2.5rem;
+    max-width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      height: 2.9375rem; // 47px — matches CNR logo SVG
+    }
   }
 }
 
