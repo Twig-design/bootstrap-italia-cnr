@@ -89,23 +89,37 @@
 
   .it-brand-wrapper {
     .it-brand-text {
-      padding-right: var(--#{$prefix}spacing-m);
+      margin: 0;
+      margin-right: 0;
+      padding: 0;
+      padding-right: 0;
     }
 
     a {
       display: flex;
       align-items: center;
+      gap: var(--#{$prefix}spacing-xs);
       text-decoration: none;
     }
 
-    h2 {
-      margin-bottom: var(--#{$prefix}spacing-3xs);
+    h2,
+    .it-brand-title {
+      margin: 0;
+      padding: 0;
       font-size: var(--#{$prefix}heading-5-font-size);
       font-weight: var(--#{$prefix}heading-font-weight-weak);
+      line-height: var(--#{$prefix}heading-5-leading, 1.2);
+
+      strong,
+      b {
+        font-weight: var(--#{$prefix}font-weight-strong);
+      }
     }
 
-    h3 {
-      padding-top: 0;
+    h3,
+    .it-brand-tagline {
+      margin: 0;
+      padding: 0;
       font-size: var(--#{$prefix}body-font-size);
       font-weight: var(--#{$prefix}body-font-weight);
     }
@@ -114,8 +128,19 @@
       flex-shrink: 0;
       width: var(--#{$prefix}footer-brand-icon-size);
       height: var(--#{$prefix}footer-brand-icon-size);
-      margin-right: var(--#{$prefix}spacing-xs);
+      margin-right: 0;
       fill: var(--#{$prefix}footer-brand-icon-color);
+    }
+
+    .it-brand-logo {
+      display: block;
+      width: auto;
+      height: 2.5rem;
+      max-width: 100%;
+
+      @include media-breakpoint-up(lg) {
+        height: 2.9375rem;
+      }
     }
   }
 

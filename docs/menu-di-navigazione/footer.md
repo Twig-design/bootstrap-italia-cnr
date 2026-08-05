@@ -7,22 +7,19 @@ toc: true
 ---
 
 ## Introduzione
-Il **footer** (in italiano piè di pagina o piede di pagina) è una sezione che contiene tutte le informazioni inerenti al sito web e alla società o organizzazione che rappresenta. 
+Il **footer** (in italiano piè di pagina o piede di pagina) è una sezione che contiene tutte le informazioni inerenti al sito web e all’organizzazione che rappresenta.
 
-Per una Pubblica Amministrazione potrebbe contenere tutte i riferimenti ai vari **servizi**, a varie **pagine utili** alla cittadinanza, riferimenti alla **privacy**, il collegamento alla **Dichiarazione di accessibilità sul form AgID** e informazioni su come **contattare** l'amministrazione.
-
-Potrebbe anche contenere riferimenti alle pagine social dell'amministrazione.
+Per un sito CNR tipicamente include il **logo**, i **contatti**, i link di **menu** e **dipartimenti**, i **profili social** e i link utili in fascia inferiore (privacy, accessibilità, ecc.).
 
 ## Footer completo
 
 Nel footer completo sono presenti i seguenti elementi:
-- **Logo** dell'ente con nome e tagline;
-- **Sezioni di primo livello** e relative sotto-sezioni; il nome della sezione è un link che porta alla pagina principale della sezione;
-- **Contatti** dell'ente;
-- **Link utili** (Media policy, Note legali, Privacy policy, Mappa del sito);
-- **Dichiarazione di accessibilità** (link esterno su form AgID);
-- **Profili Social** dell'ente;
-- **Iscrizione Newsletter** (opzionale).
+- **Logo** dell’ente;
+- **Contatti** dell’ente (indirizzo, codice fiscale, P. IVA, PEC);
+- **Menu** di navigazione principale;
+- **Dipartimenti**;
+- **Profili social**, social media policy, 5x1000 e canali RSS;
+- **Link utili** in fascia inferiore (Media policy, Note legali, Privacy policy, Mappa del sito, Dichiarazione di accessibilità).
 
 {% comment %}Example name: Completo{% endcomment %}
 {% capture example %}
@@ -33,118 +30,83 @@ Nel footer completo sono presenti i seguenti elementi:
         <div class="row clearfix">
           <div class="col-sm-12">
             <div class="it-brand-wrapper">
-              <a href="#" class="" data-focus-mouse="false">
-                <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-code-circle"></use></svg>
-                <div class="it-brand-text">
-                  <h2 class="no_toc">Nome Ente</h2>
-                  <h3 class="no_toc">Tagline</h3>
-                </div>
+              <a href="#">
+                <img class="it-brand-logo" src="{{ site.baseurl }}/docs/assets/img/icons/logo-cnr.svg" alt="Consiglio Nazionale delle Ricerche" width="202" height="47">
               </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="pt-2">
-        <div class="row">
-          <div class="col-lg-3 col-sm-6 pb-3">
-            <h4>
-              <a href="#" title="Vai alla pagina: Amministrazione">Amministrazione</a>
-            </h4>
-            <div class="link-list-wrapper">
-              <ul class="footer-list link-list clearfix">
-                <li><a class="list-item" href="#">Giunta e consiglio</a></li>
-                <li><a class="list-item" href="#">Aree di competenza</a></li>
-                <li><a class="list-item" href="#">Dipendenti</a></li>
-                <li><a class="list-item" href="#">Luoghi</a></li>
-                <li><a class="list-item" href="#">Associazioni e società partecipate</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6 pb-3">
-            <h4>
-              <a href="#" title="Vai alla pagina: Servizi">Servizi</a>
-            </h4>
-            <div class="link-list-wrapper">
-              <ul class="footer-list link-list clearfix">
-                <li><a class="list-item" href="#">Pagamenti</a></li>
-                <li><a class="list-item" href="#">Sostegno</a></li>
-                <li><a class="list-item" href="#">Domande e iscrizioni</a></li>
-                <li><a class="list-item" href="#">Segnalazioni</a></li>
-                <li><a class="list-item" href="#">Autorizzazioni e concessioni</a></li>
-                <li><a class="list-item" href="#">Certificati e dichiarazioni</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6 pb-3">
-            <h4>
-              <a href="#" title="Vai alla pagina: Novità">Novità</a>
-            </h4>
-            <div class="link-list-wrapper">
-              <ul class="footer-list link-list clearfix">
-                <li><a class="list-item" href="#">Notizie</a></li>
-                <li><a class="list-item" href="#">Eventi</a></li>
-                <li><a class="list-item" href="#">Comunicati stampa</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6 pb-3">
-            <h4>
-              <a href="#" title="Vai alla pagina: Documenti">Documenti</a>
-            </h4>
-            <div class="link-list-wrapper">
-              <ul class="footer-list link-list clearfix">
-                <li><a class="list-item" href="#">Progetti e attività</a></li>
-                <li><a class="list-item" href="#">Delibere, determine e ordinanze</a></li>
-                <li><a class="list-item" href="#">Bandi</a></li>
-                <li><a class="list-item" href="#">Concorsi</a></li>
-                <li><a class="list-item" href="#">Albo pretorio</a></li>
-              </ul>
             </div>
           </div>
         </div>
       </section>
       <section class="pt-4 border-white border-top">
         <div class="row">
-          <div class="col-lg-4 col-md-4 mt-2">
+          <div class="col-lg-3 col-md-6 pb-3">
             <h4>Contatti</h4>
-            <p>
-              <strong>Nome Ente</strong><br>
-              Via Roma 0 - 00000 Città - Codice fiscale / P. IVA: 000000000
+            <p class="mb-3">
+              Consiglio Nazionale delle Ricerche<br>
+              Piazzale Aldo Moro, 7 - 00185 Roma, Italia<br>
+              Codice Fiscale 80054330586<br>
+              Partita IVA 02118311006
             </p>
+            <p class="mb-0">
+              Indirizzo Posta Elettronica Certificata (PEC) istituzionale<br>
+              <a href="mailto:protocollo-ammcen@pec.cnr.it">protocollo-ammcen@pec.cnr.it</a>
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 pb-3">
+            <h4>Menu</h4>
             <div class="link-list-wrapper">
               <ul class="footer-list link-list clearfix">
-                <li><a class="list-item" href="#">Posta Elettronica Certificata</a></li>
-                <li>
-                  <a class="list-item" href="#">URP - Ufficio Relazioni con il Pubblico</a>
-                </li>
+                <li><a class="list-item" href="#">Il CNR</a></li>
+                <li><a class="list-item" href="#">La ricerca CNR</a></li>
+                <li><a class="list-item" href="#">Diffondere la ricerca</a></li>
+                <li><a class="list-item" href="#">Valorizzare la ricerca</a></li>
+                <li><a class="list-item" href="#">Collaborare</a></li>
+                <li><a class="list-item" href="#">News &amp; Eventi</a></li>
+                <li><a class="list-item" href="#">Contatti</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 mt-2">
-            <div class="pb-2">
-              <h4>Seguici su</h4>
-              <ul class="list-inline text-left social">
-                <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-designers-italia"></use></svg><span class="visually-hidden">Designers Italia (link esterno)</span></a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-twitter"></use></svg><span class="visually-hidden">X (link esterno)</span></a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-medium"></use></svg><span class="visually-hidden">Medium (link esterno)</span></a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-behance"></use></svg><span class="visually-hidden">Behance (link esterno)</span></a>
-                </li>
+          <div class="col-lg-3 col-md-6 pb-3">
+            <h4>Dipartimenti</h4>
+            <div class="link-list-wrapper">
+              <ul class="footer-list link-list clearfix">
+                <li><a class="list-item" href="#">Fisica e Materia</a></li>
+                <li><a class="list-item" href="#">Terra e Ambiente</a></li>
+                <li><a class="list-item" href="#">Ingegneria, ICT, Energia e Trasporti</a></li>
+                <li><a class="list-item" href="#">Scienze BioMediche</a></li>
+                <li><a class="list-item" href="#">Scienze Umane e Sociali</a></li>
+                <li><a class="list-item" href="#">Chimica e Tecnologia dei Materiali</a></li>
+                <li><a class="list-item" href="#">Bio e Agroalimentare</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 mt-2">
-            <h4>Newsletter</h4>
-            <div class="form-group d-flex gap-1">
-              <input type="text" class="form-control form-control-sm" id="exampleFormGroup1" placeholder="Inserisci la tua email" aria-label="Inserisci la tua email">
-              <button type="submit" class="btn btn-primary">Iscriviti</button>
+          <div class="col-lg-3 col-md-6 pb-3">
+            <h4>Seguici su</h4>
+            <ul class="list-inline text-left social mb-3">
+              <li class="list-inline-item">
+                <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-facebook"></use></svg><span class="visually-hidden">Facebook (link esterno)</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-instagram"></use></svg><span class="visually-hidden">Instagram (link esterno)</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-twitter"></use></svg><span class="visually-hidden">X (link esterno)</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-whatsapp"></use></svg><span class="visually-hidden">WhatsApp (link esterno)</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-linkedin"></use></svg><span class="visually-hidden">LinkedIn (link esterno)</span></a>
+              </li>
+            </ul>
+            <div class="link-list-wrapper mb-3">
+              <ul class="footer-list link-list clearfix">
+                <li><a class="list-item" href="#">Social media policy</a></li>
+                <li><a class="list-item fw-bold" href="#">Devolvi il 5x1000 al CNR</a></li>
+              </ul>
             </div>
+            <h4 class="mb-2">Canali RSS</h4>
+            <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-rss"></use></svg><span class="visually-hidden">Canali RSS</span></a>
           </div>
         </div>
       </section>
@@ -152,13 +114,12 @@ Nel footer completo sono presenti i seguenti elementi:
   </div>
   <div class="it-footer-small-prints clearfix">
     <div class="container">
-      <!-- <h3 class="visually-hidden">Sezione Link Utili</h3> -->
       <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
-        <li class="list-inline-item"><a href="#">Media policy</a></li>
-        <li class="list-inline-item"><a href="#">Note legali</a></li>
-        <li class="list-inline-item"><a href="#">Privacy policy</a></li>
+        <li class="list-inline-item"><a href="#">Media Policy</a></li>
+        <li class="list-inline-item"><a href="#">Note Legali</a></li>
+        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
         <li class="list-inline-item"><a href="#">Mappa del sito</a></li>
-        <li class="list-inline-item"><a href="https://form.agid.gov.it/view/xyz">Dichiarazione di accessibilità <span class="visually-hidden">(link esterno su sito AgID)</span></a></li>
+        <li class="list-inline-item"><a href="https://form.agid.gov.it/view/xyz">Dichiarazione Accessibilità <span class="visually-hidden">(link esterno su sito AgID)</span></a></li>
       </ul>
     </div>
   </div>
@@ -166,9 +127,9 @@ Nel footer completo sono presenti i seguenti elementi:
 {% endcapture %}{% include example.html content=example %}
 
 ## Footer compatto
-Il footer compatto è una versione semplificata del footer completo. 
+Il footer compatto è una versione semplificata del footer completo.
 
-Contiene i contatti dell'ente, collegamenti ai profili social, form di iscrizione alla newsletter (se presente) e i link utili. Può essere utilizzato nei casi in cui non è necessario mostrare le sezioni di navigazione di primo livello.
+Contiene logo, contatti, social e i link utili in fascia inferiore. Può essere utilizzato quando non è necessario mostrare menu e dipartimenti.
 
 {% comment %}Example name: Compatto{% endcomment %}
 {% capture example %}
@@ -179,12 +140,8 @@ Contiene i contatti dell'ente, collegamenti ai profili social, form di iscrizion
         <div class="row clearfix">
           <div class="col-sm-12">
             <div class="it-brand-wrapper">
-              <a href="#" class="" data-focus-mouse="false">
-                <svg class="icon"><use xlink:href="{{ site.baseurl }}/dist/svg/sprites.svg#it-pa"></use></svg>
-                <div class="it-brand-text">
-                  <h2 class="no_toc">Nome Ente</h2>
-                  <h3 class="no_toc">Tagline</h3>
-                </div>
+              <a href="#">
+                <img class="it-brand-logo" src="{{ site.baseurl }}/docs/assets/img/icons/logo-cnr.svg" alt="Consiglio Nazionale delle Ricerche" width="202" height="47">
               </a>
             </div>
           </div>
@@ -192,45 +149,43 @@ Contiene i contatti dell'ente, collegamenti ai profili social, form di iscrizion
       </section>
       <section class="pt-4 border-white border-top">
         <div class="row">
-          <div class="col-lg-4 col-md-4 mt-2">
+          <div class="col-lg-6 col-md-6 mt-2">
             <h4>Contatti</h4>
-            <p>
-              <strong>Nome Ente</strong><br>
-              Via Roma 0 - 00000 Città - Codice fiscale / P. IVA: 000000000
+            <p class="mb-3">
+              Consiglio Nazionale delle Ricerche<br>
+              Piazzale Aldo Moro, 7 - 00185 Roma, Italia<br>
+              Codice Fiscale 80054330586<br>
+              Partita IVA 02118311006
             </p>
+            <p class="mb-0">
+              Indirizzo Posta Elettronica Certificata (PEC) istituzionale<br>
+              <a href="mailto:protocollo-ammcen@pec.cnr.it">protocollo-ammcen@pec.cnr.it</a>
+            </p>
+          </div>
+          <div class="col-lg-6 col-md-6 mt-2">
+            <h4>Seguici su</h4>
+            <ul class="list-inline text-left social mb-3">
+              <li class="list-inline-item">
+                <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-facebook"></use></svg><span class="visually-hidden">Facebook (link esterno)</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-instagram"></use></svg><span class="visually-hidden">Instagram (link esterno)</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-twitter"></use></svg><span class="visually-hidden">X (link esterno)</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-whatsapp"></use></svg><span class="visually-hidden">WhatsApp (link esterno)</span></a>
+              </li>
+              <li class="list-inline-item">
+                <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top" aria-hidden="true"><use href="{{ site.baseurl }}/dist/svg/sprites.svg#it-linkedin"></use></svg><span class="visually-hidden">LinkedIn (link esterno)</span></a>
+              </li>
+            </ul>
             <div class="link-list-wrapper">
               <ul class="footer-list link-list clearfix">
-                <li><a class="list-item" href="#">Posta Elettronica Certificata</a></li>
-                <li>
-                  <a class="list-item" href="#">URP - Ufficio Relazioni con il Pubblico</a>
-                </li>
+                <li><a class="list-item" href="#">Social media policy</a></li>
+                <li><a class="list-item fw-bold" href="#">Devolvi il 5x1000 al CNR</a></li>
               </ul>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 mt-2">
-            <div class="pb-2">
-              <h4>Seguici su</h4>
-              <ul class="list-inline text-left social">
-                <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-designers-italia"></use></svg><span class="visually-hidden">Designers Italia (link esterno)</span></a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-twitter"></use></svg><span class="visually-hidden">X (link esterno)</span></a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-medium"></use></svg><span class="visually-hidden">Medium (link esterno)</span></a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="p-2 text-white" href="#"><svg class="icon icon-sm icon-inverse align-top"><use xlink:href="{{site.baseurl}}/dist/svg/sprites.svg#it-behance"></use></svg><span class="visually-hidden">Behance (link esterno)</span></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 mt-2">
-            <h4>Newsletter</h4>
-            <div class="form-group d-flex gap-1">
-              <input type="text" class="form-control form-control-sm" id="exampleFormGroup2" placeholder="Inserisci la tua email" aria-label="Inserisci la tua email">
-              <button type="submit" class="btn btn-primary">Iscriviti</button>
             </div>
           </div>
         </div>
@@ -239,13 +194,12 @@ Contiene i contatti dell'ente, collegamenti ai profili social, form di iscrizion
   </div>
   <div class="it-footer-small-prints clearfix">
     <div class="container">
-      <!-- <h3 class="visually-hidden">Sezione Link Utili</h3> -->
       <ul class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
-        <li class="list-inline-item"><a href="#">Media policy</a></li>
-        <li class="list-inline-item"><a href="#">Note legali</a></li>
-        <li class="list-inline-item"><a href="#">Privacy policy</a></li>
+        <li class="list-inline-item"><a href="#">Media Policy</a></li>
+        <li class="list-inline-item"><a href="#">Note Legali</a></li>
+        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
         <li class="list-inline-item"><a href="#">Mappa del sito</a></li>
-        <li class="list-inline-item"><a href="https://form.agid.gov.it/view/xyz">Dichiarazione di accessibilità <span class="visually-hidden">(link esterno su sito AgID)</span></a></li>
+        <li class="list-inline-item"><a href="https://form.agid.gov.it/view/xyz">Dichiarazione Accessibilità <span class="visually-hidden">(link esterno su sito AgID)</span></a></li>
       </ul>
     </div>
   </div>
