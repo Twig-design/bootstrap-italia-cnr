@@ -72,6 +72,7 @@
 
   // Card title styles
   .it-card-title {
+    margin-top: 0;
     margin-bottom: var(--#{$prefix}spacing-xxs);
 
     &.it-card-title-icon {

@@ -870,7 +870,7 @@ Al menu di navigazione principale può essere aggiunto anche un menu di navigazi
 
 ## Esplora come (audience bar)
 
-Fascia opzionale sotto la navigazione principale. Usa i [pulsanti con icona]({{ site.baseurl }}/docs/componenti/buttons/#pulsanti-con-icona) (`.btn.btn-primary.btn-xs.btn-icon`) come trigger di [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/): sull’header scuro diventano pillole bianche con testo e icona blu chiaro.
+Fascia opzionale sotto la navigazione principale. Usa i [pulsanti con icona]({{ site.baseurl }}/docs/componenti/buttons/#pulsante-con-icona) (`.btn.btn-primary.btn-xs.btn-icon`) come trigger di [dropdown]({{ site.baseurl }}/docs/componenti/dropdown/): sull’header scuro diventano pillole bianche con testo e icona blu chiaro.
 
 {% comment %}Example name: Header audience bar{% endcomment %}
 {% capture example %}
@@ -948,12 +948,88 @@ Fascia opzionale sotto la navigazione principale. Usa i [pulsanti con icona]({{ 
             <span>I dipartimenti</span>
             <svg class="icon" aria-hidden="true"><use href="{{site.baseurl}}/dist/svg/sprites.svg#it-expand"></use></svg>
           </a>
-          <div class="dropdown-menu dropdown-menu-end">
-            <div class="link-list-wrapper">
-              <ul class="link-list">
-                <li><a class="dropdown-item list-item" href="#"><span>Scienze fisiche</span></a></li>
-                <li><a class="dropdown-item list-item" href="#"><span>Scienze chimiche</span></a></li>
-              </ul>
+          <div class="dropdown-menu">
+            <div class="row">
+              <div class="col-12 col-md-3">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li>
+                      <a class="list-item dropdown-item" href="/scienze-biomediche" data-proofer-ignore>
+                        <svg class="icon icon-sm me-2" aria-hidden="true">
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                        </svg>
+                        <span>Scienze biomediche</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="list-item dropdown-item" href="/terra-e-ambiente" data-proofer-ignore>
+                        <svg class="icon icon-sm me-2" aria-hidden="true">
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                        </svg>
+                        <span>Terra e Ambiente</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li>
+                      <a class="list-item dropdown-item" href="/fisica-e-matematica" data-proofer-ignore data-focus-mouse="false">
+                        <svg class="icon icon-sm me-2" aria-hidden="true">
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                        </svg>
+                        <span>Fisica e matematica</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="list-item dropdown-item" href="/bio-e-agroalimentare" data-proofer-ignore>
+                        <svg class="icon icon-sm me-2" aria-hidden="true">
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                        </svg>
+                        <span>Bio e agroalimentare</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li>
+                      <a class="list-item dropdown-item" href="/chimkca-e-tecnologia-materiali" data-proofer-ignore>
+                        <svg class="icon icon-sm me-2" aria-hidden="true">
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                        </svg>
+                        <span>Chimica e Tecnologia materiali</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="list-item dropdown-item" href="/ingegneria-ict-energia-e-trasporti" data-proofer-ignore>
+                        <svg class="icon icon-sm me-2" aria-hidden="true">
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                        </svg>
+                        <span>Ingegneria, ICT, energia e trasporti</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="link-list-wrapper">
+                  <ul class="link-list">
+                    <li>
+                      <a class="list-item dropdown-item" href="/scienze-umane-e-patrimonio-culturale" data-proofer-ignore>
+                        <svg class="icon icon-sm me-2" aria-hidden="true">
+                          <use href="{{site.baseurl}}/dist/svg/sprites.svg#it-arrow-right-triangle"></use>
+                        </svg>
+                        <span>Scienze umane e patrimonio culturale</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
