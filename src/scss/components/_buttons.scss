@@ -34,6 +34,7 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
   --#{$prefix}btn-padding-x: var(--#{$prefix}spacing-s); // Controls the horizontal padding for the button, using spacing tokens.
   --#{$prefix}btn-padding-y: var(--#{$prefix}spacing-xs); // Controls the vertical padding for the button, using spacing tokens.
   --#{$prefix}btn-text-color: var(--#{$prefix}color-text-primary); // Controls the text color for the button, using color tokens.
+  --#{$prefix}btn-focus-ring-color: var(--#{$prefix}color-text-base); // Controls the focus ring color for the button (#1A1A1A).
 }
 
 // Styles
@@ -156,11 +157,23 @@ a.btn-primary {
   --#{$prefix}btn-background: var(--#{$prefix}color-background-primary);
 
   &:hover {
-    --#{$prefix}btn-background: var(--#{$prefix}color-background-primary-hover);
+    --#{$prefix}btn-background: var(--#{$prefix}color-btn-primary-hover);
   }
 
   &:active {
-    --#{$prefix}btn-background: var(--#{$prefix}color-background-primary-active);
+    --#{$prefix}btn-background: var(--#{$prefix}color-btn-primary-active);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--#{$prefix}btn-focus-ring-color);
+    outline-offset: 2px;
+  }
+
+  &:disabled,
+  &.disabled {
+    --#{$prefix}btn-disabled-opacity: 1;
+    --#{$prefix}btn-text-color: var(--#{$prefix}color-btn-disabled-text);
+    --#{$prefix}btn-background: var(--#{$prefix}color-btn-disabled);
   }
 
   &.btn-progress {
@@ -170,27 +183,64 @@ a.btn-primary {
   }
 }
 
+// Secondary: superficie azzurro chiarissima usata sia su fondi chiari che scuri (Figma CNR)
 .btn-secondary,
 a.btn-secondary {
-  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
-  --#{$prefix}btn-background: var(--#{$prefix}color-background-secondary);
+  --#{$prefix}btn-text-color: var(--#{$prefix}color-btn-secondary-text);
+  --#{$prefix}btn-background: var(--#{$prefix}color-btn-secondary);
+
+  &:hover,
+  &:active {
+    --#{$prefix}btn-text-color: var(--#{$prefix}color-btn-secondary-text-hover);
+  }
 
   &:hover {
-    --#{$prefix}btn-background: var(--#{$prefix}color-background-secondary-hover);
+    --#{$prefix}btn-background: var(--#{$prefix}color-btn-secondary-hover);
   }
 
   &:active {
-    --#{$prefix}btn-background: var(--#{$prefix}color-background-secondary-active);
+    --#{$prefix}btn-background: var(--#{$prefix}color-btn-secondary-active);
+  }
+
+  &:focus-visible {
+    --#{$prefix}btn-focus-ring-color: #{$white}; // bordo bianco su superficie chiara
+    outline: 2px solid var(--#{$prefix}btn-focus-ring-color);
+    outline-offset: 2px;
   }
 
   &:disabled,
   &.disabled {
+    --#{$prefix}btn-disabled-opacity: 1;
+    --#{$prefix}btn-text-color: var(--#{$prefix}color-btn-disabled-text);
+    --#{$prefix}btn-background: var(--#{$prefix}color-btn-disabled);
+
     //progress bar button
     &.btn-progress {
       border-color: hsl(210, 12%, 52%); // UI kit - missing tokens
       opacity: 1;
       background-color: hsl(210, 12%, 52%); // UI kit - missing tokens
     }
+  }
+}
+
+.btn-accent,
+a.btn-accent {
+  --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
+  --#{$prefix}btn-background: var(--#{$prefix}color-background-accent);
+
+  &:hover {
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-accent-hover);
+  }
+
+  &:active {
+    --#{$prefix}btn-background: var(--#{$prefix}color-background-accent-active);
+  }
+
+  &:disabled,
+  &.disabled {
+    --#{$prefix}btn-disabled-opacity: 1;
+    --#{$prefix}btn-text-color: var(--#{$prefix}color-btn-disabled-text);
+    --#{$prefix}btn-background: var(--#{$prefix}color-btn-disabled);
   }
 }
 
@@ -250,12 +300,22 @@ a.btn-outline {
     --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary);
     --#{$prefix}btn-text-color: var(--#{$prefix}color-text-primary);
     &:hover {
-      --#{$prefix}btn-outline-border-color: color-mix(in srgb, var(--#{$prefix}color-border-primary-hover) 70%, black); // more contrast on hover
-      --#{$prefix}btn-text-color: var(--#{$prefix}color-link-hover);
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-btn-primary-hover);
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-btn-primary-hover);
     }
     &:active {
-      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-primary-active);
-      --#{$prefix}btn-text-color: var(--#{$prefix}color-link-active);
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-btn-primary-active);
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-btn-primary-active);
+    }
+    &:focus-visible {
+      outline: 2px solid var(--#{$prefix}btn-focus-ring-color);
+      outline-offset: 2px;
+    }
+    &:disabled,
+    &.disabled {
+      --#{$prefix}btn-disabled-opacity: 1;
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-disabled);
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-btn-disabled-text);
     }
   }
 
@@ -271,6 +331,27 @@ a.btn-outline {
     &:active {
       --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-secondary-active);
       --#{$prefix}btn-text-color: var(--#{$prefix}color-link-secondary-active);
+    }
+  }
+
+  // Outline Accent
+  &-accent {
+    --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-accent);
+    --#{$prefix}btn-text-color: var(--#{$prefix}color-text-accent);
+
+    &:hover {
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-accent-hover);
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-link-accent-hover);
+    }
+    &:active {
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-accent-active);
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-text-accent);
+    }
+    &:disabled,
+    &.disabled {
+      --#{$prefix}btn-disabled-opacity: 1;
+      --#{$prefix}btn-outline-border-color: var(--#{$prefix}color-border-disabled);
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-btn-disabled-text);
     }
   }
 
@@ -341,16 +422,12 @@ a.btn-outline {
     &:active {
       --#{$prefix}btn-background: color-mix(in srgb, var(--#{$prefix}color-background-inverse) 80%, black);
     }
-  }
 
-  a.btn-secondary,
-  .btn-secondary {
-    --#{$prefix}btn-text-color: var(--#{$prefix}color-text-inverse);
-    --#{$prefix}btn-background: var(--#{$prefix}color-background-secondary);
-
-    &:hover,
-    &:active {
-      --#{$prefix}btn-background: color-mix(in srgb, var(--#{$prefix}color-background-secondary) 85%, black);
+    &:disabled,
+    &.disabled {
+      --#{$prefix}btn-disabled-opacity: 1;
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-btn-disabled-text);
+      --#{$prefix}btn-background: var(--#{$prefix}color-btn-disabled);
     }
   }
 

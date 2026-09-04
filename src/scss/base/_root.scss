@@ -267,6 +267,15 @@
   --#{$prefix}color-text-muted: #{$color-text-muted};
   --#{$prefix}color-text-secondary: #{$color-text-secondary};
   --#{$prefix}color-text-primary: #{$color-text-primary};
+  --#{$prefix}color-btn-primary-hover: #{$color-btn-primary-hover};
+  --#{$prefix}color-btn-primary-active: #{$color-btn-primary-active};
+  --#{$prefix}color-btn-secondary: #{$color-btn-secondary};
+  --#{$prefix}color-btn-secondary-hover: #{$color-btn-secondary-hover};
+  --#{$prefix}color-btn-secondary-active: #{$color-btn-secondary-active};
+  --#{$prefix}color-btn-secondary-text: #{$color-btn-secondary-text};
+  --#{$prefix}color-btn-secondary-text-hover: #{$color-btn-secondary-text-hover};
+  --#{$prefix}color-btn-disabled: #{$color-btn-disabled};
+  --#{$prefix}color-btn-disabled-text: #{$color-btn-disabled-text};
   --#{$prefix}color-text-base: #{tokens.$it-color-text-base};
   --#{$prefix}color-code: #{tokens.$it-color-red-44};
   --#{$prefix}color-link: #{$color-link};
@@ -339,6 +348,7 @@
   --#{$prefix}color-background-inverse-hover: #{tokens.$it-color-slate-93}; // TODO: replace with semantic token
   --#{$prefix}color-background-muted: #{$color-background-muted};
   --#{$prefix}color-background-accent-hover: #{$color-background-accent-hover};
+  --#{$prefix}color-background-accent-active: #{$color-background-accent-active};
   --#{$prefix}color-background-accent: #{$color-background-accent};
   --#{$prefix}color-background-secondary-lighter: #{$color-background-secondary-lighter};
   --#{$prefix}color-background-secondary-light: #{$color-background-secondary-light};

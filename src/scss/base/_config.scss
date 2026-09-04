@@ -189,6 +189,21 @@ $color-text-primary: $color-primary-blue-600 !default;
 $color-text-primary-active: $color-primary-blue-700 !default;
 $color-text-primary-hover: $color-primary-blue-500 !default;
 
+// Primary button (Figma CNR)
+$color-btn-primary-hover: $color-primary-blue-500 !default;
+$color-btn-primary-active: $color-primary-blue-800 !default;
+
+// Secondary button (Figma CNR)
+$color-btn-secondary: $color-primary-blue-50 !default; // #F2F7FE
+$color-btn-secondary-hover: $color-primary-blue-200 !default; // #AAD1F8
+$color-btn-secondary-active: #6db0f2 !default; // click
+$color-btn-secondary-text: $color-primary-blue-500 !default; // #0059B3
+$color-btn-secondary-text-hover: $color-primary-blue-700 !default; // #002447
+
+// Button disabled (Figma CNR)
+$color-btn-disabled: $color-neutral-200 !default; // #D8E0E8
+$color-btn-disabled-text: #4c6073 !default;
+
 // Links & icons (primary)
 $color-link: $color-primary-blue-600 !default;
 $color-link-hover: $color-primary-blue-500 !default;
@@ -217,6 +232,7 @@ $color-orange-900: #702b0f !default;
 
 $color-background-accent: $color-orange-700 !default;
 $color-background-accent-hover: $color-orange-800 !default;
+$color-background-accent-active: $color-orange-900 !default;
 $color-text-accent: $color-orange-800 !default;
 $color-link-accent: $color-orange-800 !default;
 $color-link-accent-hover: $color-orange-900 !default;

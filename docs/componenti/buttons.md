@@ -122,6 +122,23 @@ Gli stili definiti da Bootstrap Italia utilizzano un naming consistente con Boot
 </div>{% endif %}{% endfor %}</div>
 {% endcapture %}{% include example.html content=example %}
 
+#### Variante accent
+
+Il colore accent (arancione del UI Kit Italia) è disponibile per i pulsanti con le classi `.btn-accent` e `.btn-outline-accent`.
+
+{% comment %}Example name: Variante accent{% endcomment %}
+{% capture example %}
+
+<div class="py-1">
+  <div class="btn-example">
+    <button type="button" class="btn btn-accent">Accent</button>
+    <button type="button" class="btn btn-outline-accent">Accent outline</button>
+    <button type="button" class="btn btn-accent disabled">Accent disabled</button>
+    <button type="button" class="btn btn-outline-accent disabled">Accent outline disabled</button>
+  </div>
+</div>
+{% endcapture %}{% include example.html content=example %}
+
 {% include callout-warning-color-assistive-technologies.md %}
 
 #### Note sullo stato disabilitato

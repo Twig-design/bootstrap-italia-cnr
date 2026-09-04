@@ -105,6 +105,7 @@ $theme-colors: map.merge(
   (
     'primary': $primary,
     'secondary': $secondary,
+    'accent': $color-background-accent,
     'success': $success,
     'info': $info,
     'warning': $warning,

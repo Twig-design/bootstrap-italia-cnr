@@ -268,6 +268,13 @@
     &:active {
       --#{$prefix}btn-background: color-mix(in srgb, var(--#{$prefix}color-background-inverse) 80%, black);
     }
+
+    &:disabled,
+    &.disabled {
+      --#{$prefix}btn-disabled-opacity: 1;
+      --#{$prefix}btn-text-color: var(--#{$prefix}color-btn-disabled-text);
+      --#{$prefix}btn-background: var(--#{$prefix}color-btn-disabled);
+    }
   }
 }
 
